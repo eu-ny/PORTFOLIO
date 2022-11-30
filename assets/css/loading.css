@@ -1,0 +1,31 @@
+.loadingBg {
+    background-color: #DA9FA6;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.loadingNum {
+    height: 50%;
+    font-size: 18rem;
+    text-align: center;
+    color: #FFE8ED;
+}
+.leftDesc {
+    padding: 50px 0 0 50px;
+}
+.leftDesc > em {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.0;
+    color: #F0B6BF;
+}
+.rightDesc {
+    padding: 0 50px 50px 0;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.0;
+    text-align: right;
+    color: #F0B6BF;
+}

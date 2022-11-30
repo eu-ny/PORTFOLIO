@@ -1,0 +1,67 @@
+/* 헤더 */
+#header {
+    position: fixed;
+    z-index: 999;
+    right: 60px;
+    top: 20px;
+    width: 40px;
+    display: flex;
+}
+.Volume {
+    width: 20px;
+    margin-right: 15px;
+}
+/* 인트로 */
+#Intro {
+    background-color: #fef5f5;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+.introBg-tit {
+    position: absolute;
+    left: -20%;
+    top: -20%;
+    transform: rotate(18deg);
+    z-index: -1;
+}
+.introBg-tit > em {
+    display: block;
+    text-align: center;
+    font-size: 24vw;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke: 1px #a13a604d;
+    color: transparent;
+}
+
+.intro-tit {
+    font-size: 12vw;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 12%;
+}
+.intro-tit > em {
+    display: block;
+    color: #a13a5f;
+    line-height: 0.8;
+}
+
+.intro-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18%;
+}
+.intro-icon01 {
+    top: 1%;
+    left: 8%;
+}
+
+
+/* About01 */
+#About01 {
+    background-color: #fef5f5;
+    height: 100vh;
+}
