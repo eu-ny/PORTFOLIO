@@ -215,6 +215,15 @@
     transform: translate3d(0%,-150%,0);
 
 }
+
+.about-icon02 {
+    width: 7vw;
+    position: absolute;
+    top: -40%;
+    transform: translate(150%, -0%);
+    z-index: -1;
+}
+
 .About-text02 .tit {
     font-size: 3.2vw;
     font-weight: 600;
