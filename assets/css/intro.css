@@ -71,11 +71,11 @@
     color: #a13a5f;
     position: relative;
     z-index: 10;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .Intro-text:hover {
-    transition: .8s;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 .intro-icon01 {
