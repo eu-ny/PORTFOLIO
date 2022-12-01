@@ -48,7 +48,8 @@ button,
 input,
 select,
 table,
-textarea {
+textarea,
+pre {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

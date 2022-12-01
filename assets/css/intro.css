@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://webfontworld.github.io/Poppins/Poppins.css');
+
 body {
     cursor: none;
 }
@@ -46,7 +48,6 @@ body {
     -webkit-text-stroke: 1px #a13a5f;
     color: transparent;
     opacity: 0.2;
-    /* z-index: none; */
 }
 
 .cursor01 {
@@ -161,22 +162,33 @@ body {
 
 #section02 {
     background-color: #67353b;
-    height: 120vh;
+    height: 125vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poppins';
+    overflow: hidden;
 }
 
-/* .About01 {
-    background-image: linear-gradient(90deg, rgb(255, 175, 175) 50%, transparent 50%);
-    background-size: 30px 1px;
-    background-repeat: repeat-x;
-    background-position: 0 0, 0 14px, 0 calc(100% - 14px), 0 100%;
-} */
-
+.A1-photo {
+    position: relative;
+}
 
 .A-photo01 {
-    width: 35vw;
+    width: 34vw;
     border-top-left-radius: 275px;
     border-top-right-radius: 275px;
+}
+
+.About-title {
+    position: absolute;
+    bottom: -16%;
+    left: -21%;
+    letter-spacing: -1.8px;
+    color: #e7828e;
+    font-size: 7vw;
+    font-weight: 800;
+    text-align: center;
+    line-height: 0.9;
+    white-space: nowrap;
 }
