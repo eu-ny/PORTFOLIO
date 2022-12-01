@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url('https://webfontworld.github.io/Poppins/Poppins.css');
 
-body {
-    cursor: none;
-}
-
 /* 헤더 */
 #header {
     position: fixed;
@@ -33,7 +29,7 @@ body {
     justify-content: center;
     font-family: "Anton", sans-serif;
     position: relative;
-    /* cursor: Default; */
+    cursor: none;
 }
 
 #section01::before {
@@ -61,7 +57,11 @@ body {
     background: #fff;
     user-select: none;
     pointer-events: none;
-    transition: transform 0.3s;
+    transition: transform 0.8s;
+}
+
+.cursor01.active {
+    transform: scale(5);
 }
 
 .Intro-text {
@@ -71,7 +71,12 @@ body {
     color: #a13a5f;
     position: relative;
     z-index: 10;
+    /* transition: .8s; */
 }
+
+/* .Intro-text:hover {
+    letter-spacing: 10px;
+} */
 
 .intro-icon01 {
     position: absolute;
@@ -112,7 +117,7 @@ body {
     animation: bounce5 2.1s infinite;
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
     0% {
         transform:  translate(-150%, -90%) translateY(-8px);
     }
@@ -158,7 +163,7 @@ body {
     100% {
         transform: translate(150%, -130%) translateY(-8px);
     }
-}
+} */
 
 #section02 {
     background-color: #67353b;
@@ -168,6 +173,7 @@ body {
     justify-content: center;
     font-family: 'Poppins';
     overflow: hidden;
+    cursor: Default;
 }
 
 .A1-photo {

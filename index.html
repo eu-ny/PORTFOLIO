@@ -9,8 +9,6 @@
 </head>
 <body>
 
-    <div class="cursor01"></div>
-
     <header id="header">
         <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
         <img src="./assets/images/menu01.svg" alt="menu" class="menu">
@@ -19,6 +17,8 @@
 
     <section id="section01">
         <h2 class="ir">Intro</h2>
+
+        <div class="cursor01"></div>
 
 
         <div class="Intro-textBox">
@@ -69,6 +69,7 @@
         //Intro
         {
             const cursor = document.querySelector(".cursor01"); //첫번째 커서
+            const IntroText = document.querySelectorAll(".Intro-text"); //오버 효과
 
             window.addEventListener("mousemove", e => {
 
@@ -77,6 +78,17 @@
                         left: e.pageX -5, 
                         top: e.pageY -5
                 });
+
+                IntroText.forEach( text => {
+                    text.addEventListener("mouseenter", () => {
+                        cursor.classList.add("active");
+                    });
+
+                    text.addEventListener("mouseleave", () => {
+                        cursor.classList.remove("active");
+                    });  
+                })
+
 
             })
         }
