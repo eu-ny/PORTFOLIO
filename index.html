@@ -27,33 +27,38 @@
             <div class="Intro-text it03">PORTFOLIO</div>
         </div>
 
-        <div class="intro-icon01">
+        <div class="I-icon intro-icon01">
             <img src="./assets/icon/intro01.png" alt="말풍선" aria-required="true">
         </div>
-        <div class="intro-icon02">
+        <div class="I-icon intro-icon02">
             <img src="./assets/icon/intro02.png" alt="엄지" aria-required="true">
         </div>
-        <div class="intro-icon03">
-            <img src="./assets/icon/intro03.png" alt="로켓" aria-required="true">
-        </div>
-        <div class="intro-icon04">
+        <div class="I-icon intro-icon04">
             <img src="./assets/icon/intro04.png" alt="키보드" aria-required="true">
         </div>
-        <div class="intro-icon05">
+        <div class="I-icon intro-icon05">
             <img src="./assets/icon/intro05.png" alt="tag" aria-required="true">
         </div>
 
     </section>
     <!-- //section01 -->
 
-    <section id="section02" class="AboutBG">
+    <div class="I-icon intro-icon03">
+        <img src="./assets/icon/intro03.png" alt="로켓" aria-required="true">
+    </div>
+
+    <section id="section02" class="About01">
         <h2 class="ir">About01</h2>
 
         <div class="About-text01">
-            <p>
+            <img src="./assets/icon/about01.png" alt="전구" class="about-icon01">
+            <p class="tit">
                 MY NAME IS <br>
                 LEE HA EUN <br>
                 1998.11.09
+            </p>
+            <p class="desc">
+                안녕하세요 저는 이하은입니다. 
             </p>
         </div>
 
@@ -67,13 +72,20 @@
         </figure>
 
         <div class="About-text02">
-            <p>
-                MY NAME IS <br>
-                LEE HA EUN <br>
-                1998.11.09
+            <p class="tit">
+                I MAJORED<br>
+                IN WESTERN<br>
+                PAINTING
+            </p>
+            <p class="desc">
+                안녕하세요 저는 이하은입니다. 
             </p>
         </div>
 
+    </section>
+
+    <section id="section03" class="About02">
+        <h2 class="">ABOUT02</h2>
     </section>
 
     <script src="./assets/js/gsap.min.js"></script>
@@ -93,6 +105,7 @@
         {
             const cursor = document.querySelector(".cursor01"); //첫번째 커서
             const IntroText = document.querySelectorAll(".Intro-text"); //오버 효과
+            const IntroIcon = document.querySelectorAll(".I-icon"); //오버 효과
 
             window.addEventListener("mousemove", e => {
 
@@ -102,12 +115,22 @@
                         top: e.pageY -5
                 });
 
-                IntroText.forEach( text => {
-                    text.addEventListener("mouseenter", () => {
+                IntroText.forEach( target => {
+                    target.addEventListener("mouseenter", () => {
                         cursor.classList.add("active");
                     });
 
-                    text.addEventListener("mouseleave", () => {
+                    target.addEventListener("mouseleave", () => {
+                        cursor.classList.remove("active");
+                    });  
+                })
+
+                IntroIcon.forEach( target => {
+                    target.addEventListener("mouseenter", () => {
+                        cursor.classList.add("active");
+                    });
+
+                    target.addEventListener("mouseleave", () => {
                         cursor.classList.remove("active");
                     });  
                 })

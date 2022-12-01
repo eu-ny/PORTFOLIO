@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://webfontworld.github.io/Poppins/Poppins.css");
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
 
 /* 헤더 */
 #header {
@@ -83,10 +84,10 @@
     width: 18%;
     transform: translate(-150%, -90%);
     animation: bounce 2s infinite;
-    transition: 0.5s ease-in-out;
+    transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .intro-icon01:hover {
-    transform: translate(-160%, -90%);
+    transform: translate(-160%, -95%);
 }
 
 .intro-icon02 {
@@ -170,7 +171,7 @@
 
 #section02 {
     background-color: #67353b;
-    height: 125vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,7 +180,7 @@
     cursor: Default;
     position: relative;
 }
-.AboutBG {
+.About01 {
     background-size: 10px 10px, 60px 60px;
     background-image: linear-gradient(to bottom, transparent 5px, #67353b 5px),
         linear-gradient(to right, #ffffff20 1px, transparent 1px),
@@ -188,23 +189,47 @@
 }
 .About-text01 {
     position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 3vw;
+    top: 30%;
+    left: 8%;
+    z-index: 1;
+}
+.about-icon01 {
+    width: 12vw;
+    position: absolute;
+    top: -55%;
+    transform: translate(-70%, -0%);
+    z-index: -1;
+}
+.About-text01 .tit {
+    font-size: 3.2vw;
     font-weight: 600;
     letter-spacing: -1.8px;
     line-height: 0.95;
     color: #fffcf8;
 }
+
 .About-text02 {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 3vw;
+    bottom: 0%;
+    right: 5%;
+    transform: translate3d(0%,-150%,0);
+
+}
+.About-text02 .tit {
+    font-size: 3.2vw;
     font-weight: 600;
     letter-spacing: -1.8px;
     line-height: 0.95;
     color: #ffc9c6;
+}
+
+.desc {
+    margin-top: 10px;
+    font-size: 1.2vw;
+    letter-spacing: normal;
+    color: #d7b6b6;
+    font-family: 'SCoreDream';
+    font-weight: 200;
 }
 
 .A1-photo {
@@ -220,7 +245,7 @@
 .About-title {
     position: absolute;
     bottom: -16%;
-    left: -21%;
+    left: -24%;
     letter-spacing: -1.8px;
     color: #e7828e;
     font-size: 7vw;
