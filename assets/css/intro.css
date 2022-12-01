@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url('https://webfontworld.github.io/Poppins/Poppins.css');
+@import url("https://webfontworld.github.io/Poppins/Poppins.css");
 
 /* 헤더 */
 #header {
@@ -71,18 +71,22 @@
     color: #a13a5f;
     position: relative;
     z-index: 10;
-    /* transition: .8s; */
 }
 
-/* .Intro-text:hover {
+.Intro-text:hover {
+    transition: .8s;
     letter-spacing: 10px;
-} */
+}
 
 .intro-icon01 {
     position: absolute;
     width: 18%;
     transform: translate(-150%, -90%);
     animation: bounce 2s infinite;
+    transition: 0.5s ease-in-out;
+}
+.intro-icon01:hover {
+    transform: translate(-160%, -90%);
 }
 
 .intro-icon02 {
@@ -98,7 +102,6 @@
     left: 50%;
     top: 60%;
     transform: translate(-50%, -20%);
-
 }
 .intro-icon04 {
     position: absolute;
@@ -171,9 +174,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     overflow: hidden;
     cursor: Default;
+    position: relative;
+}
+.AboutBG {
+    background-size: 10px 10px, 60px 60px;
+    background-image: linear-gradient(to bottom, transparent 5px, #67353b 5px),
+        linear-gradient(to right, #ffffff20 1px, transparent 1px),
+        linear-gradient(to right, transparent 5px, #67353b 5px),
+        linear-gradient(to bottom, #ffffff20 1px, transparent 1px);
+}
+.About-text01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #fffcf8;
+}
+.About-text02 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 3vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #ffc9c6;
 }
 
 .A1-photo {

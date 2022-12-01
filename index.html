@@ -46,8 +46,16 @@
     </section>
     <!-- //section01 -->
 
-    <section id="section02" class="About01">
+    <section id="section02" class="AboutBG">
         <h2 class="ir">About01</h2>
+
+        <div class="About-text01">
+            <p>
+                MY NAME IS <br>
+                LEE HA EUN <br>
+                1998.11.09
+            </p>
+        </div>
 
         <figure class="A1-photo">
             <img src="./assets/images/LEEHAEUN.jpg" alt="LEEHAEUN" class="A-photo01">
@@ -58,6 +66,14 @@
             </div>
         </figure>
 
+        <div class="About-text02">
+            <p>
+                MY NAME IS <br>
+                LEE HA EUN <br>
+                1998.11.09
+            </p>
+        </div>
+
     </section>
 
     <script src="./assets/js/gsap.min.js"></script>
@@ -65,6 +81,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: 'body',
+                start: "top: 0px"
+            }
+        })
 
         //Intro
         {
