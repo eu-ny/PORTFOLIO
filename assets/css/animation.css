@@ -8,7 +8,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    z-index: -1;
   }
 
 .animation01 {
@@ -23,5 +22,44 @@
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+
+.site-scroll {
+    animation: scroll-B 6s infinite ease-in-out;
+}
+
+@keyframes scroll-B {
+    0%  {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-40%);
+    }
+    80% {
+        transform: translateY(-65%);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.text-X {
+    animation: text-X 1s cubic-bezier(0.37, 0.15, 0.52, 1.08)
+}
+
+@keyframes text-X {
+    0% {
+        transform: translateX(-90%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }

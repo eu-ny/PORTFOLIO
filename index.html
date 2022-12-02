@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="cursor01"></div>
-
     <header id="header">
         <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
         <img src="./assets/images/menu01.svg" alt="menu" class="menu">
@@ -18,6 +16,8 @@
 
     <section id="section01">
         <h2 class="ir">Intro</h2>
+
+        <div class="cursor01"></div>
 
         <div class="Intro-textBox">
             <div class="Intro-text it01">WELCOME</div>
@@ -131,26 +131,89 @@
         <article class="basic-imac">
             <div class="textMove">
                 <p class="back-tit animation01">
-                    BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE •&nbsp;
+                    BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE • &nbsp;
                 </p>
-                <p class="back-tit animation01">
-                    BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE •&nbsp;
+                <p class="back-tit animation01 tit2">
+                    BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE • &nbsp;
                 </p>
             </div>
     
             <figure class="imac-1">
                 <img src="./assets/images/iMac01.png" alt="imac-purple">
+                <div class="imac-view">
+                    <img src="./assets/images/basicSite01.png" alt="basicSite" class="site-scroll">
+                </div>
             </figure>
         </article>
         <article class="basic-work">
             <h2 class="tit">WORK</h2>
         </article>
         <article class="basic-conts">
-            <div class=""></div>
+            <div class="basic-cont01">
+                <h2 class="b-site"><a href="#">STUDY SITE</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont01.png" alt="basicSite">
+                </figure>
+            </div>
+            <div class="basic-cont01">
+                <h2 class="b-site"><a href="#">BASIC SITE 01</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont02.png" alt="basicSite">
+                </figure>
+            </div>
+            <div class="basic-cont01">
+                <h2 class="b-site"><a href="#">BASIC SITE 02</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont03.png" alt="basicSite">
+                </figure>
+            </div>
         </article>
     </section>
+    <!-- //section05 -->
+
     <section id="section05" class="react">
-        <h2>REACT</h2>
+        <h2 class="ir">REACT</h2>
+        <h2 class="ir">BASIC</h2>
+        <article class="basic-imac">
+            <div class="textMove">
+                <p class="back-tit animation01">
+                    BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE • &nbsp;
+                </p>
+                <p class="back-tit animation01 tit2">
+                    BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE • &nbsp;
+                </p>
+            </div>
+    
+            <figure class="imac-1">
+                <img src="./assets/images/iMac02.png" alt="imac-pink">
+                <div class="imac-view">
+                    <img src="./assets/images/basicSite01.png" alt="basicSite" class="site-scroll">
+                </div>
+            </figure>
+        </article>
+        <article class="basic-work">
+            <h2 class="tit">WORK</h2>
+        </article>
+        <article class="basic-conts">
+            <div class="basic-cont01">
+                <h2 class="b-site"><a href="#">STUDY SITE</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont01.png" alt="basicSite">
+                </figure>
+            </div>
+            <div class="basic-cont01">
+                <h2 class="b-site"><a href="#">BASIC SITE 01</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont02.png" alt="basicSite">
+                </figure>
+            </div>
+            <div class="basic-cont01">
+                <h2 class="b-site"><a href="#">BASIC SITE 02</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont03.png" alt="basicSite">
+                </figure>
+            </div>
+        </article>
     </section>
     <section id="section06" class="vue">
         <h2>VUE</h2>
@@ -174,6 +237,8 @@
             const cursor = document.querySelector(".cursor01"); //첫번째 커서
             const IntroText = document.querySelectorAll(".Intro-text"); //오버 효과
             const IntroIcon = document.querySelectorAll(".I-icon"); //오버 효과
+            const backTitle = document.querySelectorAll(".back-tit"); //텍스트 오버 효과
+            const basicImac = document.querySelector(".basic-imac"); //오버시 아이맥 백그라운드 색상 변경
 
             window.addEventListener("mousemove", e => {
 
@@ -201,6 +266,16 @@
                     target.addEventListener("mouseleave", () => {
                         cursor.classList.remove("active");
                     });  
+                })
+
+                backTitle.forEach(target => {
+                    target.addEventListener("mouseenter", () => {
+                        cursor.classList.add("active");
+                    })
+
+                    target.addEventListener("mouseleave", () => {
+                        cursor.classList.remove("active");
+                    }); 
                 })
 
 

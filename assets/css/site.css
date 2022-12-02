@@ -3,6 +3,7 @@
     overflow: hidden;
     font-family: "Anton", sans-serif;
     cursor: Default;
+    background: #f8eff22b;
 }
 .basic-imac {
     height: 125vh;
@@ -11,6 +12,11 @@
     justify-content: center;
     position: relative;
 }
+
+.bg-black {
+   background: #000;
+}
+
 .basic-imac::before {
     content: '';
     position: absolute;
@@ -22,31 +28,99 @@
 }
 
 .back-tit {
-    font-size: 18vw;
+    font-size: 20vw;
     white-space: nowrap;
+    /* padding-left: 0.2rem; */
     color: #7c30a2;
+    transition: .3s;
+    letter-spacing: -.2vw;
 }
 
 .imac-1 {
     width: 65vw;
     padding-right: 8%;
+    position: relative;
 }
+.imac-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51.8%, -76.5%);
+    width: 49vw;
+    height: 62%;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
 
 /* basic - work */
 .basic-work {
     text-align: center;
-    font-size: 16vw;
-    line-height: 1;
-    color: #7c30a2;
     position: relative;
+    overflow: hidden;
+    /* margin-bottom: -2.5%; */
+}
+.basic-work > .tit {
+    display: inline-block;
+    font-family: 'Tungsten';
+    font-size: 28vw;
+    color: #7c30a2;
+    font-weight: 600;
+    line-height: 1;
+    text-rendering: optimizeSpeed;
+    letter-spacing: -.5vw;
+    transition: all .5s;
+}
+.basic-work > .tit:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px #7c30a2;
 }
 
 .basic-work::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     left: 0;
     width: 100%;
     height: 1px;
     background: #8536AC;
+}
+
+.basic-conts {
+    font-family: 'Tungsten';
+    margin-top: -3%;
+    padding-bottom: 3%;
+    padding-top: 4%;
+    position: relative;
+}
+
+.basic-conts::before {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #8536AC;
+}
+
+.basic-cont01  {
+    display: flex;
+    align-items: center;
+    line-height: .8;
+}
+
+.basic-cont01 .b-site > a {
+    color: #7c30a2;
+    font-size: 12vw;
+}
+
+.b-cont01-img {
+    width: 15vw;
+    padding-bottom: 1%;
+    margin-left: 3vw;
+}
+
+#section05 {
+    overflow: hidden;
 }
