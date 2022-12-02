@@ -1,0 +1,27 @@
+/* 무한슬라이드 */
+.textMove {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: -1;
+  }
+
+.animation01 {
+    display: inline-block;
+    transform: translateX(0);
+    animation: scrolling 50s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

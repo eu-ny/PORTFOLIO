@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://webfontworld.github.io/Poppins/Poppins.css");
 @import url('https://webfontworld.github.io/score/SCoreDream.css');
+body {
+    /* overflow: hidden; */
+    cursor: none;
+}
 
 /* 헤더 */
 #header {
@@ -20,7 +24,7 @@
     cursor: pointer;
 }
 
-/* 인트로 */
+/* section01 ------------------------------------------------------------------------- */
 #section01 {
     background-color: #f8dede;
     height: 100vh;
@@ -30,7 +34,6 @@
     justify-content: center;
     font-family: "Anton", sans-serif;
     position: relative;
-    cursor: none;
 }
 
 #section01::before {
@@ -58,11 +61,11 @@
     background: #fff;
     user-select: none;
     pointer-events: none;
-    transition: transform 0.8s;
+    transition: transform 0.5s ease-in-out;
 }
 
 .cursor01.active {
-    transform: scale(5);
+    transform: scale(8);
 }
 
 .Intro-text {
@@ -100,9 +103,11 @@
 
 .intro-icon03 {
     position: absolute;
+    width: 28vw;
     left: 50%;
     top: 60%;
     transform: translate(-50%, -20%);
+    /* z-index: 1; */
 }
 .intro-icon04 {
     position: absolute;
@@ -169,15 +174,17 @@
     }
 } */
 
+
+
+/* section02 ------------------------------------------------------------------------- */
 #section02 {
     background-color: #67353b;
-    height: 120vh;
+    height: 125vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Poppins";
     overflow: hidden;
-    cursor: Default;
     position: relative;
 }
 .About01 {
@@ -189,15 +196,15 @@
 }
 .About-text01 {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 8%;
     z-index: 1;
+    width: 20vw;
 }
 .about-icon01 {
     width: 12vw;
     position: absolute;
-    top: -55%;
-    transform: translate(-70%, -0%);
+    transform: translate(-70%, -55%);
     z-index: -1;
 }
 .About-text01 .tit {
@@ -211,16 +218,15 @@
 .About-text02 {
     position: absolute;
     bottom: 0%;
-    right: 5%;
-    transform: translate3d(0%,-150%,0);
-
+    right: 3%;
+    transform: translate3d(0%,-80%,0);
+    width: 20vw;
 }
 
 .about-icon02 {
     width: 7vw;
     position: absolute;
-    top: -40%;
-    transform: translate(150%, -0%);
+    transform: translate(150%, -100%);
     z-index: -1;
 }
 
@@ -239,6 +245,7 @@
     color: #d7b6b6;
     font-family: 'SCoreDream';
     font-weight: 200;
+    word-break: keep-all;
 }
 
 .A1-photo {
@@ -251,7 +258,7 @@
     border-top-right-radius: 275px;
 }
 
-.About-title {
+.A-title01 {
     position: absolute;
     bottom: -16%;
     left: -24%;
@@ -262,4 +269,97 @@
     text-align: center;
     line-height: 0.9;
     white-space: nowrap;
+}
+
+
+
+/* section03 ------------------------------------------------------------------------- */
+#section03 {
+    background-color: #FEF5F5;
+    height: 125vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    overflow: hidden;
+    /* cursor: Default; */
+    position: relative;
+}
+
+.About02 {
+    background-size: 10px 10px, 60px 60px;
+    background-image: linear-gradient(to bottom, transparent 5px, #FEF5F5 5px),
+        linear-gradient(to right, #f5dddd 1px, transparent 1px),
+        linear-gradient(to right, transparent 5px, #FEF5F5 5px),
+        linear-gradient(to bottom, #f5dddd 1px, transparent 1px);
+}
+
+.A2-photo {
+    position: relative;
+}
+
+.A-photo02 {
+    width: 34vw;
+    border-top-left-radius: 275px;
+    border-top-right-radius: 275px;
+}
+
+.A-title02 {
+    position: absolute;
+    bottom: -16%;
+    left: -38%;
+    letter-spacing: -1.8px;
+    color: #992d54;
+    font-size: 7vw;
+    font-weight: 800;
+    text-align: center;
+    line-height: 0.9;
+    white-space: nowrap;
+}
+
+.About-text03 {
+    position: absolute;
+    top: 65%;
+    left: 6%;
+    transform: translate3d(0%,-80%,0);
+    width: 21vw;
+}
+
+.about-icon03 {
+    width: 10vw;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.About-text03 > .tit {
+    font-size: 3.2vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #AA305C;
+}
+
+.About-text04 {
+    position: absolute;
+    top: 25%;
+    right: 6%;
+    z-index: 1;
+    width: 20vw;
+}
+
+.about-icon04 {
+    width: 12vw;
+    position: absolute;
+    transform: translate(60%, -65%) scaleX(-1);
+    z-index: -1;
+}
+
+.About-text04 > .tit {
+    font-size: 3.2vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #b7646e;
 }

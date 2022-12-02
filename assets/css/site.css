@@ -1,0 +1,16 @@
+/* section04 ------------------------------------------------------------------------- */
+#section04{
+    height: 130vh;
+    overflow: hidden;
+    font-family: "Anton", sans-serif;
+    display: flex;
+    align-items: center;
+    cursor: Default;
+}
+
+.back-tit {
+    font-size: 18vw;
+    white-space: nowrap;
+    color: #8536AC;
+}
+
