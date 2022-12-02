@@ -1,10 +1,11 @@
-/* section04 ------------------------------------------------------------------------- */
-#section04{
+/* section04 ------------------------------------------------------------------------------------ */
+#section04 {
     overflow: hidden;
     font-family: "Anton", sans-serif;
     cursor: Default;
     background: #f8eff22b;
 }
+
 .basic-imac {
     height: 125vh;
     display: flex;
@@ -13,18 +14,14 @@
     position: relative;
 }
 
-.bg-black {
-   background: #000;
-}
-
 .basic-imac::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
-    background: #8536AC;
+    background: #8536ac;
 }
 
 .back-tit {
@@ -32,15 +29,17 @@
     white-space: nowrap;
     /* padding-left: 0.2rem; */
     color: #7c30a2;
-    transition: .3s;
-    letter-spacing: -.2vw;
+    transition: 0.3s;
+    letter-spacing: -0.2vw;
 }
 
-.imac-1 {
+.imac-1,
+.imac-2 {
     width: 65vw;
     padding-right: 8%;
     position: relative;
 }
+
 .imac-view {
     position: absolute;
     top: 50%;
@@ -52,7 +51,6 @@
     overflow: hidden;
 }
 
-
 /* basic - work */
 .basic-work {
     text-align: center;
@@ -60,34 +58,36 @@
     overflow: hidden;
     /* margin-bottom: -2.5%; */
 }
+
 .basic-work > .tit {
     display: inline-block;
-    font-family: 'Tungsten';
+    font-family: "Tungsten";
     font-size: 28vw;
     color: #7c30a2;
     font-weight: 600;
     line-height: 1;
     text-rendering: optimizeSpeed;
-    letter-spacing: -.5vw;
-    transition: all .5s;
+    letter-spacing: -0.5vw;
+    transition: all 0.5s;
 }
+
 .basic-work > .tit:hover {
     color: transparent;
     -webkit-text-stroke: 1px #7c30a2;
 }
 
 .basic-work::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 10%;
     left: 0;
     width: 100%;
     height: 1px;
-    background: #8536AC;
+    background: #8536ac;
 }
 
 .basic-conts {
-    font-family: 'Tungsten';
+    font-family: "Tungsten";
     margin-top: -3%;
     padding-bottom: 3%;
     padding-top: 4%;
@@ -95,19 +95,19 @@
 }
 
 .basic-conts::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0%;
     left: 0;
     width: 100%;
     height: 1px;
-    background: #8536AC;
+    background: #8536ac;
 }
 
-.basic-cont01  {
+.basic-cont01 {
     display: flex;
     align-items: center;
-    line-height: .8;
+    line-height: 0.8;
 }
 
 .basic-cont01 .b-site > a {
@@ -121,6 +121,48 @@
     margin-left: 3vw;
 }
 
+/* section05 ------------------------------------------------------------------------------------ */
 #section05 {
     overflow: hidden;
+    background: #f8eff22b;
+    font-family: "Anton", sans-serif;
+}
+
+.react-imac {
+    height: 125vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.react-imac::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #a13a5f;
+}
+
+.back-tit2 {
+    font-size: 20vw;
+    white-space: nowrap;
+    /* padding-left: 0.2rem; */
+    color: #a13a5f;
+    transition: 0.3s;
+    letter-spacing: -0.2vw;
+}
+
+.react-work {
+}
+
+.react-conts-wrap {
+}
+.react-cont {
+}
+.r-site {
+}
+.r-cont-img {
 }
