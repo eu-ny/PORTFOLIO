@@ -24,10 +24,18 @@
 .back-tit {
     font-size: 18vw;
     white-space: nowrap;
-    color: #8536AC;
+    color: #7c30a2;
 }
 
 .imac-1 {
     width: 65vw;
     padding-right: 8%;
+}
+
+/* basic - work */
+.basic-work {
+    text-align: center;
+    font-size: 16vw;
+    line-height: 1;
+    color: #7c30a2;
 }
