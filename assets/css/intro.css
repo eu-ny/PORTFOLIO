@@ -85,9 +85,9 @@ body {
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* .Intro-text:hover {
+.Intro-text:hover {
     letter-spacing: 5px;
-} */
+}
 
 .hv-e01 {
     letter-spacing: 5px;
