@@ -1,0 +1,321 @@
+/* music */
+.music__wrap{
+    /* transform: scale(1); */
+    /* transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1); */
+    transform: translate(1% ,-2%) !important;
+
+}
+.music__wrap .music_inner {
+    /* width: 350px;
+    background: #09080ec4;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    padding: 18px 20px 20px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    overflow: hidden; */
+    /* width: 95vw;
+    background: #09080ec4;
+    position: absolute;
+    right: -10%;
+    top: 0;
+    padding: 18px 20px 20px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    overflow: hidden; */
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.musicClose {
+    color: #f5f5f5b0;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.music__wrap .music__header {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+
+.music__wrap .music__header h2 {
+    font-family: 'SUIT';
+    font-size: 14px;
+}
+
+.music__wrap .music__contents {
+    /* background: #b0b0b058; */
+    width: 100%;
+}
+.current,
+.duration {
+    font-family: 'SUIT';
+    font-size: 13px;
+    color: #555;
+}
+.music__view {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music__view .img {
+    width: 40%;
+    margin-bottom: 20px;
+}
+/* .imgWrap {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 200%;
+    object-fit: cover;
+    filter: blur(14px);
+    z-index: -2;
+    opacity: 0.3;
+} */
+
+.music__view .img img {
+    width: 100%;
+}
+
+.music__view .title {
+    /* font-family: 'SUIT'; */
+    font-family: 'galmuri11';
+    /* width: 70%; */
+    color: #f5f5f5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.music__view .title h3 {
+    margin-bottom: 5px;
+    word-break: keep-all;
+    font-size: 6vw;
+    line-height: 1.2;
+}
+
+.music__view .title p {
+    font-size: 4.5vw;
+    color: #555;
+}
+
+.music__control {
+    width: 100%;
+    height: 100px;
+    /* background: #b0b0b0; */
+    /* padding: 0 20px 20px 20px; */
+}
+
+.music__control .progress {
+    width: 100%;
+    height: 6px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.music__control .progress .bar {
+    width: 0;
+    height: inherit; /* 높이는 상속받기 */
+    background: #c405e2;
+    border-radius: 5px;
+}
+
+.music__control .progress .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+.music__control .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.music__control .control .repeat {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -146px;
+
+
+}
+.music__control .control .repeat_one {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -171px;
+}
+.music__control .control .shuffle {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -195px;
+}
+.music__control .control .prev {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -50px;
+}
+.music__control .control .play {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 2px;
+}
+.music__control .control .stop {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -96px;
+}
+.music__control .control .next {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -24px;
+}
+.music__control .control .list {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -121px;
+}
+.music__control .control .sound {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -75px;
+    position: relative;
+}
+.music__control .control .sound #player_sound {
+    position: absolute;
+    top: -80px;
+    left: -54px;
+    transform: rotate(-90deg);
+}
+.music__control .control .sound #player_sound.open {
+    display: none;
+}
+
+
+.music__footer {
+    /* background: #b0b0b0; */
+}
+.music__list {
+    font-family: 'SUIT';
+    /* padding: 0 20px 20px 20px; */
+    /* display: none; */
+    color: #f5f5f5;
+    font-size: 15px;
+}
+.music__list h3 {
+    /* border-top: 2px solid #000; */
+    /* padding-top: 10px; */
+    font-size: 5vw;
+}
+.music__list h3 .list {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-bottom: 7px;
+    background-image: url(../img/game_musicPlayer_icons.svg);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    background-position: -119px -24px;  
+}
+.music__list ul {
+    /* max-height: 180px; */
+    max-height: 10vh;
+    overflow-y: scroll;
+    /* padding-right: 20px; */
+    padding: 0;
+    padding-right: 4%;
+}
+.music__list li {
+    border-bottom: 1px dashed #888;
+    list-style: none;
+    position: relative;
+    padding: 10px 0 5px;
+}
+.music__list li.playing {
+    color: #c405e2;
+}
+.music__list strong {
+    display: block;
+    margin-bottom: 4px;
+}
+.music__list em {
+   font-style: normal;
+   color: #555555;
+   font-weight: 200;
+   font-size: 14px;
+}
+.music__list li span {
+    position: absolute;
+    right: 0;
+}
+/* .music__list .close-btn {
+    display: inline-block;
+    float: right;
+    margin-top: 6px;
+    margin-right: 2px;
+    vertical-align: middle;
+    background-image: url(../img/game_music_close-btn.svg);
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+} */
+
+
+@media(max-width:390px) {
+    .music__wrap .music__header {
+        align-items: start;
+        margin-bottom: 20px;
+    }
+
+    .music__list {
+        font-size: 14px;
+    }
+
+    .music__list h3 {
+        font-size: 6vw;
+    }
+
+    .music__list ul {
+        max-height: 17vh;
+    }
+}

@@ -51,6 +51,32 @@
     }
 }
 
+
+.site-scroll02 {
+    animation: scroll-V 6s infinite ease-in-out;
+}
+
+@keyframes scroll-V {
+    0%  {
+        transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-40%);
+    }
+    80% {
+        transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .text-X {
     animation: text-X 1s cubic-bezier(0.37, 0.15, 0.52, 1.08)
 }
