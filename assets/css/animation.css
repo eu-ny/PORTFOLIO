@@ -8,12 +8,27 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
+.textMove2 {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 .animation01 {
     display: inline-block;
     transform: translateX(0);
     animation: scrolling 50s linear infinite;
+}
+
+.animation02 {
+    display: inline-block;
+    transform: translateX(0);
+    animation: scrolling 6s linear infinite;
 }
 
 @keyframes scrolling {

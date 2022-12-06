@@ -320,10 +320,9 @@
             </p>
         </div>
         <div class="s-text-animation textMove">
-            <span class="s-text animation01">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT </span>
-            <span class="s-text animation01">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT </span>
-            <span class="s-text animation01"> GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
-            <span class="s-text animation01"> GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
+            <span class="s-text animation02">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT </span>
+            <span class="s-text animation02">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT </span>
+            <span class="s-text animation02">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT </span>
             <div class="s-text-bg"></div>
         </div>
     </section>
@@ -382,7 +381,11 @@
 
     <section id="section09" class="effect">
         <div class="effect__wrap">
-            <div class="back-tit4 textMove">
+            <div class="back-tit4 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="back-tit4-2 textMove2">
                 <span class="animation01">JAVASCRIPT EFFECT</span>
                 <span class="animation01">JAVASCRIPT EFFECT</span>
             </div>
@@ -525,33 +528,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script>
-      function scroll() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
-            requestAnimationFrame(scroll);
-        }
-        scroll();
-
-        {
-            // gsap.registerPlugin(ScrollTrigger);
-            // // const intro = document.querySelector
-
-            // ScrollTrigger.create({
-            //     trigger: ".it01",
-            //     start: "top 0%",
-            //     end: "bottom 0%",
-            //     markers: true,
-            //     toggleClass: { targets: ".Intro-text", className: "hv-e01"},
-
-            // })
-        }
-
-
         gsap.registerPlugin(ScrollTrigger);
 
         const effect = gsap.utils.toArray(".effect__section");
         const effect2= gsap.utils.toArray(".effect__section2");
 
+        // javascriptEffect
         gsap.to(effect, {
             xPercent: -110 * (effect.length -1),
             ease: "none",
@@ -563,6 +545,16 @@
                 markers: true,
             }
         });
+
+      function scroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+            
+
+            requestAnimationFrame(scroll);
+        }
+        scroll();
 
         //Intro
         {
@@ -598,20 +590,10 @@
                     });  
                 })
 
-                // backTitle.forEach(target => {
-                //     target.addEventListener("mouseenter", () => {
-                //         cursor.classList.add("active");
-                //     })
-
-                //     target.addEventListener("mouseleave", () => {
-                //         cursor.classList.remove("active");
-                //     }); 
-                // })
-
-
             })
         }
 
+        //site desc view
         {
             const view = document.querySelectorAll(".imac-view")
             const viewCont = document.querySelectorAll(".view-cont")

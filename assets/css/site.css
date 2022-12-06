@@ -441,14 +441,15 @@
     font-size: 3vw;
     transition: 0.3s;
     color: #FFE3E3;
+    background-color: #CDA8B6;
 }
 
 .s-text {
     padding: 1%;
-    background-color: #CDA8B6;
+    display: block;
 }
 
-.s-text:nth-child(2){
+.s-text-bg {
     background-color: #983F5E;
     /* margin-left: -0.5%; */
 }
@@ -571,8 +572,7 @@
 .back-tit4 {
     position: absolute;
     top: 50%;
-    /* transform: translate(-49%, -40%) rotate(20deg); */
-    transform: translate(0%, -40%) rotate(8deg);
+    transform: translate(0%, -40%) rotate(5deg);
     font-size: 25vw;
     -webkit-text-stroke: 1px #7c30a232;
     color: transparent;
@@ -581,7 +581,20 @@
     text-align: center;
     letter-spacing: 2vw;
     white-space: nowrap;
-    display: grid;
+    /* display: grid; */
+}
+.back-tit4-2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -60%) rotate(5deg);
+    font-size: 25vw;
+    -webkit-text-stroke: 1px #7c30a232;
+    color: transparent;
+    font-weight: 600;
+    line-height: 0.8;
+    text-align: center;
+    letter-spacing: 2vw;
+    white-space: nowrap;
 }
 
 .effect___inner01 {
