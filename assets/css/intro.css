@@ -75,12 +75,16 @@ body {
     transform: scale(8);
 }
 
+.Intro-textBox {
+    position: relative;
+}
+
 .Intro-text {
     text-align: center;
+    position: relative;
     font-size: 11vw;
     line-height: 1;
     color: #a13a5f;
-    position: relative;
     z-index: 10;
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -99,10 +103,11 @@ body {
 
 .intro-icon01 {
     position: absolute;
-    width: 18%;
-    transform: translate(-150%, -90%);
-    animation: bounce 2s infinite;
-    transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 30%;
+    top: 0;
+    /* transform: translate(-150%, -90%); */
+    /* animation: bounce 2s infinite; */
+    /* transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 .intro-icon01:hover {
     transform: translate(-160%, -95%);
@@ -113,7 +118,6 @@ body {
     width: 12%;
     left: 35%;
     transform: translate(-160%, 130%);
-    animation: bounce2 1.9s infinite;
 }
 
 .intro-icon03 {
@@ -122,8 +126,12 @@ body {
     left: 50%;
     top: 60%;
     transform: translate(-50%, -20%);
-    /* z-index: 1; */
 }
+
+.iconZindex {
+    z-index: 11;
+}
+
 .intro-icon04 {
     position: absolute;
     width: 18%;
@@ -194,7 +202,8 @@ body {
 /* section02 ------------------------------------------------------------------------- */
 #section02 {
     background-color: #67353b;
-    height: 125vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,21 +274,23 @@ body {
 
 .A1-photo {
     position: relative;
+    margin-bottom: 8vh;
 }
 
 .A-photo01 {
-    width: 34vw;
-    border-top-left-radius: 275px;
-    border-top-right-radius: 275px;
+    width: 30vw;
+    border-top-left-radius: 300px;
+    /* border-top-left-radius: 275px; */
+    border-top-right-radius: 300px;
 }
 
 .A-title01 {
     position: absolute;
-    bottom: -16%;
-    left: -24%;
+    bottom: -15.6%;
+    left: -21%;
     letter-spacing: -1.8px;
     color: #e7828e;
-    font-size: 7vw;
+    font-size: 6vw;
     font-weight: 800;
     text-align: center;
     line-height: 0.9;
@@ -291,7 +302,7 @@ body {
 /* section03 ------------------------------------------------------------------------- */
 #section03 {
     background-color: #FEF5F5;
-    height: 125vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,21 +322,22 @@ body {
 
 .A2-photo {
     position: relative;
+    margin-bottom: 8vh;
 }
 
 .A-photo02 {
-    width: 34vw;
-    border-top-left-radius: 275px;
-    border-top-right-radius: 275px;
+    width: 30vw;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
 }
 
 .A-title02 {
     position: absolute;
-    bottom: -16%;
-    left: -38%;
+    bottom: -14.3%;
+    left: -29%;
     letter-spacing: -1.8px;
     color: #992d54;
-    font-size: 7vw;
+    font-size: 5.5vw;
     font-weight: 800;
     text-align: center;
     line-height: 0.9;
@@ -464,7 +476,7 @@ body {
 }
 
 .sns__wrap  .sns:hover {
-    width: 120%;
+    width: 140%;
     /* animation: hv-1 .6s cubic-bezier(.645,.045,.355,1) forwards; */
 }
 

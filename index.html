@@ -15,7 +15,7 @@
     </header>
     <!-- //header -->
 
-    <section id="section01">
+    <section id="section01" class="intro gsap01">
         <h2 class="ir">Intro</h2>
 
         <div class="cursor01"></div>
@@ -24,29 +24,31 @@
             <div class="Intro-text it01">WELCOME</div>
             <div class="Intro-text it02">2022</div>
             <div class="Intro-text it03">PORTFOLIO</div>
+
+
+            <div class="I-icon intro-icon01">
+                <img src="./assets/icon/intro01.png" alt="말풍선" aria-required="true">
+            </div>
+            <div class="I-icon intro-icon02">
+                <img src="./assets/icon/intro02.png" alt="엄지" aria-required="true">
+            </div>
+            <div class="I-icon intro-icon04">
+                <img src="./assets/icon/intro04.png" alt="키보드" aria-required="true">
+            </div>
+            <div class="I-icon intro-icon05">
+                <img src="./assets/icon/intro05.png" alt="tag" aria-required="true">
+            </div>
+    
+            <div class="I-icon intro-icon03">
+                <img src="./assets/icon/intro03.png" alt="로켓" aria-required="true">
+            </div>
         </div>
 
-        <div class="I-icon intro-icon01">
-            <img src="./assets/icon/intro01.png" alt="말풍선" aria-required="true">
-        </div>
-        <div class="I-icon intro-icon02">
-            <img src="./assets/icon/intro02.png" alt="엄지" aria-required="true">
-        </div>
-        <div class="I-icon intro-icon04">
-            <img src="./assets/icon/intro04.png" alt="키보드" aria-required="true">
-        </div>
-        <div class="I-icon intro-icon05">
-            <img src="./assets/icon/intro05.png" alt="tag" aria-required="true">
-        </div>
 
     </section>
     <!-- //section01 -->
 
-    <div class="I-icon intro-icon03">
-        <img src="./assets/icon/intro03.png" alt="로켓" aria-required="true">
-    </div>
-
-    <section id="section02" class="About01">
+    <section id="section02" class="About01 gsap01">
         <h2 class="ir">About01</h2>
 
         <div class="About-text01">
@@ -89,7 +91,7 @@
     </section>
     <!-- //section02 -->
 
-    <section id="section03" class="About02">
+    <section id="section03" class="About02 gsap01">
         <h2 class="ir">ABOUT02</h2>
 
         <div class="About-text03">
@@ -332,7 +334,7 @@
     </section>
     <!-- //section07 -->
 
-    <section id="section08">
+    <section id="section08" class="sliderCont">
         <div class="musicPlayer-wrap">
             <div class="inner">
                 <iframe src="music.html" frameborder="0" scrolling="no"></iframe>
@@ -349,7 +351,7 @@
     </section>
     <!-- //section08 -->
 
-    <section id="section08">
+    <!-- <section id="section08" class="sliderCont">
         <div class="musicPlayer-wrap">
             <div class="inner">
                 <iframe src="music.html" frameborder="0" scrolling="no"></iframe>
@@ -364,9 +366,8 @@
             </p>
         </div>
     </section>
-    <!-- //section08 -->
 
-    <section id="section08">
+    <section id="section08" class="sliderCont">
         <div class="musicPlayer-wrap">
             <div class="inner">
                 <iframe src="music.html" frameborder="0" scrolling="no"></iframe>
@@ -380,10 +381,10 @@
                 그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도 복습하고 새로운 것들합니다.
             </p>
         </div>
-    </section>
+    </section> -->
     <!-- //section08 -->
 
-    <section id="section09" class="effect">
+    <section id="section09" class="effectCont">
         <div class="effect__wrap">
             <div class="back-tit4 textMove2">
                 <span class="animation01">JAVASCRIPT EFFECT</span>
@@ -516,6 +517,7 @@
             </button>
         </div>
     </section>
+    <!-- //section12 -->
 
     <footer id="footer">
        <div class="sns__wrap">
@@ -531,38 +533,27 @@
         <!-- <figure class="codepen"></figure> -->
        </div>
     </footer>
+    <!-- //footer -->
 
     <script src="./assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        const effect = gsap.utils.toArray(".effect__section");
-        const effect2= gsap.utils.toArray(".effect__section2");
-
-        // javascriptEffect
-        gsap.to(effect, {
-            xPercent: -110 * (effect.length -1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".effect",
-                pin: true,
-                scrub: 1,
-                end: "+=8000",
-                markers: true,
-            }
+        // 부드러운 움직임
+       { const lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
         });
 
-      function scroll() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
-
-            
-
-            requestAnimationFrame(scroll);
+            function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
         }
-        scroll();
+
+        requestAnimationFrame(raf);}
 
         //Intro
         {
@@ -597,8 +588,93 @@
                         cursor.classList.remove("active");
                     });  
                 })
-
             })
+        }
+
+        // gsap
+        {
+
+            //intro
+
+            const intro = document.querySelector(".intro");
+            const introIcon_03 = gsap.utils.toArray(".intro-icon03");
+            // gsap.to(intro, {
+            //     // duration: 3, 
+            //     // ease: "power2.out",
+            //     // y:-500,
+            //     scrollTrigger: {
+            //         trigger: ".intro",
+            //         start: "top",
+            //         end: "bottom",
+            //         pin: true, 
+            //     },
+            // })
+
+
+            // about
+            gsap.utils.toArray(".gsap01").forEach((gsap01, i) => {
+                ScrollTrigger.create({
+                    trigger: gsap01,
+                    snap: 1,
+                    start: "top",
+                    pin: true, 
+                    pinSpacing: false,
+                    // toggleActions: "resume pause reset pause"
+                });
+            });
+
+            // ScrollTrigger.create({
+            // snap: 1/3 // snap whole page to the closest section!
+            // });
+
+
+            // javascriptEffect -----------------------------------------------------
+            const effect = gsap.utils.toArray(".effect__section");
+            const effect2= gsap.utils.toArray(".effect__section2");
+            gsap.to(effect, {
+                xPercent: -100 * (effect.length -1),
+                // x: -200 ,
+                scrollTrigger: {
+                    trigger: ".effectCont",
+                    pin: true,
+                    pinSpacing: true,
+                    scrub: 1,
+                    end: "+=8000",
+                    pin: true,
+                    snap: 1 / (effect.length - 1),
+                    markers: true,
+                },
+                duration: 5, 
+                ease: "power2.out",
+            });
+        }
+
+        // 이질감 효과-------------------------------------------------------------------
+        {
+            function scroll() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+                const intro = document.querySelector(".intro");
+                const introIcon01 = document.querySelector(".intro-icon01");
+                const introIcon02 = document.querySelector(".intro-icon02");
+                const introIcon03 = document.querySelector(".intro-icon03");
+                const introIcon04 = document.querySelector(".intro-icon04");
+                const introIcon05 = document.querySelector(".intro-icon05");
+                let iconEffect1 = (scrollTop - intro.offsetTop) * 2;
+                let iconEffect2 = (scrollTop - intro.offsetTop) * .1;
+                let iconEffect3 = (scrollTop - intro.offsetTop) * .2;
+
+                gsap.to(introIcon01, {duration: .3, y: -iconEffect2, ease: "power4.out"});
+                gsap.to(introIcon02, {duration: .3, y: -iconEffect2, ease: "power4.out"});
+                gsap.to(introIcon03, {duration: .6, y: -iconEffect1, ease: "power4.out"});
+                gsap.to(introIcon04, {duration: .3, y: -iconEffect2, ease: "power4.out"});
+                gsap.to(introIcon05, {duration: .3, y: -iconEffect2, ease: "power4.out"});
+                
+
+                requestAnimationFrame(scroll);
+            }
+            scroll();
         }
 
         //site desc view

@@ -3,7 +3,7 @@
     overflow: hidden;
     font-family: "Anton", sans-serif;
     cursor: Default;
-    background: #f8eff22b;
+    background: #fefcfd;
     text-transform: uppercase;
 }
 
@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background: #fefcfd;
 }
 
 .basic-imac::before {
@@ -554,8 +555,8 @@
 }
 
 
-/* section09 -------------------------------------------------------------------------------------  */
-.effect {
+/* section09 effectCont -------------------------------------------------------------------------------- */
+.effectCont {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -676,7 +677,7 @@
 }
 
 
-/* section10 -------------------------------------------------------------------------------------  */
+/* effectCont2 -------------------------------------------------------------------------------------  */
 .effect___inner02 {
     width: 110%;
     height: 100vh;
@@ -702,7 +703,7 @@
     color: #a13a5f;
 }
 
-/* section11 -------------------------------------------------------------------------------------  */
+/* effectCont3 -------------------------------------------------------------------------------------  */
 .effect___inner03 {
     width: 110%;
     height: 100vh;
@@ -773,5 +774,4 @@
     .musicPlayer-wrap {
         width: 90%;
     }
-
 }
