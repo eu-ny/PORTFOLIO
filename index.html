@@ -20,27 +20,37 @@
 
         <div class="cursor01"></div>
 
+        <div class="intro-back-tit">
+            <p>WELCOME</p>
+            <p>2022</p>
+            <p>PORTFOLIO</p>
+        </div>
+
         <div class="Intro-textBox">
             <div class="Intro-text it01">WELCOME</div>
             <div class="Intro-text it02">2022</div>
             <div class="Intro-text it03">PORTFOLIO</div>
 
+            <div class="icons">
+                <div class="I-icon intro-icon01">
+                    <img src="./assets/icon/intro01.png" alt="말풍선" aria-required="true">
+                </div>
 
-            <div class="I-icon intro-icon01">
-                <img src="./assets/icon/intro01.png" alt="말풍선" aria-required="true">
-            </div>
-            <div class="I-icon intro-icon02">
-                <img src="./assets/icon/intro02.png" alt="엄지" aria-required="true">
-            </div>
-            <div class="I-icon intro-icon04">
-                <img src="./assets/icon/intro04.png" alt="키보드" aria-required="true">
-            </div>
-            <div class="I-icon intro-icon05">
-                <img src="./assets/icon/intro05.png" alt="tag" aria-required="true">
-            </div>
-    
-            <div class="I-icon intro-icon03">
-                <img src="./assets/icon/intro03.png" alt="로켓" aria-required="true">
+                <div class="I-icon intro-icon02">
+                    <img src="./assets/icon/intro02.png" alt="엄지" aria-required="true">
+                </div>
+
+                <div class="I-icon intro-icon04">
+                    <img src="./assets/icon/intro04.png" alt="키보드" aria-required="true">
+                </div>
+        
+                <div class="I-icon intro-icon03">
+                    <img src="./assets/icon/intro03.png" alt="로켓" aria-required="true">
+                </div>
+
+                <div class="I-icon intro-icon05">
+                    <img src="./assets/icon/intro05.png" alt="tag" aria-required="true">
+                </div>
             </div>
         </div>
 
@@ -571,10 +581,12 @@
 
                 IntroText.forEach( target => {
                     target.addEventListener("mouseenter", () => {
+                        target.classList.add("hv-e01")
                         cursor.classList.add("active");
                     });
 
                     target.addEventListener("mouseleave", () => {
+                        target.classList.remove("hv-e01")
                         cursor.classList.remove("active");
                     });  
                 })
@@ -591,27 +603,8 @@
             })
         }
 
-        // gsap
+        // ABOUT
         {
-
-            //intro
-
-            const intro = document.querySelector(".intro");
-            const introIcon_03 = gsap.utils.toArray(".intro-icon03");
-            // gsap.to(intro, {
-            //     // duration: 3, 
-            //     // ease: "power2.out",
-            //     // y:-500,
-            //     scrollTrigger: {
-            //         trigger: ".intro",
-            //         start: "top",
-            //         end: "bottom",
-            //         pin: true, 
-            //     },
-            // })
-
-
-            // about
             gsap.utils.toArray(".gsap01").forEach((gsap01, i) => {
                 ScrollTrigger.create({
                     trigger: gsap01,
@@ -622,13 +615,10 @@
                     // toggleActions: "resume pause reset pause"
                 });
             });
+        }
 
-            // ScrollTrigger.create({
-            // snap: 1/3 // snap whole page to the closest section!
-            // });
-
-
-            // javascriptEffect -----------------------------------------------------
+        // javascriptEffect 가로스크롤 -----------------------------------------------------
+        {
             const effect = gsap.utils.toArray(".effect__section");
             const effect2= gsap.utils.toArray(".effect__section2");
             gsap.to(effect, {
@@ -661,15 +651,33 @@
                 const introIcon03 = document.querySelector(".intro-icon03");
                 const introIcon04 = document.querySelector(".intro-icon04");
                 const introIcon05 = document.querySelector(".intro-icon05");
-                let iconEffect1 = (scrollTop - intro.offsetTop) * 2;
-                let iconEffect2 = (scrollTop - intro.offsetTop) * .1;
-                let iconEffect3 = (scrollTop - intro.offsetTop) * .2;
+                const introText01 = document.querySelector(".Intro-text.it01");
+                const introText02 = document.querySelector(".Intro-text.it02");
+                const introText03 = document.querySelector(".Intro-text.it03");
+                const introBackText = document.querySelector(".intro-back-tit");
+
+                let iconEffect1 = (scrollTop - intro.offsetTop) * 1.4;
+                let iconEffect2 = (scrollTop - intro.offsetTop) * 0.15;
+                let iconEffect3 = (scrollTop - intro.offsetTop) * 0.18;
+                let iconEffect4 = (scrollTop - intro.offsetTop) * .3;
 
                 gsap.to(introIcon01, {duration: .3, y: -iconEffect2, ease: "power4.out"});
                 gsap.to(introIcon02, {duration: .3, y: -iconEffect2, ease: "power4.out"});
                 gsap.to(introIcon03, {duration: .6, y: -iconEffect1, ease: "power4.out"});
                 gsap.to(introIcon04, {duration: .3, y: -iconEffect2, ease: "power4.out"});
                 gsap.to(introIcon05, {duration: .3, y: -iconEffect2, ease: "power4.out"});
+
+                gsap.to(introBackText, {duration: .3, y: -iconEffect4, ease: "power4.out"});
+
+                gsap.to(introText01, {duration: .6, y: -iconEffect3, ease: "power4.out"});
+                gsap.to(introText02, {duration: .4, y: -iconEffect3, ease: "power4.out"});
+                gsap.to(introText03, {duration: .2, y: -iconEffect3, ease: "power4.out"});
+                
+                if(introText01.offsetTop === scrollTop){
+                    introIcon03.classList.remove("iconZindex");
+                }else{
+                    introIcon03.classList.add("iconZindex");
+                }
                 
 
                 requestAnimationFrame(scroll);

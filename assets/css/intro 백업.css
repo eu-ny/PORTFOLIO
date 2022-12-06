@@ -43,7 +43,8 @@ body {
     position: relative;
 }
 
-.intro-back-tit {
+#section01::before {
+    content: "WELCOME 2022 PORTFOLIO";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,7 +56,6 @@ body {
     -webkit-text-stroke: 1px #a13a5f;
     color: transparent;
     opacity: 0.2;
-    z-index: -1;
 }
 
 .cursor01 {
@@ -82,41 +82,44 @@ body {
 
 .Intro-text {
     text-align: center;
-    /* position: relative; */
-    /* z-index: 10; */
+    position: relative;
     font-size: 11vw;
     line-height: 1;
     color: #a13a5f;
+    z-index: 10;
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .hv-e01 {
-    letter-spacing: 8px;
+    letter-spacing: 5px;
 }
 
 .intro-icon01 {
     position: absolute;
-    width: 40%;
-    top: -30%;
-    left: -28%;
-    transform: translate(-13%, -149%);
+    width: 30%;
+    top: 0;
+    transform: translate(-150%, -90%);
+    /* animation: bounce 2s infinite; */
+    /* transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
+
+/* .intro-icon01:hover {
+    transform: translate(-160%, -95%);
+} */
 
 .intro-icon02 {
     position: absolute;
-    width: 24%;
-    left: -28%;
-    bottom: 2%;
-    /* transform: translate(-160%, 130%); */
+    width: 12%;
+    left: 35%;
+    transform: translate(-160%, 130%);
 }
 
 .intro-icon03 {
     position: absolute;
-    width: 30vw;
+    width: 28vw;
     left: 50%;
     top: 60%;
     transform: translate(-50%, -20%);
-    z-index: -1;
 }
 
 .iconZindex {
@@ -125,19 +128,69 @@ body {
 
 .intro-icon04 {
     position: absolute;
-    width: 30%;
-    right: -22%;
-    bottom: 5%;
-    z-index: -1;
+    width: 18%;
+    right: 8%;
+    top: 55%;
+    transform: translate(-50%, 30%);
+    animation: bounce4 2s infinite;
 }
 
 .intro-icon05 {
     position: absolute;
-    width: 26%;
-    top: -10%;
-    right: -25%;
-    /* transform: translate(150%, -130%); */
+    width: 12%;
+    right: 35%;
+    transform: translate(150%, -130%);
+    animation: bounce5 2.1s infinite;
 }
+
+/* @keyframes bounce {
+    0% {
+        transform:  translate(-150%, -90%) translateY(-8px);
+    }
+    50% {
+        transform: translate(-150%, -90%) translateY(4px);
+    }
+    100% {
+        transform: translate(-150%, -90%) translateY(-8px);
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        transform: translate(-160%, 130%) translateY(-8px);
+    }
+    50% {
+        transform: translate(-160%, 130%) translateY(4px);
+    }
+    100% {
+        transform: translate(-160%, 130%) translateY(-8px);
+    }
+}
+
+@keyframes bounce4 {
+    0% {
+        transform: translate(-50%, 30%) translateY(-8px);
+    }
+    50% {
+        transform: translate(-50%, 30%) translateY(4px);
+    }
+    100% {
+        transform: translate(-50%, 30%) translateY(-8px);
+    }
+}
+
+@keyframes bounce5 {
+    0% {
+        transform: translate(150%, -130%) translateY(-8px);
+    }
+    50% {
+        transform: translate(150%, -130%) translateY(4px);
+    }
+    100% {
+        transform: translate(150%, -130%) translateY(-8px);
+    }
+} */
+
 
 
 /* section02 ------------------------------------------------------------------------- */
@@ -221,6 +274,7 @@ body {
 .A-photo01 {
     width: 30vw;
     border-top-left-radius: 300px;
+    /* border-top-left-radius: 275px; */
     border-top-right-radius: 300px;
 }
 
@@ -248,8 +302,8 @@ body {
     justify-content: center;
     font-family: "Poppins";
     overflow: hidden;
-    position: relative;
     /* cursor: Default; */
+    position: relative;
 }
 
 .About02 {
@@ -392,6 +446,7 @@ body {
 
 .sns__wrap  img {
     width: 3vw;
+    /* margin: 0 auto; */
 }
 
 .sns__wrap  .sns {
@@ -401,6 +456,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: width .6s cubic-bezier(.645,.045,.355,1);
+    /* animation: hv-2 .6s cubic-bezier(.645,.045,.355,1) forwards; */
 }
 
 .github {
@@ -415,7 +471,25 @@ body {
 
 .sns__wrap  .sns:hover {
     width: 140%;
+    /* animation: hv-1 .6s cubic-bezier(.645,.045,.355,1) forwards; */
 }
+
+/* @keyframes hv-1 {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 120%;
+    }
+}
+@keyframes hv-2 {
+    from {
+        width: 120%;
+    }
+    to {
+        width: 100%;
+    }
+} */
 
 
 @media (max-width:960px){
