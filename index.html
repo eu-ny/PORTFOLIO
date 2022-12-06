@@ -345,22 +345,7 @@
         </div>
     </section>
     <!-- //section08 -->
-    <section id="section08">
-        <div class="musicPlayer-wrap">
-            <div class="inner">
-                <iframe src="music.html" frameborder="0" scrolling="no"></iframe>
-            </div>
-        </div>
-        <div class="music-desc">
-            <h2 class="music-tit">MUSIC<br> PLAYER</h2>
-            <p class="m-desc">
-                안녕하세요 저는 이하은입니다.
-                배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
-                그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도 복습하고 새로운 것들합니다.
-            </p>
-        </div>
-    </section>
-    <!-- //section08 -->
+
     <section id="section08">
         <div class="musicPlayer-wrap">
             <div class="inner">
@@ -378,14 +363,30 @@
     </section>
     <!-- //section08 -->
 
-    <section id="section09">
-        <div class="effect__wrap01">
-            <div class="effect__section01 effect___inner01">
-                <div class="back-tit4">
-                    <span>MOUSE EFFECT</span>
-                    <span>MOUSE EFFECT</span>
-                </div>
-        
+    <section id="section08">
+        <div class="musicPlayer-wrap">
+            <div class="inner">
+                <iframe src="music.html" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="music-desc">
+            <h2 class="music-tit">MUSIC<br> PLAYER</h2>
+            <p class="m-desc">
+                안녕하세요 저는 이하은입니다.
+                배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
+                그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도 복습하고 새로운 것들합니다.
+            </p>
+        </div>
+    </section>
+    <!-- //section08 -->
+
+    <section id="section09" class="effect">
+        <div class="effect__wrap">
+            <div class="back-tit4 textMove">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="effect__section effect___inner01">
                 <div class="e-text-wrap">
                     <span class="e-small-tit">
                         JAVASCRIPT
@@ -399,13 +400,49 @@
                     <img src="./assets/images/iPad01.png" alt="i-pad">
                 </figure>
             </div>
+
+            <div class="effect__section effect___inner02">
+                <!-- <div class="back-tit4">
+                    <span>PARALLAX EFFECT</span>
+                    <span>PARALLAX EFFECT</span>
+                </div> -->
+        
+                <div class="e-text-wrap pink">
+                    <span class="e-small-tit pink">
+                        JAVASCRIPT
+                    </span>
+                    <h2 class="e-title pink">PARALLAX <br> EFFECT</h2>
+                </div>
+                <figure class="i-pad">
+                    <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/parallaxEffect04" frameborder="0"></iframe>
+                    </div>
+                    <img src="./assets/images/iPad01.png" alt="i-pad">
+                </figure>
+            </div>
+
+            <div class="effect__section effect___inner03">
+                <div class="e-text-wrap">
+                    <span class="e-small-tit yellow">
+                        JAVASCRIPT
+                    </span>
+                    <h2 class="e-title yellow">SLIDER <br> EFFECT</h2>
+                </div>
+                <figure class="i-pad">
+                    <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/sliderEffect03" frameborder="0"></iframe>
+                    </div>
+                    <img src="./assets/images/iPad01.png" alt="i-pad">
+                </figure>
+            </div>
+
         </div>
     </section>
     <!-- //section09 -->
 
-    <section id="section10">
-        <div class="effect__wrap02">
-            <div class="effect__section02 effect___inner02">
+    <!-- <section id="section10">
+        <div class="effect__wrap">
+            <div class="effect__section effect___inner02">
                 <div class="back-tit4">
                     <span>PARALLAX EFFECT</span>
                     <span>PARALLAX EFFECT</span>
@@ -425,12 +462,12 @@
                 </figure>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- //section10 -->
 
-    <section id="section11">
+    <!-- <section id="section11">
         <div class="effect__wrap03">
-            <div class="effect___inner03">
+            <div class="effect__section effect___inner03">
                 <div class="back-tit4">
                     <span>SLIDER EFFECT</span>
                     <span>SLIDER EFFECT</span>
@@ -450,20 +487,22 @@
                 </figure>
             </div>
         </div>
-    </section>
+    </section> -->
      <!-- //section11 -->
 
      <section id="section12">
         <div>
             <p class="topBtn">back on top</p>
-            <button>click</button>
+            <button class="scrollTopBtn">click</button>
         </div>
         <div>
             <p>
                 Would you like<br>
                 to contact me?
             </p>
-            <button>click</button>
+            <button class="email">
+                click
+            </button>
         </div>
     </section>
 
@@ -494,48 +533,36 @@
         scroll();
 
         {
-            gsap.registerPlugin(ScrollTrigger);
-            // const intro = document.querySelector
+            // gsap.registerPlugin(ScrollTrigger);
+            // // const intro = document.querySelector
 
-            ScrollTrigger.create({
-                trigger: ".it01",
-                start: "top 0%",
-                end: "bottom 0%",
-                markers: true,
-                toggleClass: { targets: ".Intro-text", className: "hv-e01"},
+            // ScrollTrigger.create({
+            //     trigger: ".it01",
+            //     start: "top 0%",
+            //     end: "bottom 0%",
+            //     markers: true,
+            //     toggleClass: { targets: ".Intro-text", className: "hv-e01"},
 
-            })
+            // })
         }
 
 
-        // gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);
 
-        // const effect01 = gsap.utils.toArray(".effect__section01");
-        // const effect02 = gsap.utils.toArray(".effect__section02");
-        // const effect03 = gsap.utils.toArray(".section11");
+        const effect = gsap.utils.toArray(".effect__section");
+        const effect2= gsap.utils.toArray(".effect__section2");
 
-        // gsap.to(effect01, {
-        //     // xPercent: -100 * (effect01.length -1),
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: ".effect__wrap01",
-        //         pin: true,
-        //         scrub: 1,
-        //         end: "bottom",
-        //         markers: true,
-        //     }
-        // });
-        // gsap.to(effect02, {
-        //     // xPercent: -100 * (effect02.length -1),
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: ".effect__wrap02",
-        //         pin: true,
-        //         scrub: 1,
-        //         // end: "+=4000",
-        //         markers: true,
-        //     }
-        // });
+        gsap.to(effect, {
+            xPercent: -110 * (effect.length -1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".effect",
+                pin: true,
+                scrub: 1,
+                end: "+=8000",
+                markers: true,
+            }
+        });
 
         //Intro
         {
