@@ -571,8 +571,8 @@
 }
 .back-tit4 {
     position: absolute;
-    top: 50%;
-    transform: translate(0%, -40%) rotate(5deg);
+    top: 58%;
+    transform: translate(0%, -50%) rotate(5deg);
     font-size: 25vw;
     -webkit-text-stroke: 1px #7c30a232;
     color: transparent;
@@ -586,7 +586,20 @@
 .back-tit4-2 {
     position: absolute;
     top: 50%;
-    transform: translate(0%, -60%) rotate(5deg);
+    transform: translate(0%, -160%) rotate(5deg);
+    font-size: 25vw;
+    -webkit-text-stroke: 1px #7c30a232;
+    color: transparent;
+    font-weight: 600;
+    line-height: 0.8;
+    text-align: center;
+    letter-spacing: 2vw;
+    white-space: nowrap;
+}
+.back-tit4-3 {
+    position: absolute;
+    top: 40%;
+    transform: translate(0%, 160%) rotate(5deg);
     font-size: 25vw;
     -webkit-text-stroke: 1px #7c30a232;
     color: transparent;
