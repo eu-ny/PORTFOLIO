@@ -616,8 +616,22 @@
                 })
             })
 
-            // var t1 = new TimelineMax({delay:1})
-            // t1.to(".it01", 0.5, {opacity:1,})
+            // gsap.fromTo(".A1-photo",{ y: -100, opacity: 0 },
+            //     {
+            //         delay: 1,
+            //         opacity: 1,
+            //         y: 0,
+            //         duration: 1,
+            //         ease: "bounce",
+            //         scrollTrigger: {
+            //             trigger: ".A1-photo",
+            //             scrub: 1,
+            //             start: "-=500",
+            //             end: "+=100",
+            //         },
+            //     }
+            // );
+
 
         }
 
@@ -714,10 +728,10 @@
                     trigger: ".effectCont",
                     pin: true,
                     pinSpacing: true,
-                    scrub: 1,
+                    scrub: 0.5,
                     end: "+=8000",
                     pin: true,
-                    snap: 1 / (effect.length - 1),
+                    // snap: 1 / (effect.length - 1),
                     markers: true,
                 },
                 duration: 5, 
@@ -745,6 +759,12 @@
                 let iconEffect2 = (scrollTop - intro.offsetTop) * 0.14;
                 let iconEffect3 = (scrollTop - intro.offsetTop) * 0.1;
                 let iconEffect4 = (scrollTop - intro.offsetTop) * 0.18;
+
+                // var t1 = gsap.timeline({delay:0.5})
+                //     t1.to(".it01", 0.5, {opacity:1,})
+                //     t1.to(".it02", 0.5, {opacity:1,})
+                //     t1.to(".it03", 0.5, {opacity:1,})
+
 
                 gsap.to(introIcon01, {
                     duration: 1, 
@@ -778,7 +798,8 @@
                 
                 if((introText01.offsetTop + 50)  >= scrollTop){
                     introIcon03.classList.remove("iconZindex");
-                }else{
+                }else{            const introIcon02 = document.querySelector(".intro-icon02");
+    
                     introIcon03.classList.add("iconZindex");
                 }
                 

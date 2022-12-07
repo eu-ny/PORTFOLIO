@@ -96,9 +96,14 @@ body {
 
 .Intro-textBox {
     /* position: relative; */
+    /* visibility: hidden;
+    opacity: 0;
+    will-change: transform, opacity; */
 }
 
-/* .it01 {
+/* .it01,
+.it02,
+.it03 {
     opacity: 0;
 } */
 
