@@ -35,7 +35,7 @@ body {
 #section01 {
     background-color: #f8dede;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,6 +56,7 @@ body {
     color: transparent;
     opacity: 0.2;
     z-index: -1;
+    /* overflow: hidden; */
 }
 
 .cursor01 {

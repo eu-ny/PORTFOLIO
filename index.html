@@ -11,7 +11,16 @@
     <header id="header">
         <span class="scrollTop"></span>
         <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
-        <img src="./assets/images/menu01.svg" alt="menu" class="menu">
+        <nav>
+            <ul>
+                <li><a href="#section02">ABOUT</a></li>
+                <li><a href="#section04">SITE</a></li>
+                <li><a href="#section08">game</a></li>
+                <li><a href="#section09">effect</a></li>
+                <li><a href="#section12">contact</a></li>
+            </ul>
+        </nav>
+        <!-- <img src="./assets/images/menu01.svg" alt="menu" class="menu"> -->
     </header>
     <!-- //header -->
 
@@ -62,13 +71,13 @@
         <h2 class="ir">About01</h2>
 
         <div class="About-text01">
-            <img src="./assets/icon/about01.png" alt="전구" class="about-icon01">
+            <img src="./assets/icon/about01.png" alt="전구" class="about-icon01 ai01">
             <p class="tit">
                 MY NAME IS <br>
                 LEE HA EUN <br>
                 1998.11.09
             </p>
-            <p class="desc">
+            <p class="desc desc1">
                 안녕하세요 저는 이하은입니다. <br>
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
@@ -85,13 +94,13 @@
         </figure>
 
         <div class="About-text02">
-            <img src="./assets/icon/about02.png" alt="drawing" class="about-icon02">
+            <img src="./assets/icon/about02.png" alt="drawing" class="about-icon02 ai01">
             <p class="tit">
                 I MAJORED<br>
                 IN WESTERN<br>
                 PAINTING
             </p>
-            <p class="desc">
+            <p class="desc desc1">
                 안녕하세요 저는 이하은입니다. <br>
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
@@ -109,7 +118,7 @@
             <p class="tit">
                 A DEVELOPER !
             </p>
-            <p class="desc">
+            <p class="desc desc2">
                 안녕하세요 저는 이하은입니다. <br>
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
@@ -131,7 +140,7 @@
                 GROW<br>
                 FURTHER
             </p>
-            <p class="desc">
+            <p class="desc desc2">
                 안녕하세요 저는 이하은입니다. <br>
                 배움에는 끝이 없다' 라는 말이 있듯이 공부도 100%  라는 완벽한 수치는 없다고 생각합니다. 
                 그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도 복습하고 새로운 것들합니다.
@@ -350,6 +359,9 @@
                 <iframe src="music.html" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
+        <figure class="stage">
+            <img src="./assets/images/stage.png" alt="stage">
+        </figure>
         <div class="music-desc">
             <h2 class="music-tit">MUSIC<br> PLAYER</h2>
             <p class="m-desc">
@@ -515,7 +527,7 @@
      <section id="section12">
         <div>
             <p class="topBtn">back on top</p>
-            <button class="scrollTopBtn">click</button>
+            <button class="scrollTopBtn"><a href="#section01">click</a></button>
         </div>
         <div>
             <p>
@@ -523,7 +535,9 @@
                 to contact me?
             </p>
             <button class="email">
-                click
+                <a href="#">
+                    click
+                </a>
             </button>
         </div>
     </section>
@@ -632,7 +646,7 @@
             });
 
             gsap.to(".A1-photo", {
-                yPercent: -50,
+                yPercent: -30,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -642,7 +656,7 @@
             });
 
             gsap.to(".A2-photo", {
-                yPercent: -50,
+                yPercent: -30,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About02",
@@ -651,7 +665,7 @@
                 }, 
             });
             gsap.to(".A-title01", {
-                yPercent: -100,
+                yPercent: -50,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -660,10 +674,29 @@
                 }, 
             });
             gsap.to(".A-title02", {
-                yPercent: -100,
+                yPercent: -50,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About02",
+                    start: "top",
+                    scrub: true
+                }, 
+            });
+   
+            gsap.to(".desc1", {
+                yPercent: -20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "top",
+                    scrub: true
+                }, 
+            });
+            gsap.to(".ai01", {
+                yPercent: -10,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".About01",
                     start: "top",
                     scrub: true
                 }, 
@@ -743,7 +776,7 @@
 
                 gsap.to(introText, {duration: .8, y: -iconEffect3, ease: "power4.out"});
                 
-                if(introText01.offsetTop === scrollTop){
+                if((introText01.offsetTop + 50)  >= scrollTop){
                     introIcon03.classList.remove("iconZindex");
                 }else{
                     introIcon03.classList.add("iconZindex");
