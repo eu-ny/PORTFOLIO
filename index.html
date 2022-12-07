@@ -13,7 +13,7 @@
         <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
         <nav>
             <ul>
-                <li><a href="#section02">ABOUT</a></li>
+                <li><a href="#section01">ABOUT</a></li>
                 <li><a href="#section04">SITE</a></li>
                 <li><a href="#section08">game</a></li>
                 <li><a href="#section09">effect</a></li>
@@ -24,7 +24,7 @@
     </header>
     <!-- //header -->
 
-    <section id="section01" class="intro gsap01">
+    <section id="section01" class="intro">
         <h2 class="ir">Intro</h2>
 
         <div class="cursor01"></div>
@@ -72,7 +72,7 @@
 
         <div class="About-text01">
             <img src="./assets/icon/about01.png" alt="전구" class="about-icon01 ai01">
-            <p class="tit">
+            <p class="tit tit1">
                 MY NAME IS <br>
                 LEE HA EUN <br>
                 1998.11.09
@@ -95,7 +95,7 @@
 
         <div class="About-text02">
             <img src="./assets/icon/about02.png" alt="drawing" class="about-icon02 ai01">
-            <p class="tit">
+            <p class="tit tit1">
                 I MAJORED<br>
                 IN WESTERN<br>
                 PAINTING
@@ -593,45 +593,28 @@
                         top: e.pageY -5
                 });
 
-                IntroText.forEach( target => {
-                    target.addEventListener("mouseenter", () => {
-                        target.classList.add("hv-e01")
-                        cursor.classList.add("active");
-                    });
+                // IntroText.forEach( target => {
+                //     target.addEventListener("mouseenter", () => {
+                //         target.classList.add("hv-e01")
+                //         cursor.classList.add("active");
+                //     });
 
-                    target.addEventListener("mouseleave", () => {
-                        target.classList.remove("hv-e01")
-                        cursor.classList.remove("active");
-                    });  
-                })
+                //     target.addEventListener("mouseleave", () => {
+                //         target.classList.remove("hv-e01")
+                //         cursor.classList.remove("active");
+                //     });  
+                // })
 
-                IntroIcon.forEach( target => {
-                    target.addEventListener("mouseenter", () => {
-                        cursor.classList.add("active");
-                    });
+                // IntroIcon.forEach( target => {
+                //     target.addEventListener("mouseenter", () => {
+                //         cursor.classList.add("active");
+                //     });
 
-                    target.addEventListener("mouseleave", () => {
-                        cursor.classList.remove("active");
-                    });  
-                })
+                //     target.addEventListener("mouseleave", () => {
+                //         cursor.classList.remove("active");
+                //     });  
+                // })
             })
-
-            // gsap.fromTo(".A1-photo",{ y: -100, opacity: 0 },
-            //     {
-            //         delay: 1,
-            //         opacity: 1,
-            //         y: 0,
-            //         duration: 1,
-            //         ease: "bounce",
-            //         scrollTrigger: {
-            //             trigger: ".A1-photo",
-            //             scrub: 1,
-            //             start: "-=500",
-            //             end: "+=100",
-            //         },
-            //     }
-            // );
-
 
         }
 
@@ -640,7 +623,8 @@
             gsap.utils.toArray(".gsap01").forEach((gsap01, i) => {
                 ScrollTrigger.create({
                     trigger: gsap01,
-                    // snap: 1,
+                    delay: 1,
+                    snap: 1,
                     start: "top",
                     pin: true, 
                     pinSpacing: false,
@@ -648,19 +632,8 @@
                 });
             });
 
-            gsap.to(".About02", {
-                scrollTrigger: {
-                    trigger: ".About02",
-                    toggleActions: "restart pause reverse pause",
-                    toggleClass: {targets: ".About02", className: "About02_grid"},
-                }, 
-                duration: 1, 
-                backgroundColor: "#FEF5F5", 
-                ease: "none",
-            });
-
             gsap.to(".A1-photo", {
-                yPercent: -30,
+                yPercent: -10,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -668,9 +641,71 @@
                     scrub: true
                 }, 
             });
+            
+            gsap.fromTo(".A1-photo", 
+            { y: -50, opacity: 0,},
+            {
+                y: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "-=400",
+                    end: "-=50",
+                    scrub: true,
+                }, 
+            });
+            gsap.fromTo(".A-title01", 
+            { y: -50, opacity: 0, duration:2, ease: "power2.out",},
+            {
+                y: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "-=100",
+                    end: "-=50",
+                    scrub: true,
+                }, 
+            });
+
+            var t1 = gsap.timeline({delay:2})
+            t1.from(".tit1", 
+            {   
+                y: -100,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "-=100",
+                    end: "+=100",
+                    scrub: true,
+                }, 
+            },0.5);
+            
+            t1.from(".desc1", 
+            {   
+                y: -100,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "-=100",
+                    end: "+=100",
+                    scrub: true,
+                }, 
+            },1);
+
+            t1.from(".ai01", 
+            {   
+                y: -100,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "-=100",
+                    end: "+=100",
+                    scrub: true,
+                }, 
+            },1);
 
             gsap.to(".A2-photo", {
-                yPercent: -30,
+                yPercent: -10,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About02",
@@ -678,8 +713,9 @@
                     scrub: true
                 }, 
             });
+
             gsap.to(".A-title01", {
-                yPercent: -50,
+                yPercent: -60,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -688,7 +724,7 @@
                 }, 
             });
             gsap.to(".A-title02", {
-                yPercent: -50,
+                yPercent: -60,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About02",
@@ -729,7 +765,7 @@
                     pin: true,
                     pinSpacing: true,
                     scrub: 0.5,
-                    end: "+=8000",
+                    end: "+=6000",
                     pin: true,
                     // snap: 1 / (effect.length - 1),
                     markers: true,
@@ -794,7 +830,7 @@
 
                 gsap.to(introBackText, {duration: 1, y: -iconEffect4, ease: "power4.out"});
 
-                gsap.to(introText, {duration: .8, y: -iconEffect3, ease: "power4.out"});
+                gsap.to(introText, {duration: .8, y: iconEffect3, ease: "power4.out"});
                 
                 if((introText01.offsetTop + 50)  >= scrollTop){
                     introIcon03.classList.remove("iconZindex");
