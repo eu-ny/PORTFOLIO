@@ -527,7 +527,7 @@
      <section id="section12">
         <div>
             <p class="topBtn">back on top</p>
-            <button class="scrollTopBtn"><a href="#section01">click</a></button>
+            <button class="scrollTopBtn">click</button>
         </div>
         <div>
             <p>
@@ -535,7 +535,7 @@
                 to contact me?
             </p>
             <button class="email">
-                <a href="#">
+                <a href="mailto:praise1109@naver.com">
                     click
                 </a>
             </button>
@@ -809,7 +809,12 @@
 
         }
 
-
+        //footer
+        {
+            document.querySelector(".scrollTopBtn").addEventListener("click", ()=> {
+                window.scrollTo({left: 0, top: 0, behavior:"smooth"}); //scrollTo : 절대 기준의 스크롤 값 설정으로 0px의 최상단을 기준으로 설정하는 것이다. (By는 현재 스크롤 값 위치와 이동하려는 스크롤위차값의 거리만 설정.)
+            });
+        }
     </script>
 </body>
 </html>
