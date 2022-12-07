@@ -601,6 +601,10 @@
                     });  
                 })
             })
+
+            // var t1 = new TimelineMax({delay:1})
+            // t1.to(".it01", 0.5, {opacity:1,})
+
         }
 
         // ABOUT
@@ -608,12 +612,61 @@
             gsap.utils.toArray(".gsap01").forEach((gsap01, i) => {
                 ScrollTrigger.create({
                     trigger: gsap01,
-                    snap: 1,
+                    // snap: 1,
                     start: "top",
                     pin: true, 
                     pinSpacing: false,
                     // toggleActions: "resume pause reset pause"
                 });
+            });
+
+            gsap.to(".About02", {
+                scrollTrigger: {
+                    trigger: ".About02",
+                    toggleActions: "restart pause reverse pause",
+                    toggleClass: {targets: ".About02", className: "About02_grid"},
+                }, 
+                duration: 1, 
+                backgroundColor: "#FEF5F5", 
+                ease: "none",
+            });
+
+            gsap.to(".A1-photo", {
+                yPercent: -50,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "top",
+                    scrub: true
+                }, 
+            });
+
+            gsap.to(".A2-photo", {
+                yPercent: -50,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "top",
+                    scrub: true
+                }, 
+            });
+            gsap.to(".A-title01", {
+                yPercent: -100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".About01",
+                    start: "top",
+                    scrub: true
+                }, 
+            });
+            gsap.to(".A-title02", {
+                yPercent: -100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "top",
+                    scrub: true
+                }, 
             });
         }
 
@@ -652,26 +705,43 @@
                 const introIcon04 = document.querySelector(".intro-icon04");
                 const introIcon05 = document.querySelector(".intro-icon05");
                 const introText01 = document.querySelector(".Intro-text.it01");
-                const introText02 = document.querySelector(".Intro-text.it02");
-                const introText03 = document.querySelector(".Intro-text.it03");
+                const introText = document.querySelector(".Intro-textBox");
                 const introBackText = document.querySelector(".intro-back-tit");
 
-                let iconEffect1 = (scrollTop - intro.offsetTop) * 1.4;
-                let iconEffect2 = (scrollTop - intro.offsetTop) * 0.15;
-                let iconEffect3 = (scrollTop - intro.offsetTop) * 0.18;
-                let iconEffect4 = (scrollTop - intro.offsetTop) * .3;
+                let iconEffect1 = (scrollTop - intro.offsetTop) * 1.8;
+                let iconEffect2 = (scrollTop - intro.offsetTop) * 0.14;
+                let iconEffect3 = (scrollTop - intro.offsetTop) * 0.1;
+                let iconEffect4 = (scrollTop - intro.offsetTop) * 0.18;
 
-                gsap.to(introIcon01, {duration: .3, y: -iconEffect2, ease: "power4.out"});
-                gsap.to(introIcon02, {duration: .3, y: -iconEffect2, ease: "power4.out"});
-                gsap.to(introIcon03, {duration: .6, y: -iconEffect1, ease: "power4.out"});
-                gsap.to(introIcon04, {duration: .3, y: -iconEffect2, ease: "power4.out"});
-                gsap.to(introIcon05, {duration: .3, y: -iconEffect2, ease: "power4.out"});
+                gsap.to(introIcon01, {
+                    duration: 1, 
+                    y: -iconEffect2, 
+                    ease: "power1.out"
+                });
+                gsap.to(introIcon02, {
+                    duration: 1.5, 
+                    y: -iconEffect2, 
+                    ease: "power1.out"
+                });
+                gsap.to(introIcon03, {
+                    duration: .8, 
+                    y: -iconEffect1, 
+                    ease: "power1.out"
+                });
+                gsap.to(introIcon04, {
+                    duration: .2, 
+                    y: -iconEffect2, 
+                    ease: "power1.out"
+                });
+                gsap.to(introIcon05, {
+                    duration: 1.3,
+                    y: -iconEffect2, 
+                    ease: "power1.out"
+                });
 
-                gsap.to(introBackText, {duration: .3, y: -iconEffect4, ease: "power4.out"});
+                gsap.to(introBackText, {duration: 1, y: -iconEffect4, ease: "power4.out"});
 
-                gsap.to(introText01, {duration: .6, y: -iconEffect3, ease: "power4.out"});
-                gsap.to(introText02, {duration: .4, y: -iconEffect3, ease: "power4.out"});
-                gsap.to(introText03, {duration: .2, y: -iconEffect3, ease: "power4.out"});
+                gsap.to(introText, {duration: .8, y: -iconEffect3, ease: "power4.out"});
                 
                 if(introText01.offsetTop === scrollTop){
                     introIcon03.classList.remove("iconZindex");

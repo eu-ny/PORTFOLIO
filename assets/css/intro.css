@@ -47,7 +47,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-48%, -50%) rotate(28deg);
+    transform: translate(-50%, -50%) rotate(28deg);
     transform-origin: center center;
     font-size: 24vw;
     line-height: 1;
@@ -59,6 +59,7 @@ body {
 }
 
 .cursor01 {
+    filter: invert(100%);
     position: absolute;
     left: 0;
     top: 0;
@@ -66,7 +67,8 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #fff;
+    background: #00000090;
+    border: 5px solid #00000090;
     user-select: none;
     pointer-events: none;
     transition: transform 0.5s ease-in-out;
@@ -74,10 +76,7 @@ body {
 
 .cursor01.active {
     transform: scale(8);
-}
-
-.Intro-textBox {
-    position: relative;
+    background: #00000000;
 }
 
 .Intro-text {
@@ -91,14 +90,22 @@ body {
 }
 
 .hv-e01 {
-    letter-spacing: 8px;
+    letter-spacing: 4px;
 }
+
+.Intro-textBox {
+    /* position: relative; */
+}
+
+/* .it01 {
+    opacity: 0;
+} */
 
 .intro-icon01 {
     position: absolute;
     width: 40%;
     top: -30%;
-    left: -28%;
+    left: -20%;
     transform: translate(-13%, -149%);
 }
 
@@ -106,7 +113,8 @@ body {
     position: absolute;
     width: 24%;
     left: -28%;
-    bottom: 2%;
+    top: 75%;
+    /* bottom: 2%; */
     /* transform: translate(-160%, 130%); */
 }
 
@@ -125,10 +133,11 @@ body {
 
 .intro-icon04 {
     position: absolute;
-    width: 30%;
-    right: -22%;
-    bottom: 5%;
-    z-index: -1;
+    width: 32%;
+    right: -26%;
+    top: 75% ;
+    /* bottom: 5%; */
+    /* z-index: -1; */
 }
 
 .intro-icon05 {
@@ -140,7 +149,7 @@ body {
 }
 
 
-/* section02 ------------------------------------------------------------------------- */
+/* section02 어바웃 ------------------------------------------------------------------------- */
 #section02 {
     background-color: #67353b;
     width: 100%;
@@ -159,6 +168,7 @@ body {
         linear-gradient(to right, transparent 5px, #67353b 5px),
         linear-gradient(to bottom, #ffffff20 1px, transparent 1px);
 }
+
 .About-text01 {
     position: absolute;
     top: 25%;
@@ -242,6 +252,7 @@ body {
 /* section03 ------------------------------------------------------------------------- */
 #section03 {
     background-color: #FEF5F5;
+    /* background-color: #67353b; */
     height: 100vh;
     display: flex;
     align-items: center;

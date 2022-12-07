@@ -599,8 +599,8 @@
 }
 .back-tit4-3 {
     position: absolute;
-    top: 40%;
-    transform: translate(0%, 160%) rotate(5deg);
+    top: 50%;
+    transform: translate(30%, 160%) rotate(5deg);
     font-size: 25vw;
     -webkit-text-stroke: 1px #7c30a232;
     color: transparent;
