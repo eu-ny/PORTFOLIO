@@ -114,8 +114,8 @@
         <h2 class="ir">ABOUT02</h2>
 
         <div class="About-text03">
-            <img src="./assets/icon/intro05.png" alt="전구" class="about-icon03">
-            <p class="tit">
+            <img src="./assets/icon/intro05.png" alt="전구" class="about-icon03 ai02">
+            <p class="tit tit2">
                 A DEVELOPER !
             </p>
             <p class="desc desc2">
@@ -135,8 +135,8 @@
         </figure>
 
         <div class="About-text04">
-            <img src="./assets/icon/intro01.png" alt="drawing" class="about-icon04">
-            <p class="tit">
+            <img src="./assets/icon/intro01.png" alt="drawing" class="about-icon04 ai02">
+            <p class="tit tit2">
                 GROW<br>
                 FURTHER
             </p>
@@ -524,7 +524,23 @@
     </section> -->
      <!-- //section11 -->
 
-     <section id="section12">
+    <footer id="footer">
+       <div class="sns__wrap">
+        <figure class="github sns">
+            <a href="#"><img src="./assets/icon/github.svg" alt="github"></a>
+        </figure>
+        <figure class="instargram sns">
+            <a href="#"><img src="./assets/icon/Instagram.svg" alt="Instagram"></a>
+        </figure>
+        <figure class="tistory sns">
+            <a href="#"><img src="./assets/icon/tistory.svg" alt="tistory"></a>
+        </figure>
+        <!-- <figure class="codepen"></figure> -->
+       </div>
+    </footer>
+    <!-- //footer -->
+
+    <section id="section12">
         <div>
             <p class="topBtn">back on top</p>
             <button class="scrollTopBtn">click</button>
@@ -543,21 +559,6 @@
     </section>
     <!-- //section12 -->
 
-    <footer id="footer">
-       <div class="sns__wrap">
-        <figure class="github sns">
-            <a href="#"><img src="./assets/icon/github.svg" alt="github"></a>
-        </figure>
-        <figure class="instargram sns">
-            <a href="#"><img src="./assets/icon/Instagram.svg" alt="Instagram"></a>
-        </figure>
-        <figure class="tistory sns">
-            <a href="#"><img src="./assets/icon/tistory.svg" alt="tistory"></a>
-        </figure>
-        <!-- <figure class="codepen"></figure> -->
-       </div>
-    </footer>
-    <!-- //footer -->
 
     <script src="./assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -568,7 +569,7 @@
 
         // 부드러운 움직임
        { const lenis = new Lenis({
-            duration: 1.5,
+            duration: 3,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
         });
 
@@ -623,7 +624,7 @@
             gsap.utils.toArray(".gsap01").forEach((gsap01, i) => {
                 ScrollTrigger.create({
                     trigger: gsap01,
-                    delay: 1,
+                    delay: 9,
                     snap: 1,
                     start: "top",
                     pin: true, 
@@ -633,7 +634,7 @@
             });
 
             gsap.to(".A1-photo", {
-                yPercent: -10,
+                yPercent: -5,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -654,6 +655,7 @@
                     scrub: true,
                 }, 
             });
+
             gsap.fromTo(".A-title01", 
             { y: -50, opacity: 0, duration:2, ease: "power2.out",},
             {
@@ -667,7 +669,33 @@
                 }, 
             });
 
-            var t1 = gsap.timeline({delay:2})
+            gsap.fromTo(".A2-photo", 
+            { y: -50, opacity: 0,},
+            {
+                y: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "-=800",
+                    end: "-=50",
+                    scrub: true,
+                }, 
+            });
+
+            gsap.fromTo(".A-title02", 
+            { y: -50, opacity: 0, duration:2, ease: "power2.out",},
+            {
+                y: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "-=100",
+                    end: "-=50",
+                    scrub: true,
+                }, 
+            });
+
+            var t1 = gsap.timeline()
             t1.from(".tit1", 
             {   
                 // y: -100,
@@ -682,19 +710,21 @@
                     end: "+=100",
                     scrub: true,
                 }, 
-            },0.5);
+            },1);
             
             t1.from(".desc1", 
             {   
-                y: 100,
                 opacity: 0,
+                yPercent: 150,
+                duration: 5,
+                ease: "power4",
                 scrollTrigger: {
                     trigger: ".About01",
                     start: "-=100",
                     end: "+=100",
                     scrub: true,
                 }, 
-            },1);
+            },3);
 
             t1.from(".ai01", 
             {   
@@ -706,10 +736,65 @@
                     end: "+=100",
                     scrub: true,
                 }, 
+            },3);
+
+            t1.from(".tit2", 
+            {   
+                // y: -100,
+                opacity: 0,
+                duration: 3,
+                yPercent: 100,
+                ease: "power4",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "-=100",
+                    end: "+=100",
+                    scrub: true,
+                }, 
             },1);
+            
+            t1.from(".desc2", 
+            {   
+                opacity: 0,
+                yPercent: 150,
+                duration: 5,
+                ease: "power4",
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "-=100",
+                    end: "+=100",
+                    scrub: true,
+                }, 
+            },3);
+
+            t1.from(".ai02", 
+            {   
+                y: 100,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: ".About02",
+                    start: "-=100",
+                    end: "+=100",
+                    scrub: true,
+                }, 
+            },3);
+
+            // t1.from(".A1-photo", 
+            // {   
+            //     scale:1.2,
+            //     duration:10,
+            //     ease:"power4.out",
+            //     scrollTrigger: {
+            //         trigger: ".About01",
+            //         start: "-=300",
+            //         end: "+=100",
+            //         scrub: true
+            //     }, 
+            // },1);
 
             gsap.to(".A2-photo", {
-                yPercent: -10,
+                yPercent: -5,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About02",
@@ -719,7 +804,7 @@
             });
 
             gsap.to(".A-title01", {
-                yPercent: -60,
+                yPercent: -5,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -728,7 +813,7 @@
                 }, 
             });
             gsap.to(".A-title02", {
-                yPercent: -60,
+                yPercent: -5,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About02",
@@ -738,7 +823,31 @@
             });
    
             gsap.to(".desc1", {
-                yPercent: -20,
+                y: -5,
+                ease: "none",
+                // ease: Expo.easeOut,
+                scrollTrigger: {
+                    trigger: ".desc1",
+                    start: "top center",
+                    scrub: true,
+                    markers: true
+                }, 
+            }, 2.5);
+   
+            gsap.to(".desc2", {
+                y: -5,
+                ease: "none",
+                // ease: Expo.easeOut,
+                scrollTrigger: {
+                    trigger: ".desc2",
+                    start: "top center",
+                    scrub: true,
+                    markers: true
+                }, 
+            }, 2.5);
+            
+            gsap.to(".ai01", {
+                yPercent: -10,
                 ease: "none",
                 scrollTrigger: {
                     trigger: ".About01",
@@ -746,11 +855,11 @@
                     scrub: true
                 }, 
             });
-            gsap.to(".ai01", {
+            gsap.to(".ai02", {
                 yPercent: -10,
                 ease: "none",
                 scrollTrigger: {
-                    trigger: ".About01",
+                    trigger: ".About02",
                     start: "top",
                     scrub: true
                 }, 
@@ -768,8 +877,9 @@
                     trigger: ".effectCont",
                     pin: true,
                     pinSpacing: true,
-                    scrub: 0.5,
-                    end: "+=6000",
+                    // scrub: 0.5,
+                    scrub: 1.5,
+                    end: "+=4000",
                     pin: true,
                     // snap: 1 / (effect.length - 1),
                     markers: true,
@@ -795,7 +905,7 @@
                 const introText = document.querySelector(".Intro-textBox");
                 const introBackText = document.querySelector(".intro-back-tit");
 
-                let iconEffect1 = (scrollTop - intro.offsetTop) * 1.8;
+                let iconEffect1 = (scrollTop - intro.offsetTop) * 1;
                 let iconEffect2 = (scrollTop - intro.offsetTop) * 0.14;
                 let iconEffect3 = (scrollTop - intro.offsetTop) * 0.1;
                 let iconEffect4 = (scrollTop - intro.offsetTop) * 0.18;
@@ -819,12 +929,12 @@
                 gsap.to(introIcon03, {
                     duration: .8, 
                     y: -iconEffect1, 
-                    ease: "power1.out"
+                    ease: "power1.out",
                 });
                 gsap.to(introIcon04, {
-                    duration: .2, 
-                    y: -iconEffect2, 
-                    ease: "power1.out"
+                    duration: .6, 
+                    y: -(scrollTop - intro.offsetTop) * 0.2, 
+                    ease: "sine.out",
                 });
                 gsap.to(introIcon05, {
                     duration: 1.3,
@@ -838,8 +948,7 @@
                 
                 if((introText01.offsetTop + 50)  >= scrollTop){
                     introIcon03.classList.remove("iconZindex");
-                }else{            const introIcon02 = document.querySelector(".intro-icon02");
-    
+                }else{ 
                     introIcon03.classList.add("iconZindex");
                 }
                 
@@ -847,6 +956,17 @@
                 requestAnimationFrame(scroll);
             }
             scroll();
+
+            gsap.fromTo(".intro-icon03", 
+            { scale: 1 },
+            {
+                scale: 1.4,
+                scrollTrigger: {
+                    trigger: ".intro",
+                    start: "+=100",
+                    scrub: true,
+                }, 
+            });
         }
 
         //site desc view
