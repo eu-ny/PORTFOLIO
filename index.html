@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEEHAEUN</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <header id="header">
@@ -162,7 +162,7 @@
                 </p>
             </div>
     
-            <figure class="imac-1 cont-ani cont-ani-y">
+            <figure class="imac-1 cont-ani">
                 <img src="./assets/images/iMac01.png" alt="imac-purple">
                 <div class="imac-view .view">
                     <div class="view-cont">
@@ -193,7 +193,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="basic-cont01 cont-ani cont-ani-left">
+            <div class="basic-cont01 cont-ani cont-ani-left ">
                 <h2 class="b-site"><a href="#">BASIC SITE 02</a></h2>
                 <figure class="b-cont01-img linkView">
                     <img src="./assets/images/b-cont02.png" alt="basicSite">
@@ -250,7 +250,7 @@
                 </p>
             </div>
     
-            <figure class="imac-2 cont-ani cont-ani-y">
+            <figure class="imac-2 cont-ani">
                 <img src="./assets/images/iMac02.png" alt="imac-pink">
                 <div class="imac-view">
                     <div class="view-cont">
@@ -311,7 +311,7 @@
                 </p>
             </div>
     
-            <figure class="imac-2 cont-ani cont-ani-y">
+            <figure class="imac-2 cont-ani">
                 <img src="./assets/images/iMac03.png" alt="imac-yellow">
                 <div class="imac-view">
                     <div class="view-cont">
@@ -981,52 +981,82 @@
         }
 
         // site --------------------------------------------------------------------
-        {
-            function animateFrom(el) {
+        // {
 
-                let x = 0,
-                    y = 0
+        //     // 완쪽, 오른쪽에서 나오게 하기
+        //     function animateFrom(el) {
 
-                if(el.classList.contains("cont-ani-left")) {
-                    x = -1200;
-                    y = 0;
-                } else if (el.classList.contains("cont-ani-y")) {
-                    x = 0;
-                    y = 500;
-                }
+        //         // x와 y값을 변수로 지정
+        //         let x = 0,
+        //             y = 0
 
-                el.style.transform = "translate(" + x + "px, " + y + "px)";
+        //         // 만약 요소에 해당 클래스가 있을 경우 실행되기 : contains(클래스 찾기)
+        //         if(el.classList.contains("cont-ani-left")) {
+        //             x = -1000;
+        //             y = 0;
+        //         } else if (el.classList.contains("cont-ani-right")) {
+        //             x = 1000;
+        //             y = 0;
+        //         }
 
-                el.style.opacity = "0";
+        //         el.style.transform = "translate(" + x + "px, " + y + "px)"; // 위의 변수값이 transform 값에 들어가도록 설정하기
 
-                gsap.fromTo(el, {x: x, y: y, autoAlpha: 0}, { //처음 시작 시 발생하느 효과
-                    duration: 2, 
-                    x: 0,
-                    y: 0, 
-                    autoAlpha: 1,  //불투명도
-                    ease: "expo", 
-                    overwrite: "auto"
-                });
-            }
+        //         gsap.fromTo(el, {x: x, y: y, autoAlpha: 0}, { //처음 시작 시 발생하느 효과
+        //             duration: 1.2, 
+        //             x: 0,
+        //             y: 0, 
+        //             autoAlpha: 1,  //불투명도
+        //             ease: "expo", 
+        //             overwrite: "auto"
+        //         });
+        //     }
 
-            function hide(elem) {
-                gsap.set(elem, {autoAlpha: 0});
-            }
+        //     // 요소 숨기기!
+        //     function hide(elem) {
+        //         gsap.set(elem, {autoAlpha: 0});
+        //     }
 
-            document.addEventListener("DOMContentLoaded", function() {
+        //     // 실행문 : 문서 로딩 시 이벤트 발생시키기.
+        //     // DOMContentLoaded : HTML과 script가 로드된 시점에 발생하는 이벤트이며 onload 이벤트보다 먼저 발생한다. 빠른 실행속도가 필요할때 적합하다.
+        //     document.addEventListener("DOMContentLoaded", () => {
                 
-                gsap.utils.toArray(".cont-ani").forEach(function(elem) {
-                    hide(elem); // assure that the element is hidden when scrolled into view
+        //         gsap.utils.toArray(".cont-ani").forEach( (elem) => {
+        //             hide(elem); // 스크롤할 때 요소가 숨겨져 있는지 확인합니다
                     
-                    ScrollTrigger.create({
-                    trigger: elem,
-                    markers: true,
-                    onEnter: function() { animateFrom(elem) }, 
-                    onEnterBack: function() { animateFrom(elem, -1) },
-                    onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
-                    });
-                });
-            });
+        //             ScrollTrigger.create({
+        //             trigger: elem,
+        //             markers: true,
+        //             onEnter: () =>  { animateFrom(elem) }, 
+        //             onEnterBack: () => { animateFrom(elem, -1) }, //반복여부!
+        //             onLeave: function() { hide(elem) } // 스크롤할 때 요소가 숨겨져 있는지 확인합니다
+        //             });
+        //         });
+        //     });
+
+        // }
+           
+        {
+            let basicLeft = gsap.utils.toArray(".cont-ani-left");
+
+            basicLeft.forEach((left) => {
+                gsap
+                    .timeline({
+                        scrollTrigger: {
+                            trigger: left,
+                            start: "-=350",
+                            end: "+=400",
+                            scrub: true,
+                            markers: true
+                        }
+                    })
+
+                    .from(left, {
+                        opacity: 0,
+                        xPercent: -200,
+                        duration:2,
+                        ease:"expo"
+                    })
+            })
 
 
         }
