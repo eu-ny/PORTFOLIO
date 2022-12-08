@@ -111,7 +111,7 @@
     /* margin-bottom: -2.5%; */
 }
 
-.basic-work > .tit {
+.basic-work > .basic-tit {
     display: inline-block;
     font-family: "Tungsten";
     font-size: 28vw;
@@ -123,10 +123,10 @@
     transition: all 0.5s;
 }
 
-.basic-work > .tit:hover {
+/* .basic-work > .basic-tit:hover {
     color: transparent;
     -webkit-text-stroke: 1px #7c30a2;
-}
+} */
 
 .basic-work::before {
     content: "";
@@ -516,10 +516,10 @@
 
 .stage {
     position: absolute;
-    width: 60vw;
+    width: 52vw;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -40%, 0);
+    transform: translate3d(-50%, -39%, 0);
 }
 
 .music-desc {
@@ -543,9 +543,9 @@
 }
 
 .musicPlayer-wrap {
-    width: 22vw;
+    width: 20vw;
     border-radius: 1vw;
-    height: 76vh;
+    height: 70vh;
     background: #000000e3;
     padding: 2% 1%;
     margin-left: 25%;

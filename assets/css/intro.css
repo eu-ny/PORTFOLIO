@@ -20,11 +20,11 @@ body {
     width: 1.2vw;
     cursor: pointer;
 }
-.menu {
+/* .menu {
     width: 2.2vw;
     margin-right: 3%;
     cursor: pointer;
-}
+} */
 .scrollTop {
     margin-left: 3%;
     width: 87%;
