@@ -982,24 +982,28 @@
 
         // site --------------------------------------------------------------------
         {
-            function animateFrom(el, direction) {
-                direction = direction || 1;
+            function animateFrom(el) {
+
                 let x = 0,
-                    y = direction * 200;
+                    y = 0
+
                 if(el.classList.contains("cont-ani-left")) {
                     x = -1200;
                     y = 0;
                 } else if (el.classList.contains("cont-ani-y")) {
                     x = 0;
-                    y = 1500;
+                    y = 500;
                 }
+
                 el.style.transform = "translate(" + x + "px, " + y + "px)";
+
                 el.style.opacity = "0";
-                gsap.fromTo(el, {x: x, y: y, autoAlpha: 0}, {
+
+                gsap.fromTo(el, {x: x, y: y, autoAlpha: 0}, { //처음 시작 시 발생하느 효과
                     duration: 2, 
                     x: 0,
                     y: 0, 
-                    autoAlpha: 2, 
+                    autoAlpha: 1,  //불투명도
                     ease: "expo", 
                     overwrite: "auto"
                 });
