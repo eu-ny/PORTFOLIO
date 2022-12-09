@@ -125,7 +125,7 @@
             </p>
         </div>
     
-        <figure class="A2-photo a_ani2">
+        <figure class="A2-photo a_ani">
             <img src="./assets/imgs/LEEHAEUN02.jpg" alt="LEEHAEUN" class="A-photo02">
     
             <div class="A-title02">
@@ -244,11 +244,13 @@
 
 
         //어바웃
-        let about01 = gsap.utils.toArray(".a_ani");
-        let about02 = gsap.utils.toArray(".a_ani");
+        let about01 = gsap.utils.toArray(".A1-photo");
+        let about02 = gsap.utils.toArray(".A2-photo ");
         let at01 = gsap.utils.toArray(".at01");
+        let at02 = gsap.utils.toArray(".at02");
         const section02 = document.querySelector("#section02");
         const section03 = document.querySelector("#section03");
+
         about01.forEach((a)=> {
             gsap
                 .timeline({
@@ -262,12 +264,12 @@
 
                 .from(a, {
                     autoAlpha: 0,
-                    yPercent: 10,
-                    duration: 2,
+                    duration: 1,
                     ease: Expo
                 })
 
         })
+
         about02.forEach((a)=> {
             gsap
                 .timeline({
@@ -281,8 +283,7 @@
 
                 .from(a, {
                     autoAlpha: 0,
-                    yPercent: 10,
-                    duration: 2,
+                    duration: 1,
                     ease: Expo
                 })
 
@@ -315,6 +316,22 @@
                 start:"-=100"
             } 
         })
+
+        at02.forEach((a)=> {
+            gsap
+                .timeline({
+                    scrollTrigger: {
+                        trigger: section03,
+                        start:"top top",
+                    }
+                })
+                .from(a, {
+                    autoAlpha: 0,
+                    duration: 2,
+                    ease:"expo.out"
+                })
+        })
+
         gsap.from(".A-title02 span", {
             duration: 1, 
             x: 0, 
