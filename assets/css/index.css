@@ -106,17 +106,23 @@ section {
     position: absolute;
 }
 
+.it_r {
+    opacity: 0;
+}
+
 .it_icon01 {
     width: 16vw;
     top: -14%;
     left: -28%;
     z-index: -1;
+    transform: rotate(90deg);
 }
 
 .it_icon02 {
     width: 11vw;
     top: 0%;
     right: -22%;
+    transform: rotate(-90deg);
 }
 
 .it_icon03 {
@@ -128,17 +134,19 @@ section {
 }
 
 .it_icon04 {
-    width: 18vw;
+    width: 17vw;
     bottom: 0;
-    right: -35%;
+    right: -30%;
     z-index: -1;
+    transform: rotate(180deg);
 }
 
 .it_icon05 {
     width: 14vw;
     bottom: 0;
     left: -30%;
-    transform: rotate(-40deg);
+    /* transform: rotate(-40deg); */
+    transform: rotate(-220deg);
     z-index: -1;
 }
 

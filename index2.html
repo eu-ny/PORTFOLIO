@@ -212,10 +212,11 @@
             tl.from(".it02 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.08 })
             tl.from(".it03 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
             tl.from(".it_icon03", {duration: 1, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
-            tl.from(".it_icon01", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: 90, })
-            tl.from(".it_icon02", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: -90, })
-            tl.from(".it_icon04", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: 180, })
-            tl.from(".it_icon05", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: -180, })
+            tl.to(".it_r", {duration: 0.4, opacity: 1, ease: Expo, rotation: 0, })
+            // tl.from(".it_icon01", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: 90, })
+            // tl.from(".it_icon02", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: -90, })
+            // tl.from(".it_icon04", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: 180, })
+            // tl.from(".it_icon05", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: -180, })
             // 마우스 따리 움직이기
         },-300)
 
@@ -242,6 +243,15 @@
             }
         })
 
+        gsap.to(".it_back_tit", {
+            duration: 1, 
+            y: 100, 
+            ease: Back.easeOut.config(2),
+            scrollTrigger: {
+                scrub: 1,
+            }
+        });
+
 
         //어바웃
         let about01 = gsap.utils.toArray(".A1-photo");
@@ -257,6 +267,7 @@
                     scrollTrigger: {
                         trigger: section02,
                         start:"top top",
+                        end: "top -100",
                         markers: true,
                         // scrub: true,
                     }
@@ -276,6 +287,7 @@
                     scrollTrigger: {
                         trigger: section03,
                         start:"top top",
+                        end: "bottom bottom",
                         markers: true,
                         // scrub: true,
                     }
@@ -313,7 +325,7 @@
             stagger: 0.1, 
             scrollTrigger:{
                 trigger:".A1-photo",
-                start:"-=100"
+                start:"-=150"
             } 
         })
 
