@@ -207,12 +207,12 @@
         setTimeout(() => {
             let tl = gsap.timeline();
 
-            tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -100, opacity: 0, ease: Circ})
-            tl.from(".it01 span", { y: 100, duration: 0.6, ease: Expo.easeOut, opacity: 0, stagger: 0.09 })
+            tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -500, opacity: 0, ease: Power4.easeOut})
+            tl.from(".it01 span", { y: 100, duration: 0.6, ease: Expo.easeOut, opacity: 0, stagger: 0.09 }, "b")
             tl.from(".it02 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
             tl.from(".it03 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
             tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
-            tl.to(".it_r", {duration: 0.4, opacity: 1, ease: Expo, rotation: 0, })
+            tl.to(".it_r", {duration: 0.4, opacity: 1, ease: Expo, rotation: 0, }, "a")
             // tl.from(".it_icon01", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: 90, })
             // tl.from(".it_icon02", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: -90, })
             // tl.from(".it_icon04", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: 180, })
@@ -237,6 +237,7 @@
         gsap.to(".it_icon03", {
             duration: 0.5, 
             yPercent: -450,
+            scale: 2,
             ease: Expo.easeout,
             scrollTrigger: {
                 scrub: 1,
@@ -245,7 +246,17 @@
 
         gsap.to(".it_back_tit", {
             duration: 1, 
-            y: 100, 
+            y: -100, 
+            ease: Back.easeOut.config(2),
+            scrollTrigger: {
+                scrub: 1,
+            }
+        });
+
+        gsap.to(".it_text", {
+            duration: 1, 
+            y: -80,
+            blur: 9,
             ease: Back.easeOut.config(2),
             scrollTrigger: {
                 scrub: 1,
@@ -317,10 +328,10 @@
         gsap.from(".A-title01 span", {
             duration: 1, 
             x: 0, 
-            y: -200, 
+            y: -100, 
             opacity: 0, 
             ease: Expo.easeOut, 
-            stagger: 0.1, 
+            stagger: 0.09, 
             scrollTrigger:{
                 trigger:".A1-photo",
                 start:"-=150"
@@ -330,13 +341,13 @@
         gsap.from(".A-title02 span", {
             duration: 1, 
             x: 0, 
-            y: -200, 
+            y: -100, 
             opacity: 0, 
             ease: Expo.easeOut, 
-            stagger: 0.1, 
+            stagger: 0.09, 
             scrollTrigger:{
                 trigger:".A2-photo",
-                start:"-=100"
+                start:"-=150"
             } 
         })
 
