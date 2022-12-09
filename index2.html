@@ -427,7 +427,17 @@
                 requestAnimationFrame(render);
             };
             render();
-        
+
+            
+            gsap.to(icons, {
+            duration: 1, 
+            yPercent: -80,
+            filter: "blur(3px)",
+            ease: Back.easeOut.config(4),
+            scrollTrigger: {
+                scrub: 1,
+            }
+        });
             
         });
     </script>
