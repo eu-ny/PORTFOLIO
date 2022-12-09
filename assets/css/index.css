@@ -309,6 +309,7 @@ section {
     left: 6%;
     transform: translate3d(0%,-80%,0);
     width: 21vw;
+    font-family: 'SCoreDream';
 }
 
 .about-icon03 {
@@ -319,13 +320,13 @@ section {
     opacity: 0.9;
 }
 
-.About-text03 > .tit {
+/* .About-text03 > .tit {
     font-size: 3.2vw;
     font-weight: 600;
     letter-spacing: -1.8px;
     line-height: 0.95;
     color: #AA305C;
-}
+} */
 
 .About-text04 {
     position: absolute;
@@ -333,6 +334,7 @@ section {
     right: 6%;
     z-index: 1;
     width: 20vw;
+    font-family: 'SCoreDream';
 }
 
 .about-icon04 {
@@ -342,16 +344,15 @@ section {
     z-index: -1;
 }
 
-.About-text04 > .tit {
-    font-size: 3.2vw;
-    font-weight: 600;
-    letter-spacing: -1.8px;
-    line-height: 0.95;
+.tit2 {
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1;
     color: #b7646e;
 }
 
 .desc2 {
-    color: #ae4a6f;
+    color: #62263c;
 }
 
 
