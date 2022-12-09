@@ -188,12 +188,12 @@ section {
     transform: translate(-70%, -55%);
     z-index: -1;
 }
-.About-text01 .tit {
+.tit1 {
     font-size: 3vw;
     font-weight: 700;
     line-height: 1;
     /* color: #fffcf8; */
-    color: #ffc9c6;
+    color: #f1afac;
 }
 
 .About-text02 {
@@ -205,6 +205,13 @@ section {
     font-family: 'SCoreDream';
 }
 
+/* .About-text02 .tit1 {
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffc9c6;
+} */
+
 .about-icon02 {
     width: 7vw;
     position: absolute;
@@ -212,12 +219,6 @@ section {
     z-index: -1;
 }
 
-.About-text02 .tit {
-    font-size: 3vw;
-    font-weight: 700;
-    line-height: 1;
-    color: #ffc9c6;
-}
 
 .desc {
     margin-top: 10px;
