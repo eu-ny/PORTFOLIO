@@ -202,13 +202,38 @@
         setTimeout(() => {
             let tl = gsap.timeline();
 
-            tl.from(".it_back_tit", {duration: 1, x: 0, y: -200, opacity: 0, ease: Expo.easeOut, stagger: 0.03 })
-            tl.from(".it01 span", { y: 10, duration: 0.4, ease: Expo.easeOut, opacity: 0 })
-            tl.from(".it02 span", { y: 10, duration: 0.4, ease: Expo.easeOut, opacity: 0 })
-            tl.from(".it03 span", { y: 10, duration: 0.4, ease: Expo.easeOut, opacity: 0 })
+            tl.from(".it_back_tit", {duration: 1, x: 0, y: -200, opacity: 0, ease: Expo.easeOut })
+            tl.from(".it01 span", { y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.1 })
+            tl.from(".it02 span", { y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.1})
+            tl.from(".it03 span", { y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.1 })
             tl.from(".it_icon03", {duration: 1, top: 100, opacity: 0, ease: Back.easeOut.config(6) })
             // t1.from(".it_r", { duration: 0.4, scale: 1.2, opacity: 0, ease:'power4.out', rotation : 90})
             // 마우스 따리 움직이기
+        }, 1000)
+
+        gsap.to(".it01", {
+            x: -200, 
+            scrollTrigger: {
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".it03", {
+            x: 200,
+            scrollTrigger: {
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".it_icon03", {
+            duration: 0.5, 
+            yPercent: -450,
+            ease: Expo.easeout,
+            scrollTrigger: {
+                scrub: 1,
+            }
+        })
+
         const images = [...document.querySelectorAll(".it_m")];
 
         const lerp = (a, b, n) => (1 - n) * a + n * b;
@@ -224,9 +249,6 @@
             };
         };
 
-        let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-        window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
-
         gsap.fromTo('.it_r', {
             scale: 1.2,
             autoAlpha: 0,
@@ -238,6 +260,9 @@
             duration: 0.5,
             rotation : 0
         })
+
+        let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+        window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
 
         images.forEach(img => {
             let values = { x: 0, y: 0 };
@@ -262,30 +287,6 @@
             };
             render();
         });
-        }, 200)
-
-        gsap.to(".it01", {
-            x: -200, 
-            scrollTrigger: {
-                scrub: 1,
-            }
-        })
-
-        gsap.to(".it03", {
-            x: 200,
-            scrollTrigger: {
-                scrub: 1,
-            }
-        })
-
-        gsap.to(".it_icon03", {
-            duration: 0.5, 
-            yPercent: -450,
-            ease: Expo.easeout,
-            scrollTrigger: {
-                scrub: 1,
-            }
-        })
 
 
 

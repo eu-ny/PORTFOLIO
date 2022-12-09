@@ -66,11 +66,11 @@ section {
     line-height: 0.7;
     text-align: center;
     color: #a13a5f;
-    margin-top: 4%;
+    padding-top: 4%;
+    overflow: hidden;
 }
 
 .it01 span {
-    /* opacity: 0; */
     display: inline-block;
 }
 
