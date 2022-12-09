@@ -156,10 +156,10 @@ section {
 
 /* section01 -------------------------------------------------------------------------------------------*/
 #section02 {
-    height: 110vh;
+    height: 106vh;
     background-color: #67353b;
     position: sticky;
-    top: -5%;
+    top: 0%;
     left: 0;
     display: flex;
     align-items: center;
@@ -192,7 +192,8 @@ section {
     font-size: 3vw;
     font-weight: 700;
     line-height: 1;
-    color: #fffcf8;
+    /* color: #fffcf8; */
+    color: #ffc9c6;
 }
 
 .About-text02 {
@@ -222,8 +223,8 @@ section {
     margin-top: 10px;
     font-size: 14px;
     line-height: 1.4;
-    color: #d7b6b6;
-    font-weight: 200;
+    color: #fbe7e7;
+    font-weight: 300;
     word-break: keep-all;
 }
 
@@ -261,8 +262,7 @@ section {
 /* section03 -------------------------------------------------------------------------------------------*/
 #section03 {
     background-color: #FEF5F5;
-    /* background-color: #67353b; */
-    height: 110vh;
+    height: 106vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,7 +274,7 @@ section {
         linear-gradient(to right, transparent 5px, #FEF5F5 5px),
         linear-gradient(to bottom, #f5dddd 1px, transparent 1px);
     position: sticky;
-    top: -5%;
+    top: 0%;
     left: 0;
 }
 

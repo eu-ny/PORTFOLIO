@@ -71,7 +71,7 @@
     <section id="section02">
         <h2 class="ir">About01</h2>
 
-        <div class="About-text01 at01">
+        <div class="About-text01 a_ani">
             <img src="./assets/imgs/a_icon01.png" alt="전구" class="about-icon01 ai01">
             <p class="tit tit1">
                 MY NAME IS <br>
@@ -94,7 +94,7 @@
             </div>
         </figure>
     
-        <div class="About-text02 at01">
+        <div class="About-text01 a_ani">
             <img src="./assets/imgs/a_icon02.png" alt="drawing" class="about-icon02 ai01">
             <p class="tit tit1">
                 I MAJORED<br>
@@ -114,7 +114,7 @@
     <section id="section03">
         <h2 class="ir">ABOUT02</h2>
     
-        <div class="About-text03 at02">
+        <div class="About-text03 at02 a_ani2">
             <img src="./assets/imgs/it_icon05.png" alt="전구" class="about-icon03 ai02 ">
             <p class="tit tit2">
                 A DEVELOPER !
@@ -125,7 +125,7 @@
             </p>
         </div>
     
-        <figure class="A2-photo a_ani">
+        <figure class="A2-photo a_ani2">
             <img src="./assets/imgs/LEEHAEUN02.jpg" alt="LEEHAEUN" class="A-photo02">
     
             <div class="A-title02">
@@ -134,7 +134,7 @@
             </div>
         </figure>
     
-        <div class="About-text04 at02">
+        <div class="About-text04 at02 a_ani2">
             <img src="./assets/imgs/it_icon02.png" alt="drawing" class="about-icon04 ai02">
             <p class="tit tit2">
                 GROW<br>
@@ -208,10 +208,10 @@
             let tl = gsap.timeline();
 
             tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -100, opacity: 0, ease: Circ})
-            tl.from(".it01 span", { y: 100, duration: 0.6, ease: Expo.easeOut, opacity: 0, stagger: 0.1 })
-            tl.from(".it02 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.08 })
+            tl.from(".it01 span", { y: 100, duration: 0.6, ease: Expo.easeOut, opacity: 0, stagger: 0.09 })
+            tl.from(".it02 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
             tl.from(".it03 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
-            tl.from(".it_icon03", {duration: 1, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
+            tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
             tl.to(".it_r", {duration: 0.4, opacity: 1, ease: Expo, rotation: 0, })
             // tl.from(".it_icon01", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: 90, })
             // tl.from(".it_icon02", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: -90, })
@@ -254,10 +254,8 @@
 
 
         //어바웃
-        let about01 = gsap.utils.toArray(".A1-photo");
-        let about02 = gsap.utils.toArray(".A2-photo ");
-        let at01 = gsap.utils.toArray(".at01");
-        let at02 = gsap.utils.toArray(".at02");
+        let about01 = gsap.utils.toArray(".a_ani");
+        let about02 = gsap.utils.toArray(".a_ani2 ");
         const section02 = document.querySelector("#section02");
         const section03 = document.querySelector("#section03");
 
@@ -267,7 +265,7 @@
                     scrollTrigger: {
                         trigger: section02,
                         start:"top top",
-                        end: "top -100",
+                        end: "+=350",
                         markers: true,
                         // scrub: true,
                     }
@@ -301,20 +299,20 @@
 
         })
 
-        at01.forEach((a)=> {
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: section02,
-                        start:"top top",
-                    }
-                })
-                .from(a, {
-                    autoAlpha: 0,
-                    duration: 2,
-                    ease:"expo.out"
-                })
-        })
+        // at01.forEach((a)=> {
+        //     gsap
+        //         .timeline({
+        //             scrollTrigger: {
+        //                 trigger: section02,
+        //                 start:"top top",
+        //             }
+        //         })
+        //         .from(a, {
+        //             autoAlpha: 0,
+        //             duration: 2,
+        //             ease:"expo.out"
+        //         })
+        // })
 
         gsap.from(".A-title01 span", {
             duration: 1, 
@@ -327,21 +325,6 @@
                 trigger:".A1-photo",
                 start:"-=150"
             } 
-        })
-
-        at02.forEach((a)=> {
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: section03,
-                        start:"top top",
-                    }
-                })
-                .from(a, {
-                    autoAlpha: 0,
-                    duration: 2,
-                    ease:"expo.out"
-                })
         })
 
         gsap.from(".A-title02 span", {
