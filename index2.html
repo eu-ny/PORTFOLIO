@@ -8,7 +8,7 @@
     <title>LEEHAEUN</title>
 </head>
 <body>
-    <header id="header">
+    <!-- <header id="header">
         <span class="scrollTop"></span>
         <nav>
             <ul>
@@ -19,6 +19,11 @@
                 <li><a href="#section12">CONTACT</a></li>
             </ul>
         </nav>
+    </header> -->
+    <header id="header">
+        <span class="scrollTop"></span>
+        <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
+        <img src="./assets/images/menu01.svg" alt="menu" class="menu">
     </header>
     <!-- //header -->
 
@@ -32,9 +37,9 @@
         </div>
 
         <div class="it_wrap">
-            <div class="it_text it01">WELCOME</div>
-            <div class="it_text it02 it_m">2022</div>
-            <div class="it_text it03">PORTFOLIO</div>
+            <div class="it_text split it01">WELCOME</div>
+            <div class="it_text split it02 it_tm">2022</div>
+            <div class="it_text split it03">PORTFOLIO</div>
 
             <div class="icons">
                 <div class="it_icon it_icon03">
@@ -66,7 +71,7 @@
     <section id="section02">
         <h2 class="ir">About01</h2>
 
-        <div class="About-text01 a_ani">
+        <div class="About-text01 at01">
             <img src="./assets/imgs/a_icon01.png" alt="전구" class="about-icon01 ai01">
             <p class="tit tit1">
                 MY NAME IS <br>
@@ -84,12 +89,12 @@
             <img src="./assets/images/LEEHAEUN.jpg" alt="LEEHAEUN" class="A-photo01">
     
             <div class="A-title01">
-                <p>I AM THIS KIND</p>
-                <p> OF PERSON !</p>
+                <p class="split">I AM THIS KIND </p>
+                <p class="split"> OF PERSON !</p>
             </div>
         </figure>
     
-        <div class="About-text02 a_ani">
+        <div class="About-text02 at01">
             <img src="./assets/imgs/a_icon02.png" alt="drawing" class="about-icon02 ai01">
             <p class="tit tit1">
                 I MAJORED<br>
@@ -109,8 +114,8 @@
     <section id="section03">
         <h2 class="ir">ABOUT02</h2>
     
-        <div class="About-text03 a_ani">
-            <img src="./assets/imgs/it_icon05.png" alt="전구" class="about-icon03 ai02">
+        <div class="About-text03 at02">
+            <img src="./assets/imgs/it_icon05.png" alt="전구" class="about-icon03 ai02 ">
             <p class="tit tit2">
                 A DEVELOPER !
             </p>
@@ -120,16 +125,16 @@
             </p>
         </div>
     
-        <figure class="A2-photo a_ani">
+        <figure class="A2-photo a_ani2">
             <img src="./assets/imgs/LEEHAEUN02.jpg" alt="LEEHAEUN" class="A-photo02">
     
             <div class="A-title02">
-                <p>FOR THIS REASON</p>
-                <p> I WANT TO BE</p>
+                <p class="split">FOR THIS REASON</p>
+                <p class="split"> I WANT TO BE</p>
             </div>
         </figure>
     
-        <div class="About-text04 a_ani">
+        <div class="About-text04 at02">
             <img src="./assets/imgs/it_icon02.png" alt="drawing" class="about-icon04 ai02">
             <p class="tit tit2">
                 GROW<br>
@@ -178,20 +183,20 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
 
-            const introText01 = document.querySelector('.it01');
-            const introIcon03 = document.querySelector('.it_icon03')
+            // const introText01 = document.querySelector('.it01');
+            // const introIcon03 = document.querySelector('.it_icon03')
             
-            if((introText01.offsetTop + 50)  >=  scrollTop){
-                introIcon03.classList.remove("iconZindex");
-            }else{ 
-                introIcon03.classList.add("iconZindex");
-            }
+            // if((introText01.offsetTop + 50)  >=  scrollTop){
+            //     introIcon03.classList.remove("iconZindex");
+            // }else{ 
+            //     introIcon03.classList.add("iconZindex");
+            // }
         })
 
     </script>
     <!-- intro -->
     <script>
-         document.querySelectorAll(".it_text").forEach(text => {
+         document.querySelectorAll(".split").forEach(text => {
             let splitText = text.innerText;
             let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
                 splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
@@ -202,14 +207,17 @@
         setTimeout(() => {
             let tl = gsap.timeline();
 
-            tl.from(".it_back_tit", {duration: 1, x: 0, y: -200, opacity: 0, ease: Expo.easeOut })
-            tl.from(".it01 span", { y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.1 })
-            tl.from(".it02 span", { y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.1})
-            tl.from(".it03 span", { y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.1 })
-            tl.from(".it_icon03", {duration: 1, top: 100, opacity: 0, ease: Back.easeOut.config(6) })
-            // t1.from(".it_r", { duration: 0.4, scale: 1.2, opacity: 0, ease:'power4.out', rotation : 90})
+            tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -100, opacity: 0, ease: Circ})
+            tl.from(".it01 span", { y: 100, duration: 0.6, ease: Expo.easeOut, opacity: 0, stagger: 0.1 })
+            tl.from(".it02 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.08 })
+            tl.from(".it03 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
+            tl.from(".it_icon03", {duration: 1, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
+            tl.from(".it_icon01", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: 90, })
+            tl.from(".it_icon02", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: -90, })
+            tl.from(".it_icon04", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: 180, })
+            tl.from(".it_icon05", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: -180, })
             // 마우스 따리 움직이기
-        }, 1000)
+        },-300)
 
         gsap.to(".it01", {
             x: -200, 
@@ -234,7 +242,116 @@
             }
         })
 
-        const images = [...document.querySelectorAll(".it_m")];
+
+        //어바웃
+        let about01 = gsap.utils.toArray(".a_ani");
+        let about02 = gsap.utils.toArray(".a_ani");
+        let at01 = gsap.utils.toArray(".at01");
+        const section02 = document.querySelector("#section02");
+        const section03 = document.querySelector("#section03");
+        about01.forEach((a)=> {
+            gsap
+                .timeline({
+                    scrollTrigger: {
+                        trigger: section02,
+                        start:"top top",
+                        markers: true,
+                        // scrub: true,
+                    }
+                })
+
+                .from(a, {
+                    autoAlpha: 0,
+                    yPercent: 10,
+                    duration: 2,
+                    ease: Expo
+                })
+
+        })
+        about02.forEach((a)=> {
+            gsap
+                .timeline({
+                    scrollTrigger: {
+                        trigger: section03,
+                        start:"top top",
+                        markers: true,
+                        // scrub: true,
+                    }
+                })
+
+                .from(a, {
+                    autoAlpha: 0,
+                    yPercent: 10,
+                    duration: 2,
+                    ease: Expo
+                })
+
+        })
+
+        at01.forEach((a)=> {
+            gsap
+                .timeline({
+                    scrollTrigger: {
+                        trigger: section02,
+                        start:"top top",
+                    }
+                })
+                .from(a, {
+                    autoAlpha: 0,
+                    duration: 2,
+                    ease:"expo.out"
+                })
+        })
+
+        gsap.from(".A-title01 span", {
+            duration: 1, 
+            x: 0, 
+            y: -200, 
+            opacity: 0, 
+            ease: Expo.easeOut, 
+            stagger: 0.1, 
+            scrollTrigger:{
+                trigger:".A1-photo",
+                start:"-=100"
+            } 
+        })
+        gsap.from(".A-title02 span", {
+            duration: 1, 
+            x: 0, 
+            y: -200, 
+            opacity: 0, 
+            ease: Expo.easeOut, 
+            stagger: 0.1, 
+            scrollTrigger:{
+                trigger:".A2-photo",
+                start:"-=100"
+            } 
+        })
+
+        // gsap.to(".desc1, .A-title01", {
+        //     y: -5,
+        //     scrollTrigger: {
+        //         trigger: "#section02",
+        //         scrub: true,
+        //         start: "top"
+        //     }, 
+        // });
+        
+        // gsap.to(".desc2, .A-title02", {
+        //     y: -5,
+        //     duration:1,
+        //     scrollTrigger: {
+        //         trigger: "#section03",
+        //         scrub: 1,
+        //         start: "top"
+        //     }, 
+        // });
+
+    </script>
+    <script>
+        const icons = [...document.querySelectorAll(".it_m")];
+        const itext = [...document.querySelectorAll(".it_tm")];
+        const aIcon = [...document.querySelectorAll(".ai01")];
 
         const lerp = (a, b, n) => (1 - n) * a + n * b;
         const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
@@ -249,22 +366,22 @@
             };
         };
 
-        gsap.fromTo('.it_r', {
-            scale: 1.2,
-            autoAlpha: 0,
-            ease: 'power4.Out',
-            rotation : 90
-        }, {
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.5,
-            rotation : 0
-        })
+        // gsap.fromTo('.it_r', {
+        //     scale: 1.2,
+        //     autoAlpha: 0,
+        //     ease: 'power4.Out',
+        //     rotation : 90
+        // }, {
+        //     scale: 1,
+        //     autoAlpha: 1,
+        //     duration: 0.5,
+        //     rotation : 0
+        // })
 
         let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
         window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
 
-        images.forEach(img => {
+        icons.forEach(img => {
             let values = { x: 0, y: 0 };
             const xStart = gsap.utils.random(16, 64);
             const yStart = gsap.utils.random(-16, 64);
@@ -282,54 +399,13 @@
                     0.07
                 );
                 gsap.set(img, { x: values.x, y: values.y });
-
+                gsap.set(itext, {x: values.x})
                 requestAnimationFrame(render);
             };
             render();
+        
+            
         });
-
-
-
-        //어바웃
-        let about01 = gsap.utils.toArray(".a_ani");
-        about01.forEach((a)=> {
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: a,
-                        end: "-=100",
-                        scrub: true,
-                        markers: true,
-                    }
-                })
-
-                .from(a, {
-                    autoAlpha: 0,
-                    yPercent: 50,
-                    duration:3,
-                    ease:"expo.out"
-                })
-
-        })
-
-        gsap.to(".desc1, .A-title01", {
-                y: -5,
-                scrollTrigger: {
-                    trigger: "#section02",
-                    scrub: true,
-                    start: "top"
-                }, 
-            });
-        gsap.to(".desc2, .A-title02", {
-                y: -5,
-                duration:1,
-                scrollTrigger: {
-                    trigger: "#section03",
-                    scrub: 1,
-                    start: "top"
-                }, 
-            });
-
     </script>
 </body>
 </html>
