@@ -153,7 +153,7 @@
     <section id="section04" class="basic">
         <h2 class="ir">BASIC</h2>
         <article class="basic-imac">
-            <div class="textMove cont-ani-y">
+            <div class="textMove">
                 <p class="back-tit animation01">
                     BASIC CODING WEBSITE • BASIC CODING WEBSITE • BASIC CODING WEBSITE • &nbsp;
                 </p>
@@ -162,7 +162,7 @@
                 </p>
             </div>
     
-            <figure class="imac-1 cont-ani-y">
+            <figure class="imac-1">
                 <img src="./assets/images/iMac01.png" alt="imac-purple">
                 <div class="imac-view .view">
                     <div class="view-cont">
@@ -250,7 +250,7 @@
                 </p>
             </div>
     
-            <figure class="imac-2 cont-ani-y">
+            <figure class="imac-2">
                 <img src="./assets/images/iMac02.png" alt="imac-pink">
                 <div class="imac-view">
                     <div class="view-cont">
@@ -311,7 +311,7 @@
                 </p>
             </div>
     
-            <figure class="imac-2 cont-ani-y">
+            <figure class="imac-2">
                 <img src="./assets/images/iMac03.png" alt="imac-yellow">
                 <div class="imac-view">
                     <div class="view-cont">
@@ -1009,7 +1009,7 @@
         }
 
         // site --------------------------------------------------------------------
-        // {
+        // 돔 로드형 애니메이션{
 
         //     // 완쪽, 오른쪽에서 나오게 하기
         //     function animateFrom(el) {
@@ -1073,7 +1073,7 @@
                     .timeline({
                         scrollTrigger: {
                             trigger: left,
-                            start: "-=400",
+                            start: "-=600",
                             end: "+=350",
                             scrub: true,
                             markers: true
@@ -1082,29 +1082,30 @@
 
                     .from(left, {
                         opacity: 0,
-                        xPercent: -200,
+                        xPercent: -100,
                         duration:3,
                         ease:"expo"
                     })
             })
 
-            imac.forEach((top)=> {
+            imac.forEach((text)=> {
                 gsap
                     .timeline({
                         scrollTrigger: {
-                            trigger: top,
-                            end: "-=500",
+                            trigger: text,
+                            end: "-=200",
                             scrub: true,
                             markers: true,
                         }
                     })
 
-                    .from(top, {
+                    .from(text, {
                         autoAlpha: 0,
                         yPercent: 50,
                         duration:3,
                         ease:"expo"
                     })
+
             })
 
 

@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Tungsten';
     font-weight: 400;
     font-style: normal;
@@ -10,7 +10,8 @@
       url("../fonts/Tungsten-Medium.ttf") format("truetype");
   
     font-display: swap;
-}
+} */
+
 @font-face {
     font-family: 'Tungsten';
     font-weight: 300;
@@ -37,6 +38,20 @@
   
     font-display: swap;
 }
+@font-face {
+    font-family: 'Tungsten';
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/Tungsten-Book.eot");
+    src: url("../fonts/Tungsten-Book.eot?#iefix")
+        format("embedded-opentype"),
+      url("../fonts/Tungsten-Book.woff2") format("woff2"),
+      url("../fonts/Tungsten-Book.woff") format("woff"),
+      url("../fonts/Tungsten-Book.ttf") format("truetype");
+  
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Tungsten';
     font-weight: 900;

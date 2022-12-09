@@ -1,0 +1,319 @@
+#header {
+    width: 100%;
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 300;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 10% 80% 10%;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 1%;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.scrollTop {
+    color: black;
+    width: 20%;
+    margin-left: 20%;
+}
+
+section {
+    font-family: "Tungsten";
+}
+
+/* section01 -------------------------------------------------------------------------------------------*/
+#section01 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f8dede;
+    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.it_back_tit {
+    position: absolute;
+    width: 100%;
+    transform: rotate(28deg);
+    font-size: 24vw;
+    font-weight: 600;
+    line-height: 0.8;
+    text-align: center;
+    -webkit-text-stroke: 1px #a13a5f;
+    color: transparent;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.it_wrap {
+    margin-top: 1%;
+    position: relative;
+}
+
+.it_text {
+    font-size: 16vw;
+    font-weight: 600;
+    line-height: 0.7;
+    text-align: center;
+    color: #a13a5f;
+    margin-top: 4%;
+}
+
+.it01 span {
+    /* opacity: 0; */
+    display: inline-block;
+}
+
+.it_icon {
+    position: absolute;
+}
+
+.it_icon01 {
+    width: 16vw;
+    top: -14%;
+    left: -28%;
+}
+
+.it_icon02 {
+    width: 11vw;
+    top: 0%;
+    right: -22%;
+}
+
+.it_icon03 {
+    width: 30vw;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.it_icon04 {
+    width: 18vw;
+    bottom: 0;
+    right: -35%;
+    z-index: -1;
+}
+
+.it_icon05 {
+    width: 14vw;
+    bottom: 0;
+    left: -30%;
+    transform: rotate(-40deg);
+    z-index: -1;
+}
+
+.iconZindex {
+    z-index: 100;
+}
+
+/* section01 -------------------------------------------------------------------------------------------*/
+#section02 {
+    height: 100vh;
+    background-color: #67353b;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    overflow: hidden;
+
+    background-size: 10px 10px, 60px 60px;
+    background-image: linear-gradient(to bottom, transparent 5px, #67353b 5px),
+        linear-gradient(to right, #ffffff20 1px, transparent 1px),
+        linear-gradient(to right, transparent 5px, #67353b 5px),
+        linear-gradient(to bottom, #ffffff20 1px, transparent 1px);
+}
+
+.About-text01 {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    z-index: 1;
+    width: 20vw;
+}
+.about-icon01 {
+    width: 12vw;
+    position: absolute;
+    transform: translate(-70%, -55%);
+    z-index: -1;
+}
+.About-text01 .tit {
+    font-size: 3.2vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #fffcf8;
+}
+
+.About-text02 {
+    position: absolute;
+    bottom: 0%;
+    right: 3%;
+    transform: translate3d(0%,-80%,0);
+    width: 20vw;
+}
+
+.about-icon02 {
+    width: 7vw;
+    position: absolute;
+    transform: translate(150%, -100%);
+    z-index: -1;
+}
+
+.About-text02 .tit {
+    font-size: 3.2vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #ffc9c6;
+}
+
+.desc {
+    margin-top: 10px;
+    font-size: 1.1vw;
+    letter-spacing: normal;
+    color: #d7b6b6;
+    font-family: 'SCoreDream';
+    font-weight: 200;
+    word-break: keep-all;
+}
+
+.A1-photo {
+    position: relative;
+    margin-bottom: 8vh;
+}
+
+.A-photo01 {
+    width: 30vw;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+}
+
+.A-title01 {
+    position: absolute;
+    bottom: -15.6%;
+    left: -21%;
+    letter-spacing: -1.8px;
+    color: #e7828e;
+    font-size: 6vw;
+    font-weight: 800;
+    text-align: center;
+    line-height: 0.9;
+    white-space: nowrap;
+}
+
+/* section03 -------------------------------------------------------------------------------------------*/
+#section03 {
+    background-color: #FEF5F5;
+    /* background-color: #67353b; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    overflow: hidden;
+    background-size: 10px 10px, 60px 60px;
+    background-image: linear-gradient(to bottom, transparent 5px, #FEF5F5 5px),
+        linear-gradient(to right, #f5dddd 1px, transparent 1px),
+        linear-gradient(to right, transparent 5px, #FEF5F5 5px),
+        linear-gradient(to bottom, #f5dddd 1px, transparent 1px);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.A2-photo {
+    position: relative;
+    margin-bottom: 8vh;
+}
+
+.A-photo02 {
+    width: 30vw;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+}
+
+.A-title02 {
+    position: absolute;
+    bottom: -14.3%;
+    left: -29%;
+    letter-spacing: -1.8px;
+    color: #992d54;
+    font-size: 5.5vw;
+    font-weight: 800;
+    text-align: center;
+    line-height: 0.9;
+    white-space: nowrap;
+}
+
+.About-text03 {
+    position: absolute;
+    top: 65%;
+    left: 6%;
+    transform: translate3d(0%,-80%,0);
+    width: 21vw;
+}
+
+.about-icon03 {
+    width: 10vw;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.About-text03 > .tit {
+    font-size: 3.2vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #AA305C;
+}
+
+.About-text04 {
+    position: absolute;
+    top: 25%;
+    right: 6%;
+    z-index: 1;
+    width: 20vw;
+}
+
+.about-icon04 {
+    width: 12vw;
+    position: absolute;
+    transform: translate(60%, -65%) scaleX(-1);
+    z-index: -1;
+}
+
+.About-text04 > .tit {
+    font-size: 3.2vw;
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    line-height: 0.95;
+    color: #b7646e;
+}
+
+.desc2 {
+    color: #ae4a6f;
+}
+
+
+#section04 {
+    height: 100vh;
+    background: #fefcfd;
+    position: relative;
+}
+
