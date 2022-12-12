@@ -963,7 +963,6 @@ section {
     overflow: hidden;
 }
 
-
 .sc_item {
     position: absolute;
     width: 100%;
@@ -1223,7 +1222,6 @@ section {
 
 /* footer ---------------------------------------------------------------------------------------- */
 footer {
-    height: 100vh;
     background: #fff;
     position: relative;
 }
