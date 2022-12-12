@@ -290,7 +290,7 @@ section {
 
 .A2-photo {
     position: relative;
-    margin-bottom: 13vh;
+    margin-bottom: 15vh;
 }
 
 .A-photo02 {
@@ -351,7 +351,7 @@ section {
     width: 12vw;
     position: absolute;
     top: -24%;
-    right: -35%;
+    right: -30%;
     transform: translate(60%, -65%) scaleX(-1);
     z-index: -1;
 }

@@ -716,16 +716,16 @@
             let aboutAni = gsap.timeline({
                 scrollTrigger: {
                     trigger: section02,
-                    start: "top",
-                    end: "30%",
-                    scrub: 1,
+                    start: "top 1%",
+                    end: "35%",
+                    scrub: 1.5,
                     markers: true,
                 }
             })
             aboutAni
-                .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo.easeOut})
-                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:1,  ease:Expo.easeOut}, "+=2")
-                .to('.a_ani1', { duration:10, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo.easeIn}, "+=20")
+                .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Power1.easeOut})
+                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:1,  ease:Expo.easeOut}, "+=5")
+                .to('.a_ani1', { duration:10, yPercent:-20, autoAlpha:0, stagger:0.1, scale: 0.8, ease:Expo.easeIn}, "+=20")
         }
         aboutAni()
 
@@ -734,15 +734,16 @@
             let aboutAni2 = gsap.timeline({
                 scrollTrigger: {
                     trigger: section03,
-                    start: "top",
-                    end: "30% 0%",
-                    scrub: 1,
+                    start: "top 1%",
+                    end: "35%",
+                    scrub: 1.5,
+                    markers: true,
                 }
             })
             aboutAni2
-                .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo.easeOut})
-                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.1, ease:Expo.easeOut}, "+=2")
-                .to('.a_ani2', .9, { duration:5, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo.easeIn}, "+=20")
+                .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Power1.easeOut})
+                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:1, ease:Expo.easeOut}, "+=5")
+                .to('.a_ani2',{ duration:10, yPercent:-20, autoAlpha:0, stagger:0.1, scale: 0.8, ease:Expo.easeIn}, "+=20")
         }
         aboutAni2()
 
