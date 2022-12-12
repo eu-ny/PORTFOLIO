@@ -452,6 +452,70 @@
     </section>
     <!-- //section08 -->
 
+    <section id="section09" class="effectCont">
+        <div class="effect__wrap">
+            <div class="back-tit4 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="back-tit4-2 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="back-tit4-3 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="effect__section effect___inner01">
+                <div class="e-text-wrap">
+                    <span class="e-small-tit">
+                        JAVASCRIPT
+                    </span>
+                    <h2 class="e-title">MOUSE <br> EFFECT</h2>
+                </div>
+                <figure class="i-pad">
+                    <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/mouseEffect01" frameborder="0"></iframe>
+                    </div>
+                    <img src="./assets/images/iPad01.png" alt="i-pad">
+                </figure>
+            </div>
+
+            <div class="effect__section effect___inner02">
+        
+                <div class="e-text-wrap pink">
+                    <span class="e-small-tit pink">
+                        JAVASCRIPT
+                    </span>
+                    <h2 class="e-title pink">PARALLAX <br> EFFECT</h2>
+                </div>
+                <figure class="i-pad">
+                    <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/parallaxEffect04" frameborder="0"></iframe>
+                    </div>
+                    <img src="./assets/images/iPad01.png" alt="i-pad">
+                </figure>
+            </div>
+
+            <div class="effect__section effect___inner03">
+                <div class="e-text-wrap">
+                    <span class="e-small-tit yellow">
+                        JAVASCRIPT
+                    </span>
+                    <h2 class="e-title yellow">SLIDER <br> EFFECT</h2>
+                </div>
+                <figure class="i-pad">
+                    <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/sliderEffect03" frameborder="0"></iframe>
+                    </div>
+                    <img src="./assets/images/iPad01.png" alt="i-pad">
+                </figure>
+            </div>
+
+        </div>
+    </section>
+    <!-- //section09 -->
+
 
 
 
@@ -618,7 +682,7 @@
             let aboutAni = gsap.timeline({
                 scrollTrigger: {
                     trigger: section02,
-                    start: "top 2%",
+                    start: "top",
                     end: "20% 0%",
                     scrub: 1,
                 }
@@ -626,7 +690,7 @@
             aboutAni
                 .from(".a_ani", { yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo})
                 .from(ai01, { yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.04, ease:Expo})
-                .to('.a_ani1', { duration:3, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo})
+                .to('.a_ani1', .9, { duration:3, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Power1.easeOut}, "a")
         }
         aboutAni()
 
@@ -635,7 +699,7 @@
             let aboutAni2 = gsap.timeline({
                 scrollTrigger: {
                     trigger: section03,
-                    start: "top 2%",
+                    start: "top",
                     end: "20% 0%",
                     scrub: 1,
                 }
@@ -643,9 +707,10 @@
             aboutAni2
                 .from(".A2-photo", { yPercent:10, autoAlpha: 0, filter: "blur(3px)",})
                 .from(ai02, { yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.04})
-                .to('.a_ani2', { duration:3, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8})
+                .to('.a_ani2', .9, { duration:5, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8}, "a")
         }
         aboutAni2()
+
     </script>
 
     <!-- site -->
@@ -844,6 +909,12 @@
             }
         })
 
+        // gsap.to("#section08", {
+        //     scrollTrigger: {
+        //         pin: "#section08"
+        //     }
+        // })
+
 
     </script>
 
@@ -911,6 +982,29 @@ btnNext.addEventListener('click', Slider.next);
 btnPrev.addEventListener('click', Slider.prev);
 
 Slider.init();
+    </script>
+
+    <!-- 가로 스크롤 -->
+    <script>
+        const effect = gsap.utils.toArray(".effect__section");
+        const effect2= gsap.utils.toArray(".effect__section2");
+        gsap.to(effect, {
+            xPercent: -100 * (effect.length -1),
+            // x: -200 ,
+            scrollTrigger: {
+                trigger: ".effectCont",
+                pin: true,
+                pinSpacing: true,
+                // scrub: 0.5,
+                scrub: 1.5,
+                end: "+=4000",
+                pin: true,
+                // snap: 1 / (effect.length - 1),
+                markers: true,
+            },
+            duration: 5, 
+            ease: "power2.out",
+        });
     </script>
 
     <!-- 마우스 따라 움직이는 효과 -->

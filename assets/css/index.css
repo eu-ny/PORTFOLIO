@@ -1017,3 +1017,188 @@ section {
     opacity: .6;
     transform: translateX(5px);
 }
+
+
+
+/* section09 effectCont -------------------------------------------------------------------------------- */
+.effectCont {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.effect__wrap {
+    width: 300%;
+    overscroll-behavior: none;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    background: #F6F5F3;
+    font-family: "Tungsten";
+}
+.back-tit4 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -23%) rotate(5deg);
+    font-size: 25vw;
+    -webkit-text-stroke: 1px #7c30a232;
+    color: transparent;
+    font-weight: 600;
+    line-height: 0.8;
+    text-align: center;
+    letter-spacing: 2vw;
+    white-space: nowrap;
+    /* display: grid; */
+}
+.back-tit4-2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -160%) rotate(5deg);
+    font-size: 25vw;
+    -webkit-text-stroke: 1px #7c30a232;
+    color: transparent;
+    font-weight: 600;
+    line-height: 0.8;
+    text-align: center;
+    letter-spacing: 2vw;
+    white-space: nowrap;
+}
+.back-tit4-3 {
+    position: absolute;
+    top: 50%;
+    transform: translate(-4%, 116%) rotate(5deg);
+    font-size: 25vw;
+    -webkit-text-stroke: 1px #7c30a232;
+    color: transparent;
+    font-weight: 600;
+    line-height: 0.8;
+    text-align: center;
+    letter-spacing: 2vw;
+    white-space: nowrap;
+}
+
+.effect___inner01 {
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Tungsten";
+    position: relative;
+    overflow: hidden;
+}
+
+.e-text-wrap {
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 3%;
+    z-index: 1;
+}
+
+.e-small-tit {
+    font-size: 2.5vw;
+    margin-right: 7vw;
+    margin-bottom: 1vw;
+    padding: 2% 8%;
+    border-radius: 10px;
+    background: #EDA24B;
+    color: #fff;
+}
+
+.e-title {
+    font-size: 9vw;
+    font-weight: 600;
+    line-height: 0.8;
+    color: #8536ac;
+}
+
+.i-pad {
+    position: relative;
+    width: 65vw;
+}
+
+.i-pad-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0.5deg) skewX(-0.5deg);
+    width: 48vw;
+    height: 58%;
+    border-radius: 1vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.i-pad-view::-webkit-scrollbar {
+    display: none;
+}
+
+.i-pad-view > iframe {
+    width: 115%;
+    height: 125%;
+    padding-right: 14%;
+}
+
+
+/* effectCont2 -------------------------------------------------------------------------------------  */
+.effect___inner02 {
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+    align-items: center;
+    /* background: #F6F5F3; */
+    position: relative;
+    overflow: hidden;
+}
+
+.e-text-wrap.pink {
+    width: auto;
+    /* margin-right: 6%; */
+}
+
+.e-small-tit.pink {
+    background: #8536ac;
+    margin-right: 13vw;
+}
+.e-title.pink {
+    color: #a13a5f;
+}
+
+/* effectCont3 -----------------------------------------------------------------------------------------------------------------------------  */
+.effect___inner03 {
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #F6F5F3; */
+    font-family: "Tungsten";
+    position: relative;
+    overflow: hidden;
+}
+
+
+.e-small-tit.yellow {
+    margin-right: 6vw;
+    background: #a13a5f;
+}
+.e-title.yellow {
+    color: #EDA24B;
+}
+
+
+/* media */
+@media (max-width:600px) {
+    .imac-1, .imac-2 {
+        width: 110vw;
+    }
+
+    .imac-view {
+        transform: translate(-48.8%, -76.5%);
+        width: 76vw;
+    }
+
+}
