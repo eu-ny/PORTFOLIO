@@ -474,9 +474,9 @@
                     <h2 class="e-title">MOUSE <br> EFFECT</h2>
                 </div>
                 <figure class="i-pad">
-                    <div class="i-pad-view">
+                    <!-- <div class="i-pad-view">
                         <iframe src="https://eu-ny.github.io/coding/javascript/effect/mouseEffect01" frameborder="0"></iframe>
-                    </div>
+                    </div> -->
                     <img src="./assets/images/iPad01.png" alt="i-pad">
                 </figure>
             </div>
@@ -490,9 +490,9 @@
                     <h2 class="e-title pink">PARALLAX <br> EFFECT</h2>
                 </div>
                 <figure class="i-pad">
-                    <div class="i-pad-view">
+                    <!-- <div class="i-pad-view">
                         <iframe src="https://eu-ny.github.io/coding/javascript/effect/parallaxEffect04" frameborder="0"></iframe>
-                    </div>
+                    </div> -->
                     <img src="./assets/images/iPad01.png" alt="i-pad">
                 </figure>
             </div>
@@ -505,9 +505,9 @@
                     <h2 class="e-title yellow">SLIDER <br> EFFECT</h2>
                 </div>
                 <figure class="i-pad">
-                    <div class="i-pad-view">
+                    <!-- <div class="i-pad-view">
                         <iframe src="https://eu-ny.github.io/coding/javascript/effect/sliderEffect03" frameborder="0"></iframe>
-                    </div>
+                    </div> -->
                     <img src="./assets/images/iPad01.png" alt="i-pad">
                 </figure>
             </div>
@@ -515,6 +515,11 @@
         </div>
     </section>
     <!-- //section09 -->
+
+    <section id="section10" class="container">
+        <h2 class="sec8_tit"> worklist</h2>
+        
+    </section>
 
 
 
@@ -987,7 +992,13 @@ Slider.init();
     <!-- 가로 스크롤 -->
     <script>
         const effect = gsap.utils.toArray(".effect__section");
-        const effect2= gsap.utils.toArray(".effect__section2");
+        const e_smallTit1 = document.querySelector(".effect___inner01 .e-small-tit");
+        const e_smallTit2 = document.querySelector(".effect___inner02 .e-small-tit");
+        const e_smallTit3 = document.querySelector(".effect___inner03 .e-small-tit");
+        const e_iPad1 = document.querySelectorAll(".effect___inner01 .i-pad");
+        const e_iPad2 = document.querySelectorAll(".effect___inner02 .i-pad");
+        const e_iPad3 = document.querySelectorAll(".effect___inner03 .i-pad");
+
         gsap.to(effect, {
             xPercent: -100 * (effect.length -1),
             // x: -200 ,
@@ -1005,6 +1016,70 @@ Slider.init();
             duration: 5, 
             ease: "power2.out",
         });
+
+        // gsap.to(e_smallTit1, {
+        //     xPercent: -50,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: e_smallTit1,
+        //         start:"left 10%",
+        //         scrub: 2.2,
+        //         ease: Power4.easeOut,
+        //     }
+        // })
+
+        // gsap.to(e_iPad1, {
+        //     xPercent: -10,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: e_iPad1,
+        //         start:"left 10%",
+        //         scrub: 2.2,
+        //         ease: Power4.easeOut,
+        //     }
+        // })
+        // gsap.to(e_smallTit2, {
+        //     xPercent: -50,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: e_smallTit2,
+        //         start:"left 10%",
+        //         scrub: 2.2,
+        //         ease: Power4.easeOut,
+        //     }
+        // })
+
+        // gsap.to(e_iPad2, {
+        //     xPercent: -10,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: e_iPad2,
+        //         start:"left 10%",
+        //         scrub: 2.2,
+        //         ease: Power4.easeOut,
+        //     }
+        // })
+        // gsap.to(e_smallTit3, {
+        //     xPercent: -50,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: e_smallTit3,
+        //         start:"left 10%",
+        //         scrub: 2.2,
+        //         ease: Power4.easeOut,
+        //     }
+        // })
+
+        // gsap.to(e_iPad3, {
+        //     xPercent: -10,
+        //     duration:3,
+        //     scrollTrigger: {
+        //         trigger: e_iPad3,
+        //         start:"left 10%",
+        //         scrub: 2.2,
+        //         ease: Power4.easeOut,
+        //     }
+        // })
     </script>
 
     <!-- 마우스 따라 움직이는 효과 -->
