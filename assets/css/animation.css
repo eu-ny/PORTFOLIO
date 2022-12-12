@@ -28,7 +28,7 @@
 .animation02 {
     display: inline-block;
     transform: translateX(0);
-    animation: scrolling 6s linear infinite;
+    animation: scrolling 30s linear infinite;
 }
 
 @keyframes scrolling {
