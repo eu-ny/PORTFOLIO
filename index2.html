@@ -521,6 +521,35 @@
         
     </section>
 
+    <footer id="footer">
+        <div class="contact_wrap">
+            <p class="topBtn">back on top</p>
+            <button class="scrollTopBtn">click</button>
+        </div>
+        <div>
+            <p>
+                Would you like<br>
+                to contact me?
+            </p>
+            <button class="email">
+                <a href="mailto:praise1109@naver.com">
+                    click
+                </a>
+            </button>
+        </div>
+        <div class="sns__wrap">
+            <figure class="github sns">
+                <a href="#"><img src="./assets/icon/github.svg" alt="github"></a>
+            </figure>
+            <figure class="instargram sns">
+                <a href="#"><img src="./assets/icon/Instagram.svg" alt="Instagram"></a>
+            </figure>
+            <figure class="tistory sns">
+                <a href="#"><img src="./assets/icon/tistory.svg" alt="tistory"></a>
+            </figure>
+        </div>
+    </footer>
+
 
 
 
@@ -688,14 +717,15 @@
                 scrollTrigger: {
                     trigger: section02,
                     start: "top",
-                    end: "20% 0%",
+                    end: "30%",
                     scrub: 1,
+                    markers: true,
                 }
             })
             aboutAni
-                .from(".a_ani", { yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo})
-                .from(ai01, { yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.04, ease:Expo})
-                .to('.a_ani1', .9, { duration:3, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Power1.easeOut}, "a")
+                .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo.easeOut})
+                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.06,  ease:Expo.easeOut}, "+=2")
+                .to('.a_ani1', { duration:10, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo.easeIn}, "+=20")
         }
         aboutAni()
 
@@ -705,14 +735,14 @@
                 scrollTrigger: {
                     trigger: section03,
                     start: "top",
-                    end: "20% 0%",
+                    end: "30% 0%",
                     scrub: 1,
                 }
             })
             aboutAni2
-                .from(".A2-photo", { yPercent:10, autoAlpha: 0, filter: "blur(3px)",})
-                .from(ai02, { yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.04})
-                .to('.a_ani2', .9, { duration:5, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8}, "a")
+                .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo.easeOut})
+                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.06, ease:Expo.easeOut}, "+=2")
+                .to('.a_ani2', .9, { duration:5, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo.easeIn}, "+=20")
         }
         aboutAni2()
 
@@ -950,7 +980,7 @@
                 timeline
                     .to(item, .5, { left: 0, delay: 1 })
                     .to(item, .5, { scale: 1 })
-                    .staggerFrom(texts, .5, { y: 300, autoAlpha: 0, ease: Back.easeOut }, 0.2)
+                    .staggerFrom(texts, .5, { y: 100, autoAlpha: 0, ease: Back.easeOut }, 0.2)
                     .staggerFrom(stage, .5, { autoAlpha: 0, scale: .8, ease: Back.easeOut }, 0.2)
             },
 
@@ -960,7 +990,7 @@
                 const stage = item.querySelector('.stage');
                 const timeline = new TimelineMax();
                 timeline
-                    .staggerTo(texts, .5, { y: 300, autoAlpha: 0, ease: Back.easeIn }, '-0.5')
+                    .staggerTo(texts, .5, { y: 100, autoAlpha: 0, ease: Back.easeIn }, '-0.5')
                     .staggerTo(stage, .5, { autoAlpha: 0, scale: 0.8, ease: Back.easeOut }, '-0.5')
                     .to(item, .5, { scale: .9 })
                     .to(item, .5, { left: '100vw' })
@@ -1001,7 +1031,6 @@ Slider.init();
 
         gsap.to(effect, {
             xPercent: -100 * (effect.length -1),
-            // x: -200 ,
             scrollTrigger: {
                 trigger: ".effectCont",
                 pin: true,

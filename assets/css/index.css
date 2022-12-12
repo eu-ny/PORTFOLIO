@@ -903,10 +903,10 @@ section {
 
 .stage {
     position: absolute;
-    width: 48vw;
+    width: 55vw;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -32%, 0);
+    transform: translate3d(-50%, -38%, 0);
 }
 
 .music-desc {
@@ -1026,6 +1026,7 @@ section {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 .effect__wrap {
     width: 300%;
@@ -1048,7 +1049,6 @@ section {
     text-align: center;
     letter-spacing: 2vw;
     white-space: nowrap;
-    /* display: grid; */
 }
 .back-tit4-2 {
     position: absolute;
@@ -1147,17 +1147,14 @@ section {
     width: 110%;
     height: 100vh;
     display: flex;
-    /* flex-direction: row-reverse; */
     justify-content: center;
     align-items: center;
-    /* background: #F6F5F3; */
     position: relative;
     overflow: hidden;
 }
 
 .e-text-wrap.pink {
     width: auto;
-    /* margin-right: 6%; */
 }
 
 .e-small-tit.pink {
@@ -1175,7 +1172,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: #F6F5F3; */
     font-family: "Tungsten";
     position: relative;
     overflow: hidden;
@@ -1222,4 +1218,116 @@ section {
     font-weight: 500;
     color: #a13a5f;
     padding-top: 4%;
+}
+
+
+/* footer ---------------------------------------------------------------------------------------- */
+footer {
+    height: 100vh;
+    background: #fff;
+    position: relative;
+}
+
+.contact_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Tungsten';
+    height: 60vh;
+}
+
+.contact_wrap div {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact_wrap div:first-child::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    right: 0;
+    background: #a13a5f;
+}
+
+.contact_wrap p {
+    text-transform: uppercase;
+    margin-top: 7vh;
+    font-size: 6vw;
+    font-weight: 400;
+    line-height: 0.8;
+    height: 38%;
+    color: #A13A5F;
+}
+
+.contact_wrap .topBtn {
+    padding-top: 3vw;
+}
+
+.contact_wrap button {
+    font-size: 2vw;
+    padding: 2% 8%;
+    border-radius: 50px;
+    background: #F9BDB3;
+    color: #fff;
+    font-family: 'Tungsten';
+    cursor: pointer;
+}
+
+.contact_wrap button > a {
+    color: #fff;
+}
+
+
+.sns__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.sns__wrap  img {
+    width: 3vw;
+}
+
+.sns__wrap  .sns {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width .6s cubic-bezier(.645,.045,.355,1);
+}
+
+.github {
+    background: #DFB2BC;
+}
+.instargram {
+    background: #DE939F;
+}
+.tistory {
+    background: #6E4878;
+}
+
+.sns__wrap  .sns:hover {
+    width: 140%;
+}
+
+
+@media (max-width:960px){
+    .sns__wrap img {
+        height: 30vh;
+    }
+}
+
+@media (max-width:600px){
+    .sns__wrap img {
+        height: 20vh;
+    }
 }
