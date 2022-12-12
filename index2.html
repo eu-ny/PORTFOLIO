@@ -775,7 +775,7 @@
                         // autoAlpha: 0,
                         yPercent: 50,
                         duration:3,
-                        ease:"expo"
+                        ease:"expo.out"
                     })
 
             })
@@ -854,9 +854,10 @@
                 }
             })
 
-            aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
-            aboutAni4.to('#section05 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
-            aboutAni5.to('#section06 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
+            // aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
+            aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease: Back.easeIn})
+            aboutAni4.to('#section05 .textMove', { duration:1, marginTop: "30vh", ease: Back.easeIn})
+            aboutAni5.to('#section06 .textMove', { duration:1, marginTop: "30vh", ease: Back.easeIn})
         }
         siteAni01()
 
