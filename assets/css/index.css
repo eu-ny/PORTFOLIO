@@ -988,7 +988,7 @@ section {
     justify-content: space-between;
 }
 
-.slider__arrows--left {
+/* .slider__arrows--left {
     background-image: url(../imgs/left-arrow.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -997,13 +997,14 @@ section {
     background-image: url(../imgs/right-arrow.svg);
     background-repeat: no-repeat;
     background-position: center center;
-}
+} */
 
 .slider__arrows--left,
 .slider__arrows--right {
     color: #fff;
-    width: 5vw;
-    height: 8vh;
+    /* width: 5vw;
+    height: 8vh; */
+    font-size: 6vw;
     cursor: pointer;
     transition: transform .5s, opacity .5s;
 }
