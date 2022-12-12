@@ -150,7 +150,7 @@
     </section>
     <!-- //section03 -->
 
-    <section id="section04" class="basic">
+    <section id="section04" class="basic site">
         <h2 class="ir">BASIC</h2>
         <article class="basic-imac cont-ani-y">
             <div class="textMove">
@@ -231,7 +231,7 @@
     </section>
     <!-- //section04 -->
 
-    <section id="section05" class="react">
+    <section id="section05" class="react site">
         <h2 class="ir">REACT</h2>
 
         <article class="react-imac">
@@ -305,7 +305,7 @@
     </section>
     <!-- //section05 -->
 
-    <section id="section06" class="vue">
+    <section id="section06" class="vue site">
         <h2 class="ir">VUE</h2>
 
         <article class="vue-imac cont-ani-y">
@@ -585,6 +585,7 @@
         })
 
     </script>
+
     <!-- intro -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
@@ -666,6 +667,8 @@
                 scrub: 1,
             }
         });
+
+        gsap.fromTo("#section04 .tit", {y:200,},{ duration: 0.2, ease: Back.easeOut.config(2),  y: 0, scrollTrigger: {  scrub: 1, start: "top 20%" }})
 
 
         //어바웃 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -767,13 +770,13 @@
                             start: "top 70%",
                             end: "+=450",
                             scrub: true,
-                            markers: true
+                            // markers: true
                         }
                     })
 
                     .from(left, {
                         xPercent: -150,
-                        duration:4,
+                        duration:5,
                         ease:"expo.out"
                     })
             })
@@ -786,7 +789,7 @@
                             start: "top 70%",
                             end: "+=300",
                             scrub: true,
-                            markers: true
+                            // markers: true
                         }
                     }, "+=10")
 
@@ -805,7 +808,7 @@
                             trigger: top,
                             end: "-=200",
                             scrub: true,
-                            markers: true,
+                            // markers: true,
                         }
                     })
 
@@ -844,6 +847,10 @@
 
         function siteAni01(){
 
+            // let work = gsap.timeline({
+            //     scrollTrigger: { trigger: "#section04 .tit", start: "top 0%", end: "bottom 100%", }
+            // })
+
             let aboutAni3 = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#section04',
@@ -863,17 +870,20 @@
             })
 
             let aboutAni5 = gsap.timeline({
-                scrollTrigger: {
-                    trigger: '#section06',
-                    start: "top 10%",
-                    end: "100% 0%",
-                    scrub: 2,
+                scrollTrigger: { 
+                    trigger: '#section06', 
+                    start: "top 10%", 
+                    end: "100% 0%", 
+                    scrub: 2, 
                 }
             })
 
             aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
             aboutAni4.to('#section05 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
             aboutAni5.to('#section06 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
+
+            // work.to("#section04 .tit", { duration: 1, ease:Expo.easeOut, y: -100,})
+            
         }
         siteAni01()
 
