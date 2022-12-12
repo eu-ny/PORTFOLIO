@@ -1276,10 +1276,12 @@ footer {
     color: #fff;
     font-family: 'Tungsten';
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .contact_wrap button > a {
     color: #fff;
+    text-transform: uppercase;
 }
 
 
