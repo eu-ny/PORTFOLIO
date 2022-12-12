@@ -616,10 +616,10 @@
             let tl = gsap.timeline();
 
             tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -500, opacity: 0, ease: Power4.easeOut})
-            tl.from(".it01 span", { y: 100, duration: 0.6, ease: Expo.easeOut, opacity: 0, stagger: 0.09 }, "b")
-            tl.from(".it02 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
-            tl.from(".it03 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
-            tl.to(".it_r", {duration: 0.4, autoAlpha: 1, ease: Expo, rotation: 0, }, "a")
+            tl.from(".it01 span", { y: 200, duration: 0.6, ease: Expo.easeOut, stagger: 0.04 })
+            tl.from(".it02 span", { y: 200, duration: 0.5, ease: Expo.easeOut, stagger: 0.04 })
+            tl.from(".it03 span", { y: 200, duration: 0.5, ease: Expo.easeOut, stagger: 0.04 })
+            tl.to(".it_r", {duration: 0.4, autoAlpha: 1, ease: Expo, rotation: 0, })
             tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
         },-300)
 
@@ -639,9 +639,10 @@
 
         gsap.to(".it_icon03", {
             duration: 0.5, 
-            yPercent: -450,
-            scale: 1.5,
-            ease: Expo.easeout,
+            yPercent: -500,
+            scale: 2,
+            // ease: Expo.easeout,
+            ease: Back.easeOut,
             scrollTrigger: {
                 scrub: 1,
             }
@@ -683,7 +684,7 @@
             }
         });
 
-        gsap.fromTo("#section04 .tit", {y:200,},{ duration: 0.2, ease: Back.easeOut.config(2),  y: 0, scrollTrigger: {  scrub: 1, start: "top 20%" }})
+        // gsap.fromTo("#section04 .tit", {y:200,},{ duration: 0.2, ease: Back.easeOut.config(2),  y: 0, scrollTrigger: {  scrub: 1, start: "top 20%" }})
 
 
         //어바웃 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1210,7 +1211,7 @@ Slider.init();
             gsap.to(icons, {
                 duration: 1, 
                 yPercent: -80,
-                filter: "blur(3px)",
+                filter: "blur(5px)",
                 ease: Back.easeOut.config(4),
                 scrollTrigger: {
                     scrub: 1,
