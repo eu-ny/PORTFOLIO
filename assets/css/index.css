@@ -238,7 +238,7 @@ section {
 
 .A1-photo {
     position: relative;
-    margin-bottom: 13svh;
+    margin-bottom: 13vh;
 }
 
 .A-photo01 {
@@ -249,7 +249,7 @@ section {
 
 .A-title01 {
     position: absolute;
-    bottom: -15.4%;
+    bottom: -15.5%;
     left: -21%;
     letter-spacing: -1.8px;
     color: #e7828e;
@@ -290,25 +290,25 @@ section {
 
 .A2-photo {
     position: relative;
-    margin-bottom: 10vh;
+    margin-bottom: 13vh;
 }
 
 .A-photo02 {
-    width: 30vw;
+    width: 28vw;
     border-top-left-radius: 300px;
     border-top-right-radius: 300px;
 }
 
 .A-title02 {
     position: absolute;
-    bottom: -14.3%;
+    bottom: -14%;
     left: -29%;
     letter-spacing: -1.8px;
     color: #992d54;
     font-size: 5.5vw;
     font-weight: 800;
     text-align: center;
-    line-height: 0.9;
+    line-height: 0.85;
     white-space: nowrap;
     overflow: hidden;
 }

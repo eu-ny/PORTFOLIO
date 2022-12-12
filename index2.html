@@ -364,11 +364,11 @@
             <h2 class="s-tit s_tit01">JAVASCRIPT EFFECT</h2>
             <h2 class="s-tit s_tit02">WORK SERIES !</h2>
 
-            <figure class="s-icon01">
-                <img src="./assets/imgs/it_icon05.png" alt="code" class="s-icon">
+            <figure class="s-icon01 s_icon">
+                <img src="./assets/imgs/it_icon05.png" alt="code" class="">
             </figure>
-            <figure class="s-icon02">
-                <img src="./assets/imgs/gift.png" alt="gift" class="s-icon">
+            <figure class="s-icon02 s_icon">
+                <img src="./assets/imgs/gift.png" alt="gift" class="">
             </figure>
         </div>
         <div class="s-desc-wrap">
@@ -724,7 +724,7 @@
             })
             aboutAni
                 .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo.easeOut})
-                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.06,  ease:Expo.easeOut}, "+=2")
+                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:1,  ease:Expo.easeOut}, "+=2")
                 .to('.a_ani1', { duration:10, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo.easeIn}, "+=20")
         }
         aboutAni()
@@ -741,7 +741,7 @@
             })
             aboutAni2
                 .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo.easeOut})
-                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.06, ease:Expo.easeOut}, "+=2")
+                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.1, ease:Expo.easeOut}, "+=2")
                 .to('.a_ani2', .9, { duration:5, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo.easeIn}, "+=20")
         }
         aboutAni2()
@@ -950,6 +950,16 @@
         //     }
         // })
 
+        // gsap.to('.s_icon', {
+        //     duration:1,
+        //     repeat: -1,
+        //     repeatDelay: 0.5,
+        //     yoyo: true,
+        //     y: -100,
+        //     ease: Power4.easeOut,
+        //     toggleActions: "restart pause resume reset"
+        // })
+
 
     </script>
 
@@ -1116,7 +1126,7 @@ Slider.init();
         const icons = [...document.querySelectorAll(".it_m")];
         const itext = [...document.querySelectorAll(".it_tm")];
         const aIcon = [...document.querySelectorAll(".ai01_2")];
-        const sIcon = [...document.querySelectorAll(".s-icon")];
+        const sIcon = [...document.querySelectorAll(".s_icon")];
 
         const lerp = (a, b, n) => (1 - n) * a + n * b;
         const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
