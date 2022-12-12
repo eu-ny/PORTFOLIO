@@ -445,8 +445,8 @@
         </article>
 
         <div class="slider__arrows">
-            <div class="slider__arrows--left">&#10094;</div>
-            <div class="slider__arrows--right">&#10095;</div>
+            <div class="slider__arrows--left"></div>
+            <div class="slider__arrows--right"></div>
         </div>
 
     </section>
@@ -854,16 +854,18 @@
                 }
             })
 
-            // aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
-            aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease: Back.easeIn})
-            aboutAni4.to('#section05 .textMove', { duration:1, marginTop: "30vh", ease: Back.easeIn})
-            aboutAni5.to('#section06 .textMove', { duration:1, marginTop: "30vh", ease: Back.easeIn})
+            aboutAni3.to('#section04 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
+            aboutAni4.to('#section05 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
+            aboutAni5.to('#section06 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
         }
         siteAni01()
 
-        gsap.from("#section04 .tit span", { yoyo: true, y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%', end:"bottom bottom"}})
-        gsap.from("#section05 .tit span", { yoyo: true, y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%', end:"bottom bottom"}})
-        gsap.from("#section06 .tit span", { yoyo: true, y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%', end:"bottom bottom"}})
+        gsap.from("#section04 .tit span", {  y: 100, duration: 1, ease: Back.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%', end:"bottom bottom"}})
+        // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 10%', end: 'bottom top'}})
+
+
+        gsap.from("#section05 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%', end:"bottom bottom"}})
+        gsap.from("#section06 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%', end:"bottom bottom"}})
     </script>
 
     <!-- gameEffect -->
