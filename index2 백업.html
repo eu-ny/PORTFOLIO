@@ -462,6 +462,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
     <!-- common -->
     <script>
+        gsap.registerPlugin(ScrollTrigger);
+
         // 부드러운 움직임
         const lenis = new Lenis({
             duration: 2,
@@ -484,6 +486,15 @@
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+            // const introText01 = document.querySelector('.it01');
+            // const introIcon03 = document.querySelector('.it_icon03')
+            
+            // if((introText01.offsetTop + 50)  >=  scrollTop){
+            //     introIcon03.classList.remove("iconZindex");
+            // }else{ 
+            //     introIcon03.classList.add("iconZindex");
+            // }
         })
 
     </script>
@@ -507,6 +518,11 @@
             tl.from(".it03 span", { y: 100, duration: 0.5, ease: Expo.easeOut, opacity: 0, stagger: 0.07 })
             tl.to(".it_r", {duration: 0.4, autoAlpha: 1, ease: Expo, rotation: 0, }, "a")
             tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
+            // tl.from(".it_icon01", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: 90, })
+            // tl.from(".it_icon02", {duration: 0.2, autoAlpha: 0, ease: Expo, rotation: -90, })
+            // tl.from(".it_icon04", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: 180, })
+            // tl.from(".it_icon05", {duration: 0.3, autoAlpha: 0, ease: Expo, rotation: -180, })
+            // 마우스 따리 움직이기
         },-300)
 
         gsap.to(".it01", {
@@ -570,14 +586,43 @@
         });
 
 
-        //어바웃 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+        // gsap.to('.textMove', {
+        //     duration: 1, 
+        //     y:100,
+        //     ease: Back.easeOut.config(2),
+        //     scrollTrigger:{
+        //         trigger:'.textMove',
+        //         start: 'top 0%',
+        //         scrub:2
+        //     }
+        // })
 
+
+        //어바웃
+
+        // let tit1 = gsap.utils.toArray(".tit1");
         let ai01 = gsap.utils.toArray(".ai01");
         let ai02 = gsap.utils.toArray(".ai02");
         let span1 = gsap.utils.toArray(".A-title01 span");
         let span2 = gsap.utils.toArray(".A-title02 span");
         const section02 = gsap.utils.toArray("#section02");
         const section03 = gsap.utils.toArray("#section03");
+
+        // ScrollTrigger.create({
+        //     trigger: "#section02",
+        //     start:"top 5%",
+        //     end: "bottom bottom ",
+        //     scrub: 1,
+        //     duration:1,
+        //     animation: gsap.from(".a_ani", {
+        //         y:10,
+        //         scale: (1.1, 1.1),
+        //         opacity: 0,
+        //         filter: "blur(3px)",
+        //         },
+        //     ),
+        // });
+
 
         ScrollTrigger.create({
             trigger: "#section02",
@@ -587,6 +632,12 @@
                     x: 0, 
                     y: 100, 
                     opacity: 0, 
+                    // ease: Expo.easeOut, 
+                    // scrollTrigger:{
+                    //     trigger: section02,
+                    //     start:"top top",
+                    //     end:"cente center"
+                    // } 
                 },{
                     y:0,
                     opacity: 1, 
@@ -604,6 +655,12 @@
                     x: 0, 
                     y: 100, 
                     opacity: 0, 
+                    // ease: Expo.easeOut, 
+                    // scrollTrigger:{
+                    //     trigger: section02,
+                    //     start:"top top",
+                    //     end:"cente center"
+                    // } 
                 },{
                     y:0,
                     opacity: 1, 
@@ -618,14 +675,17 @@
             let aboutAni = gsap.timeline({
                 scrollTrigger: {
                     trigger: section02,
-                    start: "top 2%",
-                    end: "20% 0%",
+                    start: "0 0%",
+                    end: "30% 0%",
                     scrub: 1,
                 }
             })
             aboutAni
                 .from(".a_ani", { yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Expo})
                 .from(ai01, { yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:0.04, ease:Expo})
+                // .to(ai01,{ scale:0.5, opacity: 0,  yPercent: 10, stagger:0.04 })
+                // .to('.A1-photo img', { duration:3, ease:Expo, yPercent:-2, stagger:0.04,})
+                // .from('.ai01_2', { duration:3, stagger:0.04, ease:Expo, rotation: 360, repeat: 1, repeatDelay: 5})
                 .to('.a_ani1', { duration:3, yPercent:-20, autoAlpha:0, stagger:0.04, scale: 0.8, ease:Expo})
         }
         aboutAni()
@@ -635,8 +695,8 @@
             let aboutAni2 = gsap.timeline({
                 scrollTrigger: {
                     trigger: section03,
-                    start: "top 2%",
-                    end: "20% 0%",
+                    start: "top 5%",
+                    end: "30% 0%",
                     scrub: 1,
                 }
             })
@@ -655,6 +715,7 @@
             let contLeft = gsap.utils.toArray(".cont-ani-left");
             let contLeftImg = gsap.utils.toArray(".cont-ani-left-img");
             // let imacTop = gsap.utils.toArray(".cont-ani-y");
+            // let imacAni = gsap.utils.toArray(".imac_ani");
             let textMove = gsap.utils.toArray(".textMove");
             let imac = gsap.utils.toArray(".imac");
 
@@ -671,6 +732,7 @@
                     })
 
                     .from(left, {
+                        // opacity: 0,
                         xPercent: -150,
                         duration:4,
                         ease:"expo.out"
@@ -682,6 +744,7 @@
                     .timeline({
                         scrollTrigger: {
                             trigger: left,
+                            // start: "-=600",
                             start: "top 70%",
                             end: "+=300",
                             scrub: true,
@@ -717,6 +780,25 @@
 
             })
 
+            // textMove.forEach((top)=> {
+            //     gsap
+            //         .timeline({
+            //             scrollTrigger: {
+            //                 trigger: top,
+            //                 end: "-=200",
+            //                 scrub: true,
+            //                 markers: true,
+            //             }
+            //         })
+
+            //         .from(top, {
+            //             autoAlpha: 0,
+            //             yPercent: -100,
+            //             duration:3,
+            //             ease:"expo"
+            //         })
+            // })
+
         }
 
         //site desc view ----------------------------------------------------------------
@@ -742,6 +824,8 @@
 
 
         function siteAni01(){
+            // let textMove = gsap.utils.toArray(".textMove");
+            // let imac = gsap.utils.toArray(".imac");
 
             let aboutAni3 = gsap.timeline({
                 scrollTrigger: {
@@ -1041,5 +1125,149 @@ Slider.init();
         })
     </script>
 
+    <!-- <script>
+                // let about01 = gsap.utils.toArray(".a_ani");
+        // let about02 = gsap.utils.toArray(".a_ani2 ");
+        // const section02 = document.querySelector("#section02");
+        // const section03 = document.querySelector("#section03");
+
+        // about01.forEach((a)=> {
+        //     gsap
+        //         .timeline({
+        //             scrollTrigger: {
+        //                 trigger: section02,
+        //                 start:"top top",
+        //                 end: "bottom center",
+        //                 // end: "100% 0",
+        //                 markers: true,
+        //                 repeat: -1,
+        //             }
+        //         })
+
+        //         .from(a, {
+        //             autoAlpha: 0,
+        //             // scale: 1.1,
+        //             // filter: "blur(5px)",
+        //             duration: 0.5,
+        //             ease: Expo
+        //         })
+
+        //         // .to(a, {
+        //         //     scale: 0.8,
+        //         // })
+
+        // })
+
+        // about02.forEach((a)=> {
+        //     gsap
+        //         .timeline({
+        //             scrollTrigger: {
+        //                 trigger: section03,
+        //                 start:"top top",
+        //                 end: "bottom bottom",
+        //                 // markers: true,
+        //                 // scrub: true,
+        //             }
+        //         })
+
+        //         .from(a, {
+        //             autoAlpha: 0,
+        //             duration: 0.5,
+        //             ease: Expo
+        //         })
+
+        // })
+
+        // // at01.forEach((a)=> {
+        // //     gsap
+        // //         .timeline({
+        // //             scrollTrigger: {
+        // //                 trigger: section02,
+        // //                 start:"top top",
+        // //             }
+        // //         })
+        // //         .from(a, {
+        // //             autoAlpha: 0,
+        // //             duration: 2,
+        // //             ease:"expo.out"
+        // //         })
+        // // })
+
+        // gsap.from(".A-title01 span", {
+        //     duration: 1, 
+        //     x: 0, 
+        //     y: 100, 
+        //     opacity: 0, 
+        //     ease: Expo.easeOut, 
+        //     stagger: 0.06, 
+        //     scrollTrigger:{
+        //         trigger: section02,
+        //         start:"-=150",
+        //         end:"+=200"
+        //     } 
+        // })
+
+        // gsap.from(".A-title02 span", {
+        //     duration: 1, 
+        //     x: 0, 
+        //     y: 100, 
+        //     opacity: 0, 
+        //     ease: Expo.easeOut, 
+        //     stagger: 0.06, 
+        //     scrollTrigger:{
+        //         trigger: section03,
+        //         start:"-=150",
+        //         end:"+=200"
+        //     } 
+        // })
+
+        // gsap.to(".desc1, .A-title01", {
+        //     y: -5,
+        //     scrollTrigger: {
+        //         trigger: "#section02",
+        //         scrub: true,
+        //         start: "top"
+        //     }, 
+        // });
+        
+        // gsap.to(".desc2, .A-title02", {
+        //     y: -5,
+        //     duration:1,
+        //     scrollTrigger: {
+        //         trigger: "#section03",
+        //         scrub: 1,
+        //         start: "top"
+        //     }, 
+        // });
+
+        // ai01.forEach((text)=> {
+        //     gsap
+        //         .timeline({
+        //             scrollTrigger: {
+        //                 trigger: section02,
+        //                 start: "top 5%",
+        //                 end: "bottom bottom",
+        //                 scrub: 1,
+        //                 markers: true,
+        //             }
+        //         })
+        //         .from(text, {
+        //             opacity: 0,
+        //             scale: 1.1,
+        //             // xPercent: -10,
+        //             duration: 3,
+        //             ease:"expo",
+        //             stagger: {
+        //                 from: "center",
+        //                 axis: "x",
+        //                 amount: 2
+        //             }
+        //         })
+        // })
+
+
+
+
+    </script> -->
 </body>
 </html>
