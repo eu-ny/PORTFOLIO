@@ -475,7 +475,7 @@ section {
     transition: all 0.5s;
 }
 
-.tit span {
+.work_tit span {
     display: inline-block;
     margin-bottom: -10%;
 }
@@ -612,7 +612,11 @@ section {
     position: relative;
 }
 
-.react-imac::before {
+.r_line {
+    background: #a13a5f;
+}
+
+/* .react-imac::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -620,7 +624,7 @@ section {
     width: 100%;
     height: 1px;
     background: #a13a5f;
-}
+} */
 
 .back-tit2 {
     font-size: 20vw;
@@ -636,7 +640,7 @@ section {
     overflow: hidden;
 }
 
-.react-work > .tit {
+.react-work > .work_tit {
     display: inline-block;
     font-family: "Tungsten";
     font-size: 28vw;
@@ -648,7 +652,7 @@ section {
     transition: all 0.5s;
 }
 
-.react-work::before {
+/* .react-work::before {
     content: "";
     position: absolute;
     bottom: 10%;
@@ -656,7 +660,7 @@ section {
     width: 100%;
     height: 1px;
     background: #a13a5f;
-}
+} */
 
 .react-conts-wrap {
     font-family: "Tungsten";
@@ -666,7 +670,7 @@ section {
     position: relative;
 }
 
-.react-conts-wrap::before {
+/* .react-conts-wrap::before {
     content: "";
     position: absolute;
     bottom: 0%;
@@ -674,7 +678,7 @@ section {
     width: 100%;
     height: 1px;
     background: #a13a5f;
-}
+} */
 
 .react-cont {
     display: flex;
@@ -730,7 +734,11 @@ section {
     position: relative;
 }
 
-.vue-imac::before {
+.v_line {
+    background: #EDA24B;
+}
+
+/* .vue-imac::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -738,7 +746,7 @@ section {
     width: 100%;
     height: 1px;
     background: #EDA24B;
-}
+} */
 
 .back-tit3 {
     font-size: 20vw;
@@ -754,7 +762,7 @@ section {
     overflow: hidden;
 }
 
-.vue-work > .tit {
+.vue-work > .work_tit {
     display: inline-block;
     font-family: "Tungsten";
     font-size: 28vw;
@@ -766,7 +774,7 @@ section {
     transition: all 0.5s;
 }
 
-.vue-work::before {
+/* .vue-work::before {
     content: "";
     position: absolute;
     bottom: 10%;
@@ -774,7 +782,7 @@ section {
     width: 100%;
     height: 1px;
     background: #EDA24B;
-}
+} */
 
 .vue-conts-wrap {
     font-family: "Tungsten";
@@ -784,7 +792,7 @@ section {
     position: relative;
 }
 
-.vue-conts-wrap::before {
+/* .vue-conts-wrap::before {
     content: "";
     position: absolute;
     bottom: 0%;
@@ -792,7 +800,7 @@ section {
     width: 100%;
     height: 1px;
     background: #EDA24B;
-}
+} */
 
 .vue-cont {
     display: flex;
@@ -1121,7 +1129,6 @@ section {
 
 .e-small-tit {
     font-size: 2.5vw;
-    margin-right: 7vw;
     margin-bottom: 1vw;
     padding: 2% 8%;
     border-radius: 10px;
@@ -1130,7 +1137,7 @@ section {
 }
 
 .e-title {
-    font-size: 9vw;
+    font-size: 7vw;
     font-weight: 600;
     line-height: 0.8;
     color: #8536ac;
@@ -1138,7 +1145,7 @@ section {
 
 .i-pad {
     position: relative;
-    width: 65vw;
+    width: 50vw;
 }
 
 .i-pad-view {
@@ -1181,7 +1188,7 @@ section {
 
 .e-small-tit.pink {
     background: #8536ac;
-    margin-right: 13vw;
+    /* margin-right: 13vw; */
 }
 .e-title.pink {
     color: #a13a5f;
@@ -1201,13 +1208,13 @@ section {
 
 
 .e-small-tit.yellow {
-    margin-right: 6vw;
+    /* margin-right: 6vw; */
     background: #a13a5f;
 }
+
 .e-title.yellow {
     color: #EDA24B;
 }
-
 
 /* media */
 @media (max-width:600px) {

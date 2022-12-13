@@ -150,7 +150,7 @@
     </section>
     <!-- //section03 -->
 
-    <section id="section04" class="basic site">
+    <section id="section04" class="basic">
         <h2 class="ir">BASIC</h2>
         <article class="basic-imac cont-ani-y">
             <div class="textMove">
@@ -173,9 +173,9 @@
                 </div>
             </figure>
         </article>
-        <article class="basic-work">
+        <article class="basic-work site_work">
             <div class="basic_line1"></div>
-            <h2 class="basic-tit tit split">WORK</h2>
+            <h2 class="basic-tit work_tit split">WORK</h2>
             <div class="basic_line2"></div>
         </article>
         <article class="basic-conts">
@@ -234,7 +234,7 @@
     </section>
     <!-- //section04 -->
 
-    <section id="section05" class="react site">
+    <section id="section05" class="react">
         <h2 class="ir">REACT</h2>
 
         <article class="react-imac">
@@ -258,8 +258,10 @@
             </figure>
         </article>
 
-        <article class="react-work">
-            <h2 class="tit split">WORK</h2>
+        <article class="react-work site_work">
+            <div class="basic_line1 r_line"></div>
+            <h2 class="react-tit work_tit split">WORK</h2>
+            <div class="basic_line2 r_line"></div>
         </article>
 
         <article class="react-conts-wrap">
@@ -303,12 +305,14 @@
                     </div>
                 </figure>
             </div>
+
+            <div class="basic_line3 r_line"></div>
         </article>
 
     </section>
     <!-- //section05 -->
 
-    <section id="section06" class="vue site">
+    <section id="section06" class="vue">
         <h2 class="ir">VUE</h2>
 
         <article class="vue-imac cont-ani-y">
@@ -332,8 +336,10 @@
             </figure>
         </article>
 
-        <article class="vue-work">
-            <h2 class="tit split">WORK</h2>
+        <article class="vue-work site_work">
+            <div class="basic_line1 v_line"></div>
+            <h2 class="vue-tit work_tit split">WORK</h2>
+            <div class="basic_line2 v_line"></div>
         </article>
 
         <article class="vue-conts-wrap">
@@ -357,6 +363,7 @@
                     </div>
                 </figure>
             </div>
+            <div class="basic_line3 v_line"></div>
         </article>
 
     </section>
@@ -923,18 +930,27 @@
             
         }
         siteAni01()
-        // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 10%', end: 'bottom top'}})
-       
-        gsap.from("#section04 .tit span", {  y: 300, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%'}})
-        gsap.from("#section05 .tit span", {  y: 300, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%'}})
-        gsap.from("#section06 .tit span", {  y: 300, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%'}})
 
+        setTimeout(() => {
+            //scrollTrigger:{ trigger: '#section04 .site_work', start:'top 40%', end: 'bottom bottom'}
+            // scrollTrigger:{ trigger: '#section05 .site_work', start:'top 40%', end: 'bottom 0%'}
+            // scrollTrigger:{ trigger: '#section06 .site_work', start:'top 40%', end: 'bottom 0%'}
+
+            let time10 = gsap.timeline({
+                scrollTrigger:{ trigger: 'basic_work', start:'top top'}
+            });
+
+            time10.from(".basic-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04, })
+            // time.from(".react-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
+            // time.from(".vue-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
+        },2000)
+        // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 135', end: 'bottom top'}})
         // setTimeout(() => {
         //     let siteTime = gsap.timeline();
 
-        //     siteTime.from("#section04 .tit span", {  y: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%'}})
-        //     siteTime.from("#section05 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%'}})
-        //     siteTime.from("#section06 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%'}})
+        //     siteTime.from("#section04 .work_tit span", {  y: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%'}})
+        //     siteTime.from("#section05 .work_tit span", {  y: 100, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%'}})
+        //     siteTime.from("#section06 .work_tit span", {  y: 100, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%'}})
         // })
 
     </script>
