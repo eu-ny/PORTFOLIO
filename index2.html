@@ -174,7 +174,9 @@
             </figure>
         </article>
         <article class="basic-work">
+            <div class="basic_line1"></div>
             <h2 class="basic-tit tit split">WORK</h2>
+            <div class="basic_line2"></div>
         </article>
         <article class="basic-conts">
             <div class="basic-cont01">
@@ -207,6 +209,7 @@
                     </div>
                 </figure>
             </div>
+            <div class="basic_line3"></div>
             <!-- <div class="basic-cont01 cont-ani-left">
                 <h2 class="b-site"><a href="#">PHP SITE 04</a></h2>
                 <figure class="b-cont01-img">
@@ -525,10 +528,27 @@
     </section>
     <!-- //section09 -->
 
-    <section id="section10" class="container">
-        <h2 class="sec8_tit"> worklist</h2>
-
-        <table class="workTable"></table>
+    <section id="section10">
+        <div class="container">
+            <h2 class="sec8_tit"> worklist</h2>
+    
+            <table class="workTable">
+               <tbody>
+                    <tr>
+                        <th>제목</th>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <th>제목</th>
+                        <td>내용</td>
+                    </tr>
+               </tbody>
+            </table>
+        </div>
         
     </section>
     <!-- //section10 -->
@@ -616,9 +636,9 @@
             let tl = gsap.timeline();
 
             tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -500, opacity: 0, ease: Power4.easeOut})
-            tl.from(".it01 span", { y: 200, duration: 0.6, ease: Expo.easeOut, stagger: 0.04 })
-            tl.from(".it02 span", { y: 200, duration: 0.5, ease: Expo.easeOut, stagger: 0.04 })
-            tl.from(".it03 span", { y: 200, duration: 0.5, ease: Expo.easeOut, stagger: 0.04 })
+            tl.from(".it01 span", { y: 200, duration: 0.8, ease: Expo.easeOut,stagger: 0.05 })
+            tl.from(".it02 span", { y: 200, duration: 0.8, ease: Expo.easeOut, stagger: 0.05 })
+            tl.from(".it03 span", { y: 200, duration: 0.8, ease: Expo.easeOut, stagger: 0.05 })
             tl.to(".it_r", {duration: 0.4, autoAlpha: 1, ease: Expo, rotation: 0, })
             tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
         },-300)
@@ -736,15 +756,15 @@
                 scrollTrigger: {
                     trigger: section02,
                     start: "top 1%",
-                    end: "35%",
-                    scrub: 1.5,
+                    end: "center +20%",
+                    scrub: 2,
                     markers: true,
                 }
             })
             aboutAni
-                .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Power1.easeOut})
-                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:1,  ease:Expo.easeOut}, "+=5")
-                .to('.a_ani1', { duration:10, yPercent:-20, autoAlpha:0, stagger:0.1, scale: 0.8, ease:Expo.easeIn}, "+=20")
+                .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Power1.easeOut})
+                .from(ai01, { duration: 3, yPercent:10, autoAlpha: 0, filter: "blur(5px)", stagger:0.2,  ease:Expo.easeOut}, "+=1")
+                .to('.a_ani1', { duration:9, yPercent:-50, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
         }
         aboutAni()
 
@@ -754,15 +774,15 @@
                 scrollTrigger: {
                     trigger: section03,
                     start: "top 1%",
-                    end: "35%",
-                    scrub: 1.5,
+                    end: "center +20%",
+                    scrub: 2,
                     markers: true,
                 }
             })
             aboutAni2
-                .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(3px)", ease:Power1.easeOut})
-                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(3px)", stagger:1, ease:Expo.easeOut}, "+=5")
-                .to('.a_ani2',{ duration:10, yPercent:-20, autoAlpha:0, stagger:0.1, scale: 0.8, ease:Expo.easeIn}, "+=20")
+                .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Power1.easeOut})
+                .from(ai02, { duration: 3, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Expo.easeOut, stagger:0.2,}, "+=1")
+                .to('.a_ani2',{ duration:9, yPercent:-50, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
         }
         aboutAni2()
 
@@ -796,6 +816,8 @@
                         ease:"expo.out"
                     })
             })
+
+            gsap.to
 
             contLeftImg.forEach((left) => {
                 gsap
@@ -898,17 +920,23 @@
             aboutAni4.to('#section05 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
             aboutAni5.to('#section06 .textMove', { duration:1, marginTop: "30vh", ease:Power4.easeOut})
 
-            // work.to("#section04 .tit", { duration: 1, ease:Expo.easeOut, y: -100,})
             
         }
         siteAni01()
+        // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 10%', end: 'bottom top'}})
+       
+        gsap.from("#section04 .tit span", {  y: 300, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%'}})
+        gsap.from("#section05 .tit span", {  y: 300, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%'}})
+        gsap.from("#section06 .tit span", {  y: 300, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%'}})
 
-        gsap.from("#section04 .tit span", {  y: 100, duration: 1, ease: Back.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%', end:"bottom bottom"}})
-        // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 10%', end: 'bottom top'}})
+        // setTimeout(() => {
+        //     let siteTime = gsap.timeline();
 
+        //     siteTime.from("#section04 .tit span", {  y: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'top 40%'}})
+        //     siteTime.from("#section05 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%'}})
+        //     siteTime.from("#section06 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%'}})
+        // })
 
-        gsap.from("#section05 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section05 .tit', start:'top 40%', end:"bottom bottom"}})
-        gsap.from("#section06 .tit span", {  y: 100, duration: 1, ease: Expo.easeOut, opacity: 0, stagger: 0.09, scrollTrigger:{ trigger: '#section06 .tit', start:'top 40%', end:"bottom bottom"}})
     </script>
 
     <!-- gameEffect -->
@@ -1017,8 +1045,8 @@
                 timeline
                     .to(item, .5, { left: 0, delay: 1 })
                     .to(item, .5, { scale: 1 })
-                    .staggerFrom(texts, .5, { y: 100, autoAlpha: 0, ease: Back.easeOut }, 0.2)
                     .staggerFrom(stage, .5, { autoAlpha: 0, scale: .8, ease: Back.easeOut }, 0.2)
+                    .staggerFrom(texts, .5, { y: 120, autoAlpha: 0, ease: Back.easeOut }, 0.2)
             },
 
             out: (index, nextIndex) => {
@@ -1027,8 +1055,8 @@
                 const stage = item.querySelector('.stage');
                 const timeline = new TimelineMax();
                 timeline
-                    .staggerTo(texts, .5, { y: 100, autoAlpha: 0, ease: Back.easeIn }, '-0.5')
-                    .staggerTo(stage, .5, { autoAlpha: 0, scale: 0.8, ease: Back.easeOut }, '-0.5')
+                    .staggerTo(texts, .5, { y: 120, autoAlpha: 0, ease: Back.easeIn }, '-0.5')
+                    .staggerTo(stage, .5, { autoAlpha: 0, scale: 0.8, ease: Back.easeOut }, '-0.5') 
                     .to(item, .5, { scale: .9 })
                     .to(item, .5, { left: '100vw' })
                     .call(Slider.in, [nextIndex], this, '-=1.5')
@@ -1209,7 +1237,7 @@ Slider.init();
 
             
             gsap.to(icons, {
-                duration: 1, 
+                duration: 0.5, 
                 yPercent: -80,
                 filter: "blur(5px)",
                 ease: Back.easeOut.config(4),
@@ -1245,8 +1273,8 @@ Slider.init();
 
         sIcon.forEach(img => {
             let values = { x: 0, y: 0 };
-            const xStart = gsap.utils.random(-12, 74);
-            const yStart = gsap.utils.random(-20, 84);
+            const xStart = gsap.utils.random(-120, 160);
+            const yStart = gsap.utils.random(-120, 160);
 
             const render3 = () => {
                 values.x = lerp(
