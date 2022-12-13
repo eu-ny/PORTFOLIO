@@ -51,6 +51,7 @@
 
 section {
     font-family: "Tungsten";
+    cursor: default;
 }
 
 /* section01 -------------------------------------------------------------------------------------------*/
@@ -63,7 +64,7 @@ section {
     background-color: #f8dede;
     position: relative;
     position: sticky;
-    top: 3;
+    top: 0;
     left: 0;
 }
 
@@ -154,6 +155,7 @@ section {
 }
 
 /* section01 -------------------------------------------------------------------------------------------*/
+
 #section02 {
     height: 100vh;
     background-color: #67353b;
@@ -283,7 +285,7 @@ section {
         linear-gradient(to right, transparent 5px, #FEF5F5 5px),
         linear-gradient(to bottom, #f5dddd 1px, transparent 1px);
     position: sticky;
-    top: 0%;
+    top: 0;
     left: 0;
 }
 
@@ -374,7 +376,7 @@ section {
     cursor: Default;
     background: #fefcfd;
     text-transform: uppercase;
-    position: relative;
+    position: relative
 }
 
 .basic-imac {
@@ -486,7 +488,7 @@ section {
     z-index: 9999;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 1.5px;
     background: #8536ac;
 }
 
@@ -497,7 +499,7 @@ section {
     z-index: 9999;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 1.5px;
     background: #8536ac;
 }
 
@@ -507,7 +509,7 @@ section {
     z-index: 9999;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 1.5px;
     background: #8536ac;
 }
 
@@ -534,6 +536,7 @@ section {
     display: flex;
     align-items: center;
     line-height: 0.8;
+    /* transform: translateX(-400%); */
 }
 
 .basic-cont01 .b-site > a {
@@ -852,9 +855,10 @@ section {
     position: relative;
     font-family: "Tungsten";
     background-color: #fefcfd;
+        background-image: linear-gradient(180deg, #fefcfd 90%, #fbcbcf 100%);
 }
 
-.s-text-animation {
+/* .s-text-animation {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -862,17 +866,33 @@ section {
     font-size: 3vw;
     transition: 0.3s;
     color: #FFE3E3;
-    background-color: #CDA8B6;
+} */
+
+.s-text-animation2 {
+    position: absolute;
+    bottom: 0;
+    white-space: nowrap;
+    font-size: 3vw;
+    transition: 0.3s;
+    color: #FFE3E3;
 }
 
 .s-text {
     padding: 1%;
     display: block;
+    background-color: #CDA8B6;
+    padding-right: 20%;
 }
+/* 
+.s_text01 {
+    padding: 1%;
+    display: block;
+    background-color: #CDA8B6;
+} */
 
-.s-text-bg {
+/* .s-text-bg {
     background-color: #983F5E;
-}
+} */
 
 .s-title-wrap {
     font-size: 8vw;
@@ -990,7 +1010,7 @@ section {
 #section08 {
     position: relative;
     height: 100vh;
-    background-image: linear-gradient(180deg, #fbcbcf 0%, #f5adb4 100%);
+    background-image: linear-gradient(180deg, #fbcbcf 5%, #f5adb4 100%);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1265,8 +1285,16 @@ section {
 
 .workTable th {
     width: 20%;
+    font-size: 3vw;
 }
 
+.workTable td {
+    text-align: right;
+}
+
+.workTable {
+    height: 100vh;
+}
 
 /* footer ---------------------------------------------------------------------------------------- */
 footer {

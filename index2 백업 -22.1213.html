@@ -210,6 +210,26 @@
                 </figure>
             </div>
             <div class="basic_line3"></div>
+            <!-- <div class="basic-cont01 cont-ani-left">
+                <h2 class="b-site"><a href="#">PHP SITE 04</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont03.png" alt="basicSite">
+                    <div class="link">
+                        <a href="#" class="github_link"></a>
+                        <a href="#" class="site_link"></a>
+                    </div>
+                </figure>
+            </div>
+            <div class="basic-cont01 cont-ani-left">
+                <h2 class="b-site"><a href="#">PHP PROJECT 05</a></h2>
+                <figure class="b-cont01-img">
+                    <img src="./assets/images/b-cont03.png" alt="basicSite">
+                    <div class="link">
+                        <a href="#" class="github_link"></a>
+                        <a href="#" class="site_link"></a>
+                    </div>
+                </figure>
+            </div> -->
         </article>
     </section>
     <!-- //section04 -->
@@ -343,7 +363,7 @@
                     </div>
                 </figure>
             </div>
-            <!-- <div class="basic_line3 v_line"></div> -->
+            <div class="basic_line3 v_line"></div>
         </article>
 
     </section>
@@ -370,14 +390,10 @@
                 그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도 복습하고 새로운 것들합니다.
             </p>
         </div>
-        <!-- <div class="s-text-animation textMove">
+        <div class="s-text-animation textMove">
             <span class="s-text animation02 s_text01">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
             <span class="s-text animation02 s_text02">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
             <div class="s-text-bg"></div>
-        </div> -->
-        <div class="s-text-animation2">
-            <span class="s-text">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT SEARCH EFFECT</span>
-            <span class="s-text">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT SEARCH EFFECT</span>
         </div>
     </section>
     <!-- //section07 -->
@@ -448,6 +464,18 @@
 
     <section id="section09" class="effectCont">
         <div class="effect__wrap">
+            <!-- <div class="back-tit4 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="back-tit4-2 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div>
+            <div class="back-tit4-3 textMove2">
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+                <span class="animation01">JAVASCRIPT EFFECT</span>
+            </div> -->
             <div class="back-tit4">
                 <span class="jsEffect">JAVASCRIPT EFFECT JAVASCRIPT EFFECT JAVASCRIPT EFFECT</span>
             </div>
@@ -465,6 +493,9 @@
                     <h2 class="e-title">MOUSE <br> EFFECT</h2>
                 </div>
                 <figure class="i-pad">
+                    <!-- <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/mouseEffect01" frameborder="0"></iframe>
+                    </div> -->
                     <img src="./assets/imgs/iPad01.png" alt="i-pad">
                 </figure>
             </div>
@@ -478,6 +509,9 @@
                     <h2 class="e-title pink">PARALLAX <br> EFFECT</h2>
                 </div>
                 <figure class="i-pad">
+                    <!-- <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/parallaxEffect04" frameborder="0"></iframe>
+                    </div> -->
                     <img src="./assets/imgs/iPad01.png" alt="i-pad">
                 </figure>
             </div>
@@ -490,6 +524,9 @@
                     <h2 class="e-title yellow">SLIDER <br> EFFECT</h2>
                 </div>
                 <figure class="i-pad">
+                    <!-- <div class="i-pad-view">
+                        <iframe src="https://eu-ny.github.io/coding/javascript/effect/sliderEffect03" frameborder="0"></iframe>
+                    </div> -->
                     <img src="./assets/imgs/iPad01.png" alt="i-pad">
                 </figure>
             </div>
@@ -505,40 +542,15 @@
             <table class="workTable">
                <tbody>
                     <tr>
-                        <th rowspan="3">BASIC</th>
+                        <th>제목</th>
                         <td>내용</td>
                     </tr>
                     <tr>
+                        <th>제목</th>
                         <td>내용</td>
                     </tr>
                     <tr>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <th rowspan="4">REACT</th>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">PHP</th>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
-                        <th rowspan="2">VUE</th>
-                        <td>내용</td>
-                    </tr>
-                    <tr>
+                        <th>제목</th>
                         <td>내용</td>
                     </tr>
                </tbody>
@@ -621,7 +633,6 @@
     <!-- intro -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
-
         document.querySelectorAll(".split").forEach(text => {
             let splitText = text.innerText;
             let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
@@ -634,12 +645,12 @@
             let tl = gsap.timeline();
 
             tl.from(".it_back_tit", {duration: 0.8, x: 0, y: -500, opacity: 0, ease: Power4.easeOut})
-            tl.from(".it01 span", { yPercent: 200, duration: 0.8, ease: Expo.easeOut,stagger: 0.05 })
-            tl.from(".it02 span", { yPercent: 200, duration: 0.8, ease: Expo.easeOut, stagger: 0.05 }, "-=.6")
-            tl.from(".it03 span", { yPercent: 200, duration: 0.8, ease: Expo.easeOut, stagger: 0.05 }, "-=.6")
+            tl.from(".it01 span", { y: 200, duration: 0.8, ease: Expo.easeOut,stagger: 0.05 })
+            tl.from(".it02 span", { y: 200, duration: 0.8, ease: Expo.easeOut, stagger: 0.05 })
+            tl.from(".it03 span", { y: 200, duration: 0.8, ease: Expo.easeOut, stagger: 0.05 })
             tl.to(".it_r", {duration: 0.4, autoAlpha: 1, ease: Expo, rotation: 0, })
-            tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)},"-=.8")
-        })
+            tl.from(".it_icon03", {duration: 0.8, top: 1000, autoAlpha: 0, ease: Back.easeOut.config(4)})
+        },-300)
 
         gsap.to(".it01", {
             x: -200, 
@@ -657,8 +668,9 @@
 
         gsap.to(".it_icon03", {
             duration: 0.5, 
-            yPercent: -800,
-            scale: 1.2,
+            yPercent: -500,
+            scale: 2,
+            // ease: Expo.easeout,
             ease: Back.easeOut,
             scrollTrigger: {
                 scrub: 1,
@@ -700,11 +712,11 @@
                 scrub: 1,
             }
         });
-    </script>
 
-    <!-- ABOUT -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
+        // gsap.fromTo("#section04 .tit", {y:200,},{ duration: 0.2, ease: Back.easeOut.config(2),  y: 0, scrollTrigger: {  scrub: 1, start: "top 20%" }})
+
+
+        //어바웃 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
         let ai01 = gsap.utils.toArray(".ai01");
         let ai02 = gsap.utils.toArray(".ai02");
@@ -752,17 +764,16 @@
             let aboutAni = gsap.timeline({
                 scrollTrigger: {
                     trigger: section02,
-                    start: "top 0%",
-                    end: "bottom center",
+                    start: "top 1%",
+                    end: "center +20%",
                     scrub: 2,
                     markers: true,
-                    pin: section02,
                 }
             })
             aboutAni
                 .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Power1.easeOut})
                 .from(ai01, { duration: 3, yPercent:10, autoAlpha: 0, filter: "blur(5px)", stagger:0.2,  ease:Expo.easeOut}, "+=1")
-                .to('.a_ani1', { duration:9, yPercent:-10, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
+                .to('.a_ani1', { duration:9, yPercent:-50, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
         }
         aboutAni()
 
@@ -771,89 +782,94 @@
             let aboutAni2 = gsap.timeline({
                 scrollTrigger: {
                     trigger: section03,
-                    start: "top 0%",
-                    // end: "+=20%",
-                    end: "bottom center",
+                    start: "top 1%",
+                    end: "center +20%",
                     scrub: 2,
                     markers: true,
-                    pin: section03,
                 }
             })
             aboutAni2
                 .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Power1.easeOut})
                 .from(ai02, { duration: 3, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Expo.easeOut, stagger:0.2,}, "+=1")
-                .to('.a_ani2',{ duration:9, yPercent:-10, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
+                .to('.a_ani2',{ duration:9, yPercent:-50, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
         }
         aboutAni2()
 
     </script>
 
-    <!-- SITE -->
+    <!-- site -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        let contLeft = gsap.utils.toArray(".cont-ani-left");
-        let contLeftImg = gsap.utils.toArray(".cont-ani-left-img");
-        let textMove = gsap.utils.toArray(".textMove");
-        let imac = gsap.utils.toArray(".imac");
+        {
+            let contLeft = gsap.utils.toArray(".cont-ani-left");
+            let contLeftImg = gsap.utils.toArray(".cont-ani-left-img");
+            // let imacTop = gsap.utils.toArray(".cont-ani-y");
+            let textMove = gsap.utils.toArray(".textMove");
+            let imac = gsap.utils.toArray(".imac");
 
-        contLeft.forEach((left) => {
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: left,
-                        start: "top 70%",
-                        end: "+=300",
-                        scrub: 0.1,
-                        delay:1
-                    }
-                })
+            contLeft.forEach((left) => {
+                gsap
+                    .timeline({
+                        scrollTrigger: {
+                            trigger: left,
+                            start: "top 70%",
+                            end: "+=450",
+                            scrub: true,
+                            // markers: true
+                        }
+                    })
 
-                .from(left, {
-                    xPercent: -150,
-                    duration:5,
-                    ease:"expo.out"
-                })
-        })
+                    .from(left, {
+                        xPercent: -150,
+                        duration:5,
+                        ease:"expo.out"
+                    })
+            })
 
-        contLeftImg.forEach((left) => {
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: left,
-                        start: "top 70%",
-                        end: "+=300",
-                        scrub: 0.2,
-                        delay:1
-                    }
-                }, "+=10")
+            gsap.to
 
-                .from(left, {
-                    opacity: 0,
-                    xPercent: -400,
-                    duration:3,
-                    ease:"expo.out"
-                })
-        })
+            contLeftImg.forEach((left) => {
+                gsap
+                    .timeline({
+                        scrollTrigger: {
+                            trigger: left,
+                            start: "top 70%",
+                            end: "+=300",
+                            scrub: true,
+                            // markers: true
+                        }
+                    }, "+=10")
 
-        imac.forEach((top)=> {
-            gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: top,
-                        end: "-=200",
-                        scrub: true,
-                    }
-                })
+                    .from(left, {
+                        opacity: 0,
+                        xPercent: -400,
+                        duration:3,
+                        ease:"expo.out"
+                    })
+            })
 
-                .from(top, {
-                    yPercent: 50,
-                    duration:3,
-                    ease:"expo.out"
-                })
+            imac.forEach((top)=> {
+                gsap
+                    .timeline({
+                        scrollTrigger: {
+                            trigger: top,
+                            end: "-=200",
+                            scrub: true,
+                            // markers: true,
+                        }
+                    })
 
-        })
+                    .from(top, {
+                        // autoAlpha: 0,
+                        yPercent: 50,
+                        duration:3,
+                        ease:"expo.out"
+                    })
 
+            })
+
+        }
 
         //site desc view ----------------------------------------------------------------
         {
@@ -878,6 +894,10 @@
 
 
         function siteAni01(){
+
+            // let work = gsap.timeline({
+            //     scrollTrigger: { trigger: "#section04 .tit", start: "top 0%", end: "bottom 100%", }
+            // })
 
             let aboutAni3 = gsap.timeline({
                 scrollTrigger: {
@@ -914,179 +934,20 @@
         }
         siteAni01()
 
-        function siteAni02(){
-            ScrollTrigger.create({
-                trigger: ".basic-work",
-                start:"top center +=10%",
-                end:"bottom",
-                yoyo:true,
-                delay:10,
-                animation : gsap.fromTo('.basic-tit span', {
-                        x: 0, 
-                        yPercent: 200, 
-                    },{
-                        yPercent:0,
-                        duration: 1, 
-                        ease: Expo.easeOut, 
-                        stagger: 0.05,
-                    },)
-            })
-    
-            ScrollTrigger.create({
-                trigger: ".react-work",
-                start:"top center",
-                end:"bottom",
-                yoyo:true,
-                delay:10,
-                animation : gsap.fromTo('.react-tit span', {
-                        yPercent: 200, 
-                    },{
-                        yPercent:0,
-                        duration: 1, 
-                        ease: Expo.easeOut, 
-                        stagger: 0.05,
-                    })
-            })
-    
-            ScrollTrigger.create({
-                trigger: ".vue-work",
-                start:"top center",
-                end:"bottom",
-                yoyo:true,
-                delay:10,
-                animation : gsap.fromTo('.vue-tit span', {
-                        yPercent: 200, 
-                    },{
-                        yPercent:0,
-                        duration: 1, 
-                        ease: Expo.easeOut, 
-                        stagger: 0.05,
-                    })
-            })
+        // setTimeout(() => {
+        //     //scrollTrigger:{ trigger: '#section04 .site_work', start:'top 40%', end: 'bottom bottom'}
+        //     // scrollTrigger:{ trigger: '#section05 .site_work', start:'top 40%', end: 'bottom 0%'}
+        //     // scrollTrigger:{ trigger: '#section06 .site_work', start:'top 40%', end: 'bottom 0%'}
 
-        }
+        //     let time10 = gsap.timeline({
+        //         scrollTrigger:{ trigger: 'basic_work', start:'top top'}
+        //     });
 
-        function siteline(){
-
-            ScrollTrigger.create({
-                trigger: ".basic-imac",
-                start:"bottom bottom -=5%",
-                end:"bottom bottom +=10%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic-work .basic_line1', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            ScrollTrigger.create({
-                trigger: ".basic-imac",
-                start:"bottom bottom -=5%",
-                end:"bottom bottom +=10%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic-work .basic_line2', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            ScrollTrigger.create({
-                trigger: ".basic-conts",
-                start:"top top",
-                end:"bottom bottom +=10%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic-conts .basic_line3', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            
-            ScrollTrigger.create({
-                trigger: ".react-imac",
-                start:"bottom bottom -=5%",
-                end:"bottom bottom +=10%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line1.r_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            ScrollTrigger.create({
-                trigger: ".react-imac",
-                start:"bottom bottom -=5%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line2.r_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            ScrollTrigger.create({
-                trigger: ".react-cont",
-                start:"top top",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line3.r_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-
-            ScrollTrigger.create({
-                trigger: ".vue-imac",
-                start:"bottom bottom -=5%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line1.v_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            ScrollTrigger.create({
-                trigger: ".vue-imac",
-                start:"bottom bottom -=5%",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line2.v_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-            ScrollTrigger.create({
-                trigger: ".vue-work",
-                start:"top top",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line3.v_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
-        }
-
-        siteline()
-        siteAni02() 
-
+        //     time10.from(".basic-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04, })
+        //     // time.from(".react-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
+        //     // time.from(".vue-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
+        // },2000)
+        // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 135', end: 'bottom top'}})
 
 
     </script>
@@ -1096,78 +957,76 @@
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.from(".s_tit01", {
-            x: -80, 
-            y: -10,
+            x: 0, 
             scrollTrigger: {
-                trigger:"s_tit01",
+                trigger:"#section07",
                 scrub: 1,
             }
         })
 
         gsap.to(".s_tit01", {
-            x: 0, 
-            y: 5,
+            x: -80, 
+            y: -50,
             scrollTrigger: {
-                trigger:".s_tit01",
+                trigger:"#section07",
                 scrub: 1,
             }
         })
 
         gsap.from(".s_tit02", {
-            x: 80, 
-            y: -5,
             scrollTrigger: {
-                trigger:".s_tit02",
+                trigger:"#section07",
                 scrub: 1,
             }
         })
 
         gsap.to(".s_tit02", {
-            x: 0,
-            y: 5,
+            x: 50, 
+            y: -40,
             scrollTrigger: {
-                trigger:".s_tit02",
+                trigger:"#section07",
+                scrub: 1,
+            }
+        })
+        gsap.to(".s_text01", {
+            x: 100, 
+            scrollTrigger: {
+                trigger:"#section07",
                 scrub: 1,
             }
         })
 
-        ScrollTrigger.create({
-                trigger: ".s_desc01",
-                scrub:1,
-                // TweenMax: {},
-                animation : gsap.fromTo('.s_desc01', {
-                        marginTop: "-6%", 
-                    },{
-                        marginTop: "0%", 
-                        duration: 1, 
-                        ease: Expo.easeOut, 
-                    })
+        gsap.to(".s_text02", {
+            x: 100, 
+            scrollTrigger: {
+                trigger:"#section07",
+                scrub: 1,
+            }
         })
 
-        // const rows = document.querySelectorAll(".s-text");
+        gsap.to(".s_desc01", {
+            yPercent: -20, 
+            scrollTrigger: {
+                trigger:"#section07",
+                scrub: 1,
+            }
+        })
 
-        // rows.forEach(function (e, i) {
-        //     let row_width = e.getBoundingClientRect().width;
-        //     let row_item_width = e.children[0].getBoundingClientRect().width;
-        //     let initial_offset = ((2 * row_item_width) / row_width) * 100 * -1;
-        //     let x_translation = initial_offset * -1;
-        //     console.log(x_translation);
+        // gsap.to("#section08", {
+        //     scrollTrigger: {
+        //         pin: "#section08"
+        //     }
+        // })
 
-        //     gsap.set(e, {
-        //         xPercent: `${initial_offset}`
-        //     });
-
-        //     let duration = 5 * (i + 1);
-
-        //     var tl = gsap.timeline();
-
-        //     tl.to(e, {
-        //         ease: "none",
-        //         duration: duration,
-        //         xPercent: 0,
-        //         repeat: -1
-        //     });
-        // });
+        // gsap.to('.s_icon', {
+        //     duration:1,
+        //     repeat: -1,
+        //     repeatDelay: 0.5,
+        //     yoyo: true,
+        //     y: -100,
+        //     ease: Power4.easeOut,
+        //     toggleActions: "restart pause resume reset"
+        // })
 
 
     </script>
@@ -1332,8 +1191,6 @@ Slider.init();
 
     <!-- 마우스 따라 움직이는 효과 -->
     <script>
-         gsap.registerPlugin(ScrollTrigger);
-
         const icons = [...document.querySelectorAll(".it_m")];
         const itext = [...document.querySelectorAll(".it_tm")];
         const aIcon = [...document.querySelectorAll(".ai01_2")];
@@ -1352,11 +1209,24 @@ Slider.init();
             };
         };
 
+        // gsap.fromTo('.it_r', {
+        //     scale: 1.2,
+        //     autoAlpha: 0,
+        //     ease: 'power4.Out',
+        //     rotation : 90
+        // }, {
+        //     scale: 1,
+        //     autoAlpha: 1,
+        //     duration: 0.5,
+        //     rotation : 0
+        // })
+
         let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
         window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
 
         icons.forEach(img => {
             let values = { x: 0, y: 0 };
+            // const xStart = gsap.utils.random(16, 64);
             const xStart = gsap.utils.random(-12, 74);
             const yStart = gsap.utils.random(-20, 84);
 
@@ -1381,8 +1251,8 @@ Slider.init();
             
             gsap.to(icons, {
                 duration: 0.5, 
-                yPercent: -90,
-                filter: "blur(6px)",
+                yPercent: -80,
+                filter: "blur(5px)",
                 ease: Back.easeOut.config(4),
                 scrollTrigger: {
                     scrub: 1,
@@ -1435,7 +1305,20 @@ Slider.init();
                 requestAnimationFrame(render3);
             };
             render3();
+
+            // gsap.to(sIcon, {
+            //     duration: 1, 
+            //     yPercent: -80,
+            //     ease: Back.easeOut.config(4),
+            //     scrollTrigger: {
+            //         scrub: 1,
+            //     }
+            // });
         })
+    </script>
+
+    <script>
+        
     </script>
 </body>
 </html>
