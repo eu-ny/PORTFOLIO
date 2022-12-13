@@ -797,8 +797,13 @@
 
     <!-- site -->
     <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".basic-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.basic-work', start:'top 40%',}})
+        gsap.from(".react-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.react-work', start:'top 40%'}})
+        gsap.from(".vue-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.vue-work', start:'top 40%'}})
+
         {
-            gsap.registerPlugin(ScrollTrigger);
             let contLeft = gsap.utils.toArray(".cont-ani-left");
             let contLeftImg = gsap.utils.toArray(".cont-ani-left-img");
             // let imacTop = gsap.utils.toArray(".cont-ani-y");
@@ -931,24 +936,20 @@
         }
         siteAni01()
 
-        setTimeout(() => {
-            //scrollTrigger:{ trigger: '#section04 .site_work', start:'top 40%', end: 'bottom bottom'}
-            // scrollTrigger:{ trigger: '#section05 .site_work', start:'top 40%', end: 'bottom 0%'}
-            // scrollTrigger:{ trigger: '#section06 .site_work', start:'top 40%', end: 'bottom 0%'}
+        // setTimeout(() => {
+        //     //scrollTrigger:{ trigger: '#section04 .site_work', start:'top 40%', end: 'bottom bottom'}
+        //     // scrollTrigger:{ trigger: '#section05 .site_work', start:'top 40%', end: 'bottom 0%'}
+        //     // scrollTrigger:{ trigger: '#section06 .site_work', start:'top 40%', end: 'bottom 0%'}
 
-            let time10 = gsap.timeline({
-                scrollTrigger:{ trigger: 'basic_work', start:'top top'}
-            });
+        //     let time10 = gsap.timeline({
+        //         scrollTrigger:{ trigger: 'basic_work', start:'top top'}
+        //     });
 
-            time10.from(".basic-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04, })
-            // time.from(".react-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
-            // time.from(".vue-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
-        },2000)
+        //     time10.from(".basic-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04, })
+        //     // time.from(".react-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
+        //     // time.from(".vue-tit span", {  yPercent: 200, duration: 1, ease: Expo.easeOut, stagger: 0.04,})
+        // },2000)
         // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 135', end: 'bottom top'}})
-
-        gsap.from(".basic-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.basic-work', start:'top 10%'}})
-        gsap.from(".react-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.react-work', start:'top 10%'}})
-        gsap.from(".vue-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.vue-work', start:'top 10%'}})
 
 
     </script>
