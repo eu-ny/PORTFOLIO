@@ -790,7 +790,7 @@ section {
 .vue-conts-wrap {
     font-family: "Tungsten";
     margin-top: -3%;
-    padding-bottom: 3%;
+    padding-bottom: 2.3%;
     padding-top: 4%;
     position: relative;
 }
@@ -858,37 +858,25 @@ section {
         background-image: linear-gradient(180deg, #fefcfd 90%, #fbcbcf 100%);
 }
 
-/* .s-text-animation {
+.s-text-animation {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    white-space: nowrap;
+    /* bottom: 0; */
+    top: 18%;
     font-size: 3vw;
-    transition: 0.3s;
-    color: #FFE3E3;
-} */
-
-.s-text-animation2 {
-    position: absolute;
-    bottom: 0;
-    white-space: nowrap;
-    font-size: 3vw;
-    transition: 0.3s;
     color: #FFE3E3;
 }
-
 .s-text {
-    padding: 1%;
+    padding: 1% 0;
+    padding-right: .5%;
     display: block;
+    white-space: nowrap;
     background-color: #CDA8B6;
-    padding-right: 20%;
 }
-/* 
+
 .s_text01 {
-    padding: 1%;
     display: block;
     background-color: #CDA8B6;
-} */
+}
 
 /* .s-text-bg {
     background-color: #983F5E;

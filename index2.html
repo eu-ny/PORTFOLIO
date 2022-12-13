@@ -370,14 +370,10 @@
                 그렇지만 100%에 근접할 수 있도록 틈틈이 비는 시간을 이용해 배웠던것도 복습하고 새로운 것들합니다.
             </p>
         </div>
-        <!-- <div class="s-text-animation textMove">
-            <span class="s-text animation02 s_text01">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
-            <span class="s-text animation02 s_text02">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
+        <div class="s-text-animation textMove">
+            <span class="s-text animation02 s_text">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
+            <span class="s-text animation02 s_text s_text01"> GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT</span>
             <div class="s-text-bg"></div>
-        </div> -->
-        <div class="s-text-animation2">
-            <span class="s-text">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT SEARCH EFFECT</span>
-            <span class="s-text">GAME EFFECT SLIDER EFFECT MOUSE EFFECT PARALLAX EFFECT SEARCH EFFECT</span>
         </div>
     </section>
     <!-- //section07 -->
@@ -995,9 +991,8 @@
                     })
             })
             ScrollTrigger.create({
-                trigger: ".basic-conts",
-                start:"top top",
-                end:"bottom bottom +=10%",
+                trigger: ".basic-work ",
+                start:"bottom center",
                 yoyo:true,
                 animation : gsap.fromTo('.basic-conts .basic_line3', {
                         xPercent: -200, 
@@ -1034,8 +1029,8 @@
                     })
             })
             ScrollTrigger.create({
-                trigger: ".react-cont",
-                start:"top top",
+                trigger: ".react-work",
+                start:"bottom center",
                 yoyo:true,
                 animation : gsap.fromTo('.basic_line3.r_line', {
                         xPercent: -200, 
@@ -1070,18 +1065,18 @@
                         ease: Power4.easeOut, 
                     })
             })
-            ScrollTrigger.create({
-                trigger: ".vue-work",
-                start:"top top",
-                yoyo:true,
-                animation : gsap.fromTo('.basic_line3.v_line', {
-                        xPercent: -200, 
-                    },{
-                        xPercent:0,
-                        duration: 3, 
-                        ease: Power4.easeOut, 
-                    })
-            })
+            // ScrollTrigger.create({
+            //     trigger: ".vue-work",
+            //     start:"bottom center",
+            //     yoyo:true,
+            //     animation : gsap.fromTo('.basic_line3.v_line', {
+            //             xPercent: -200, 
+            //         },{
+            //             xPercent:0,
+            //             duration: 3, 
+            //             ease: Power4.easeOut, 
+            //         })
+            // })
         }
 
         siteline()
@@ -1106,7 +1101,7 @@
 
         gsap.to(".s_tit01", {
             x: 0, 
-            y: 5,
+            y: 0,
             scrollTrigger: {
                 trigger:".s_tit01",
                 scrub: 1,
@@ -1136,13 +1131,26 @@
                 scrub:1,
                 // TweenMax: {},
                 animation : gsap.fromTo('.s_desc01', {
-                        marginTop: "-6%", 
+                        marginTop: "-7%", 
                     },{
                         marginTop: "0%", 
                         duration: 1, 
                         ease: Expo.easeOut, 
-                    })
+                    })  
         })
+
+        // ScrollTrigger.create({
+        //         trigger: ".animation02",
+        //         // TweenMax: {},
+        //         animation : gsap.fromTo('.animation02', {
+        //                 xPercent: "0%", 
+        //             },{
+        //                 xPercent: "-200%", 
+        //                 speed: 2,
+        //                 duration: 1, 
+        //                 ease: Expo.easeOut, 
+        //             })
+        // })
 
         // const rows = document.querySelectorAll(".s-text");
 
@@ -1235,7 +1243,9 @@
 btnNext.addEventListener('click', Slider.next);
 btnPrev.addEventListener('click', Slider.prev);
 
-Slider.init();
+setTimeout(()=>{
+    Slider.init();
+},3)
     </script>
 
     <!-- 가로 스크롤 -->
