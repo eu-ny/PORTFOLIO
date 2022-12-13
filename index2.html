@@ -946,9 +946,9 @@
         },2000)
         // gsap.to("#section04 .tit span", {  y: -100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '#section04 .tit', start:'bottom bottom 135', end: 'bottom top'}})
 
-        gsap.from(".basic-tit span", {  yPercent: 100, duration: 1, ease: Expo.easeOut, stagger: 0.05, scrollTrigger:{ trigger: '#section04 .site_work', start:'top 40%'}})
-        gsap.from(".react-tit span", {  yPercent: 100, duration: 1, ease: Expo.easeOut, stagger: 0.05, scrollTrigger:{ trigger: '#section05 .site_work', start:'top 40%'}})
-        gsap.from(".vue-tit span", {  yPercent: 100, duration: 1, ease: Expo.easeOut, stagger: 0.05, scrollTrigger:{ trigger: '#section06 .site_work', start:'top 40%'}})
+        gsap.from(".basic-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.basic-work', start:'top 10%'}})
+        gsap.from(".react-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.react-work', start:'top 10%'}})
+        gsap.from(".vue-tit > span", {  yPercent: 100, duration: 1, ease: Back.easeOut, stagger: 0.09, scrollTrigger:{ trigger: '.vue-work', start:'top 10%'}})
 
 
     </script>
