@@ -1196,7 +1196,17 @@ section {
     font-size: 7vw;
     font-weight: 600;
     line-height: 0.8;
+}
+
+.e-title >a {
     color: #8536ac;
+}
+
+
+.e-title > a:hover {
+    transition: all 0.3s;
+    color: #F6F5F3 !important;
+    -webkit-text-stroke: 2px #8536ac;
 }
 
 .i-pad {
@@ -1260,7 +1270,7 @@ section {
 .e-small-tit.pink {
     background: #8536ac;
 }
-.e-title.pink {
+.e-title.pink >a {
     color: #a13a5f;
 }
 
@@ -1281,7 +1291,7 @@ section {
     background: #a13a5f;
 }
 
-.e-title.yellow {
+.e-title.yellow >a {
     color: #EDA24B;
 }
 
