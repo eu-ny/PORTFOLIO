@@ -1221,13 +1221,13 @@ section {
     box-shadow: 5px 10px 20px rgba(9, 9, 9, 0.124);
 }
 
-.pad-bar {
+/* .pad-bar {
     position: absolute;
     top: 0;
     width: 100%;
     height: 4vh;
     background: #ededed;
-}
+} */
 
 .i-pad-view {
     position: absolute;
@@ -1274,6 +1274,12 @@ section {
     color: #a13a5f;
 }
 
+.e-title.pink > a:hover {
+    transition: all 0.3s;
+    color: #F6F5F3 !important;
+    -webkit-text-stroke: 2px #a13a5f;
+}
+
 /* effectCont3 -----------------------------------------------------------------------------------------------------------------------------  */
 .effect___inner03 {
     width: 110%;
@@ -1293,6 +1299,12 @@ section {
 
 .e-title.yellow >a {
     color: #EDA24B;
+}
+
+.e-title.yellow > a:hover {
+    transition: all 0.3s;
+    color: #F6F5F3 !important;
+    -webkit-text-stroke: 2px #EDA24B;
 }
 
 /* media */
