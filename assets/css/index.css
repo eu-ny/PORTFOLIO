@@ -980,13 +980,14 @@ section {
 }
 
 .tetris-wrap {
-    width: 280px;
+    width: 320px;
     border-radius: 1vw;
-    height: 540px;
+    /* height: 540px; */
     background: #04000fcc;
     margin-left: 25%;
     margin-bottom: 6%;
     z-index: 10;
+    overflow: hidden;
 }
 
 .inner {
