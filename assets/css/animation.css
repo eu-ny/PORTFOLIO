@@ -31,12 +31,27 @@
     animation: scrolling 30s linear infinite;
 }
 
+.animation03 {
+    display: inline-block;
+    transform: translateX(0);
+    animation: scrolling2 80s linear infinite;
+}
+
 @keyframes scrolling {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+@keyframes scrolling2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }
 
