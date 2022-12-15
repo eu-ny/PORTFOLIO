@@ -815,7 +815,6 @@
                     ease: Back.easeOut,
 
                 });
-                menuIcon.style.display = "none";
 
                 gsap.fromTo(menuIconClose, {
                     scaleY: 0,
@@ -831,6 +830,14 @@
                     duration:1,
                     ease: Expo.easeOut,
                 });
+
+                gsap.from(".menu_cont > ul > li",{
+                    xPercent: 100,
+                    duration:1,
+                    ease: Expo.easeOut,
+                    stagger: 0.1,
+                });
+
                 gsap.to(".menu_cont > ul > li",{
                     xPercent: 0,
                     duration:1,
@@ -838,6 +845,7 @@
                     stagger: 0.1,
                 });
 
+                menuIcon.style.display = "none";
                 menuIconClose.style.display = "block";
             })
 
@@ -850,10 +858,6 @@
                 },{
                     scaleY: 1,
                 });
-                
-                menuIconClose.style.display = "none";
-
-                menuIcon.style.display = "block";
 
                 gsap.to(menuCont,{
                     right: "-40vw",
@@ -866,6 +870,9 @@
                     ease: Expo.easeOut,
                     stagger: 0.1,
                 });
+
+                menuIconClose.style.display = "none";
+                menuIcon.style.display = "block";
             })
 
         }
