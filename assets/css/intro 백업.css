@@ -546,3 +546,28 @@ body {
     letter-spacing: 2vw;
     white-space: nowrap;
 }
+
+/* #header {
+    width: 100%;
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 300;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 10% 80% 10%;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 1%;
+}
+
+#header ul {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.scrollTop {
+    color: black;
+    width: 20%;
+    margin-left: 20%;
+} */

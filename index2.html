@@ -6,26 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEEHAEUN</title>
+
+    <link rel="icon" href="./assets/imgs/it_icon05.png">
+    <link rel="shortcut icon" href="./assets/imgs/it_icon05.png">
 </head>
 <body>
-    <!-- <header id="header">
-        <span class="scrollTop"></span>
-        <nav>
-            <ul>
-                <li><a href="#section01">HOME</a></li>
-                <li><a href="#section02">ABOUT</a></li>
-                <li><a href="#section04">SITE</a></li>
-                <li><a href="#section08">EFFECT</a></li>
-                <li><a href="#section12">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header> -->
     <header id="header">
         <span class="scrollTop"></span>
-        <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
-        <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume_close">
-        <audio src="./assets/audio/Walking.mp3" class="Audio"></audio>
-        <img src="./assets/images/menu01.svg" alt="menu" class="menu">
+        <div class="auduo_wrap">
+            <img src="./assets/imgs/Volume01.svg" alt="Volume" class="Volume">
+            <img src="./assets/imgs/Volume01.svg" alt="Volume" class="Volume_close">
+            <audio src="./assets/audio/Walking.mp3" class="Audio" loop></audio>
+        </div>
+        <div class="menu">
+            <img src="./assets/imgs/menu01.svg" alt="menu" class="menuIcon">
+            <img src="./assets/imgs/close-small.svg" alt="menu" class="menuIconClose">
+            <div class="menuIconClose"></div>
+            <nav class="menu_cont">
+                <div class="menu_bg1"></div>
+                <ul>
+                    <li><a href="#" class="ir">menulist</a></li>
+                    <li><a onclick="topScroll()">HOME</a></li>
+                    <li><a href="#section02">ABOUT</a></li>
+                    <li><a href="#section04">SITE</a></li>
+                    <li><a href="#section08">EFFECT</a></li>
+                    <li><a href="#footer">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- //header -->
 
@@ -81,7 +89,7 @@
                 1998.11.09
             </p>
             <p class="desc desc1">
-                안녕하세요 저는 이하은입니다. <br>
+                안녕하세요 저는 이하은입니다. 🤩<br>
                 주위 사람들에게 편안하고 친근한 느낌을 주지만 우유부단하지 않으며 꼼꼼함으로 더욱 완벽을 추구하는 사람입니다!
                 배움에 대한 열정이 높기 때문에 100% 완벽하진 않더라도 하고자 한다면 의지와 끈기를 가지고 100% 노력하겠습니다.
             </p>
@@ -104,7 +112,7 @@
                 PAINTING
             </p>
             <p class="desc desc1">
-                미술문화복지를 전공하였으나 웹 디자인이라는 직업을 알게 되면서 웹이라는 분야에 흥미를 느끼게 되었습니다. 코딩을 공부하면서 화면을 직접 디자인하고 구현할 수 있다는 점에서 매력을 느끼게 되었고 진로를 결정할 마음을 가질정도로 큰 성취감을 느꼈습니다. 이러한 과정에서 본래 가지고 있던 미적인 감각과 코딩을 함께 녹여낼 수 있는 강점에 설레고 끌렸습니다.
+                미술문화복지를 전공하였으나 웹 디자인이라는 직업을 알게 되면서 웹이라는 분야에 흥미를 느끼게 되었습니다. 코딩을 공부하면서 화면을 직접 디자인하고 구현할 수 있다는 점에서 매력을 느끼게 되었고 진로를 결정할 마음을 가질정도로 큰 성취감을 느꼈습니다. 이러한 과정에서 본래 가지고 있던 미적인 감각과 코딩을 함께 녹여낼 수 있는 강점에 설레고 끌렸습니다.🥰
             </p>
         </div>
 
@@ -793,6 +801,79 @@
             })
         }
         playMusic()
+
+        function nav(){
+            const menu = document.querySelector(".menu");
+            const menuIcon = document.querySelector(".menuIcon");
+            const menuIconClose = document.querySelector(".menuIconClose");
+            const menuCont = document.querySelector(".menu_cont");
+
+            menuIcon.addEventListener("click", () => {
+                gsap.to(menuIcon,{
+                    scaleY: 0,
+                    duration:1,
+                    ease: Back.easeOut,
+
+                });
+                menuIcon.style.display = "none";
+
+                gsap.fromTo(menuIconClose, {
+                    scaleY: 0,
+
+                },{
+                    scaleY: 1,
+                    duration:1,
+                    ease: Back.easeOut,
+                });
+
+                gsap.to(menuCont,{
+                    right: 0,
+                    duration:1,
+                    ease: Expo.easeOut,
+                });
+                gsap.to(".menu_cont > ul > li",{
+                    xPercent: 0,
+                    duration:1,
+                    ease: Expo.easeOut,
+                    stagger: 0.1,
+                });
+
+                menuIconClose.style.display = "block";
+            })
+
+            menuIconClose.addEventListener("click", () => {
+
+                gsap.fromTo(menuIcon,{
+                    scaleY: 0,
+                    duration:1.5,
+                    ease: Back.easeOut,
+                },{
+                    scaleY: 1,
+                });
+                
+                menuIconClose.style.display = "none";
+
+                menuIcon.style.display = "block";
+
+                gsap.to(menuCont,{
+                    right: "-40vw",
+                    duration:1.5,
+                    ease: Expo.easeOut,
+                });
+                gsap.to(".menu_cont > ul > li",{
+                    xPercent: 100,
+                    duration:1,
+                    ease: Expo.easeOut,
+                    stagger: 0.1,
+                });
+            })
+
+        }
+        nav()
+
+        function topScroll(){
+            window.scrollTo({left: 0, top: 0}); //scrollTo : 절대 기준의 스크롤 값 설정으로 0px의 최상단을 기준으로 설정하는 것이다. (By는 현재 스크롤 값 위치와 이동하려는 스크롤위차값의 거리만 설정.)
+        }
 
     </script>
 
