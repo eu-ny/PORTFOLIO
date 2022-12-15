@@ -23,6 +23,8 @@
     <header id="header">
         <span class="scrollTop"></span>
         <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume">
+        <img src="./assets/images/Volume01.svg" alt="Volume" class="Volume_close">
+        <audio src="./assets/audio/Walking.mp3" class="Audio"></audio>
         <img src="./assets/images/menu01.svg" alt="menu" class="menu">
     </header>
     <!-- //header -->
@@ -772,6 +774,25 @@
         })
 
         gsap.registerPlugin(ScrollTrigger);
+
+        function playMusic(){
+            const Volume = document.querySelector(".Volume");
+            const VolumeClose = document.querySelector(".Volume_close");
+            const Audio = document.querySelector(".Audio");
+
+            Volume.addEventListener("click", () => {
+                Volume.style.display = "none";
+                VolumeClose.style.display = "block";
+                Audio.play();
+            })
+
+            VolumeClose.addEventListener("click", () => {
+                VolumeClose.style.display = "none";
+                Volume.style.display = "block";
+                Audio.pause();
+            })
+        }
+        playMusic()
 
     </script>
 

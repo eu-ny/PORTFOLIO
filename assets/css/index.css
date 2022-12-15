@@ -37,6 +37,25 @@
     cursor: pointer;
 }
 
+.Volume_close {
+    width: 1vw;
+    cursor: pointer;
+    display: none;
+    animation: audio 2s cubic-bezier(0.15, 0.29, 0.79, 1.15) infinite;
+}
+
+@keyframes audio {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 .menu {
     width: 1.8vw;
     margin-right: 2%;
@@ -1192,7 +1211,7 @@ section {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 5px 10px 20px rgba(9, 9, 9, 0.124);
+    box-shadow: 6px 8px 15px rgba(138, 138, 167, 0.108);
 }
 
 .i-pad-view::-webkit-scrollbar {
@@ -1285,7 +1304,7 @@ section {
     overflow: hidden;
 }
 .i-pad.search {
-    background: #f5f5f5;
+    background: #f8f8f8;
 }
 
 
@@ -1414,13 +1433,13 @@ footer {
 }
 
 .contact_wrap .topBtn {
-    padding-top: 3vw;
+    padding-top: 2vw;
 }
 
 .contact_wrap button {
     font-size: 2vw;
     padding: 2% 8%;
-    border-radius: 20px;
+    border-radius: 10px;
     background: #F9BDB3;
     color: #fff;
     font-family: 'Tungsten';
