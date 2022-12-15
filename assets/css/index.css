@@ -1340,7 +1340,7 @@ section {
 
 /* section10 -------------------------------------------------------------------------------------  */
 #section10 {
-    height: 250vh;
+    height: 220vh;
     width: 100%;
     font-family: 'Tungsten';
     position: relative;
@@ -1375,17 +1375,17 @@ section {
 }
 
 .workTable {
-    height: 20vh;
+    height: 35vh;
     color: #a13a5f;
     margin-bottom: 10vh;
 }
 
 .workTable.bacic {
-    height: 50vh;
+    height: 55vh;
 }
 
-.workTable.height {
-    height: 40vh;
+.workTable.vue {
+    height: 12vh;
 }
 
 .workTable th {
