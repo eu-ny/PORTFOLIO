@@ -952,7 +952,7 @@ section {
 .music-desc,
 .tetris-desc {
     margin-left: 5%;
-    width: 20vw;
+    width: 20%;
     text-align: justify;
     color: #fff;
     z-index: 10;
