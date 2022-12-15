@@ -1262,6 +1262,9 @@ section {
     position: relative;
     overflow: hidden;
 }
+.i-pad.search {
+    background: #f5f5f5;
+}
 
 
 
