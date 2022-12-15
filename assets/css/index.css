@@ -992,6 +992,16 @@ section {
     overflow: hidden;
 }
 
+.memory-wrap {
+    width: 600px;
+    border-radius: 1vw;
+    background: #04000fcc;
+    margin-left: 25%;
+    margin-bottom: 4%;
+    z-index: 10;
+    overflow: hidden;
+}
+
 .inner {
     width: 100%;
     height: 100%;
@@ -1071,7 +1081,7 @@ section {
     position: relative;
 }
 .effect__wrap {
-    width: 400%;
+    width: 500%;
     overscroll-behavior: none;
     display: flex;
     flex-wrap: nowrap;
@@ -1084,7 +1094,7 @@ section {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(0%, -22%) rotate(5deg);
+    transform: translate(0%, 40%) rotate(5deg);
     font-size: 25vw;
     color: #81727732;
     font-weight: 600;
@@ -1096,7 +1106,7 @@ section {
 .back-tit4-2 {
     position: absolute;
     top: 50%;
-    transform: translate(0%, -160%) rotate(5deg);
+    transform: translate(0%, -90%) rotate(5deg);
     font-size: 25vw;
     -webkit-text-stroke: 1px #81727732;
     color: transparent;
@@ -1109,7 +1119,7 @@ section {
 .back-tit4-3 {
     position: absolute;
     top: 50%;
-    transform: translate(-4%, 116%) rotate(5deg);
+    transform: translate(-4%, 160%) rotate(5deg);
     font-size: 25vw;
     -webkit-text-stroke: 1px #81727732;
     color: transparent;
@@ -1253,6 +1263,18 @@ section {
 
 /* effectCont4 -------------------------------------------------------------------- */
 .effect___inner04 {
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Tungsten";
+    position: relative;
+    overflow: hidden;
+}
+
+/* effectCont5 -------------------------------------------------------------------- */
+.effect___inner05 {
     width: 110%;
     height: 100vh;
     display: flex;

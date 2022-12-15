@@ -33,8 +33,13 @@
 
 .animation03 {
     display: inline-block;
+    transform: translateX(-100%);
+    animation: scrolling2 90s linear infinite;
+}
+.animation04 {
+    display: inline-block;
     transform: translateX(0);
-    animation: scrolling2 80s linear infinite;
+    animation: scrolling 80s linear infinite;
 }
 
 @keyframes scrolling {
