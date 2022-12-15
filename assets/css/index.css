@@ -860,8 +860,8 @@ section {
 
 .s-text-animation {
     position: absolute;
-    /* bottom: 0; */
-    top: 18%;
+    bottom: 0;
+    /* top: 18%; */
     font-size: 3vw;
     color: #FFE3E3;
 }
@@ -888,6 +888,7 @@ section {
     letter-spacing: -0.2vw;
     color: #a13a5f;
     position: relative;
+    margin-bottom: 10vh;
 }
 
 .s-tit:first-child {
@@ -948,7 +949,8 @@ section {
     transform: translate3d(-50%, -38%, 0);
 }
 
-.music-desc {
+.music-desc,
+.tetris-desc {
     margin-left: 5%;
     width: 20vw;
     text-align: justify;
@@ -956,14 +958,15 @@ section {
     z-index: 10;
 }
 
-.music-tit {
+.music-tit,
+.tetris-tit  {
     font-weight: 500;
     line-height: 1;
     font-size: 6vw;
     margin-bottom: 4%;
 }
 
-.m-desc {
+.item-desc {
     font-family: 'SCoreDream';
     font-weight: 300;
 }
@@ -982,10 +985,9 @@ section {
 .tetris-wrap {
     width: 320px;
     border-radius: 1vw;
-    /* height: 540px; */
     background: #04000fcc;
     margin-left: 25%;
-    margin-bottom: 6%;
+    margin-bottom: 4%;
     z-index: 10;
     overflow: hidden;
 }
@@ -1069,7 +1071,7 @@ section {
     position: relative;
 }
 .effect__wrap {
-    width: 300%;
+    width: 400%;
     overscroll-behavior: none;
     display: flex;
     flex-wrap: nowrap;
@@ -1078,61 +1080,18 @@ section {
     font-family: "Tungsten";
 }
 
-
-.back-tit4 {
-    position: absolute;
-    top: 20%;
-    /* transform: translate(0%, 140%) rotate(10deg); */
-    font-size: 22vw;
-    /* -webkit-text-stroke: 1px #7c30a232; */
-    color: #7c30a232;
-    color: transparent;
-    font-weight: 600;
-    line-height: 0.8;
-    text-align: center;
-    letter-spacing: 2vw;
-    white-space: nowrap;
-}
-.back-tit4-2 {
-    position: absolute;
-    top: 50%;
-    /* transform: translate(0%, 2%) rotate(10deg); */
-    font-size: 22vw;
-    -webkit-text-stroke: 1px #7c30a232;
-    color: transparent;
-    font-weight: 600;
-    line-height: 0.8;
-    text-align: center;
-    letter-spacing: 2vw;
-    white-space: nowrap;
-}
-.back-tit4-3 {
-    position: absolute;
-    top: 30%;
-    /* transform: translate(-4%, 257%) rotate(10deg); */
-    font-size: 22vw;
-    -webkit-text-stroke: 1px #7c30a232;
-    font-weight: 600;
-    line-height: 0.8;
-    text-align: center;
-    letter-spacing: 2vw;
-    white-space: nowrap;
-}
-
 .back-tit4 {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(0%, -22%) rotate(5deg);
     font-size: 25vw;
-    /* -webkit-text-stroke: 1px #7c30a232; */
     color: #81727732;
     font-weight: 600;
     line-height: 0.8;
     text-align: center;
     letter-spacing: 2vw;
     white-space: nowrap;
-    /* display: grid; */
 }
 .back-tit4-2 {
     position: absolute;
@@ -1184,9 +1143,8 @@ section {
 }
 
 .e-small-tit {
-    font-size: 2.5vw;
-    /* margin-bottom: 1vw; */
-    padding: 2% 8%;
+    font-size: 1.8vw;
+    padding: 2% 6%;
     border-radius: 8px;
     background: #EDA24B;
     color: #fff;
@@ -1194,12 +1152,12 @@ section {
 }
 
 .e-title {
-    font-size: 7vw;
+    font-size: 6vw;
     font-weight: 600;
     line-height: 0.8;
 }
 
-.e-title >a {
+.e-title > a {
     color: #8536ac;
 }
 
@@ -1210,9 +1168,14 @@ section {
     -webkit-text-stroke: 2px #8536ac;
 }
 
+.effect_desc {
+    font-family: 'SCoreDream';
+    font-size: 14px;
+    color: #666;
+    padding-right: 15%;
+}
+
 .i-pad {
-    /* position: relative;
-    width: 55vw; */
     width: 50vw;
     background: #000;
     height: 65vh;
@@ -1220,26 +1183,6 @@ section {
     position: relative;
     overflow: hidden;
     box-shadow: 5px 10px 20px rgba(9, 9, 9, 0.124);
-}
-
-/* .pad-bar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 4vh;
-    background: #ededed;
-} */
-
-.i-pad-view {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0.5deg) skewX(-0.5deg);
-    width: 48vw;
-    height: 58%;
-    border-radius: 1vw;
-    overflow: hidden;
-    overflow-y: scroll;
 }
 
 .i-pad-view::-webkit-scrollbar {
@@ -1253,7 +1196,7 @@ section {
 }
 
 
-/* effectCont2 -------------------------------------------------------------------------------------  */
+/* effectCont2 -------------------------------------------------------------------- */
 .effect___inner02 {
     width: 110%;
     height: 100vh;
@@ -1281,7 +1224,7 @@ section {
     -webkit-text-stroke: 2px #a13a5f;
 }
 
-/* effectCont3 -----------------------------------------------------------------------------------------------------------------------------  */
+/* effectCont3 --------------------------------------------------------------------  */
 .effect___inner03 {
     width: 110%;
     height: 100vh;
@@ -1308,22 +1251,23 @@ section {
     -webkit-text-stroke: 2px #EDA24B;
 }
 
-/* media */
-@media (max-width:600px) {
-    .imac-1, .imac-2 {
-        width: 110vw;
-    }
-
-    .imac-view {
-        transform: translate(-48.8%, -76.5%);
-        width: 76vw;
-    }
-
+/* effectCont4 -------------------------------------------------------------------- */
+.effect___inner04 {
+    width: 110%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Tungsten";
+    position: relative;
+    overflow: hidden;
 }
+
+
 
 /* section10 -------------------------------------------------------------------------------------  */
 #section10 {
-    height: 150vh;
+    height: 250vh;
     width: 100%;
     font-family: 'Tungsten';
     position: relative;
@@ -1336,27 +1280,39 @@ section {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
 .sec8_tit {
     text-transform: uppercase;
-    font-size: 4vw;
+    font-size: 5vw;
     font-weight: 500;
     color: #a13a5f;
     padding-top: 6%;
     padding-bottom: 4%;
 }
 
+.sec10_icon {
+    position: absolute;
+    width: 8vw;
+    top: 15%;
+    left: 5%;
+    transform: rotate(150deg);
+}
+
 .workTable {
-    height: 15vh;
+    height: 20vh;
     color: #a13a5f;
     margin-bottom: 10vh;
 }
 
+.workTable.bacic {
+    height: 50vh;
+}
+
 .workTable.height {
-    height: 25vh;
+    height: 40vh;
 }
 
 .workTable th {
@@ -1371,6 +1327,8 @@ section {
     text-align: left;
     padding-left: 5%;
     font-size: 14px;
+    color: #874f56;
+    line-height: 1.6;
 }
 
 .workTable td a {
@@ -1379,6 +1337,7 @@ section {
     background: #a13a5f;
     padding: 5px;
     border-radius: 5px;
+    line-height: 2.5;
 }
 
 /* .workTable .t_hv:hover {

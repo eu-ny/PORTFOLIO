@@ -247,7 +247,7 @@ for (let i = 0; i < allMusic.length; i++) {
         <li data-index="${i + 1}">
             <strong>${allMusic[i].name}</strong>
             <em>${allMusic[i].artist}</em>
-            <audio class="${allMusic[i].audio}" src="../assets/audio/${allMusic[i].audio}.mp3"></audio>
+            <audio class="${allMusic[i].audio}" src="./assets/audio/${allMusic[i].audio}.mp3"></audio>
             <span class="audio-duration" id="${allMusic[i].audio}">재생시간</span>
         </li>
     `;
