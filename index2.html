@@ -903,7 +903,7 @@
             })
             aboutAni
                 .from(".a_ani", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Power1.easeOut})
-                .from(ai01, { duration: 3, yPercent:10, autoAlpha: 0, filter: "blur(5px)", stagger:0.2,  ease:Expo.easeOut}, "+=1")
+                .from(ai01, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(5px)", stagger:1,  ease:Expo.easeOut}, "+=2")
                 .to('.a_ani1', { duration:9, yPercent:-10, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
         }
         aboutAni()
@@ -923,7 +923,7 @@
             })
             aboutAni2
                 .from(".A2-photo", { duration: 2, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Power1.easeOut})
-                .from(ai02, { duration: 3, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Expo.easeOut, stagger:0.2,}, "+=1")
+                .from(ai02, { duration: 4, yPercent:10, autoAlpha: 0, filter: "blur(5px)", ease:Expo.easeOut, stagger:1,}, "+=2")
                 .to('.a_ani2',{ duration:9, yPercent:-10, autoAlpha:0.8, scale: 0.8, ease:Expo.easeIn}, "+=10")
         }
         aboutAni2()
