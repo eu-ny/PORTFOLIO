@@ -1041,11 +1041,11 @@ section {
 }
 
 .memory-wrap {
-    width: 600px;
+    /* width: 600px; */
     border-radius: 1vw;
     background: #04000fcc;
     margin-left: 25%;
-    margin-bottom: 4%;
+    margin-bottom: 7%;
     z-index: 10;
     overflow: hidden;
 }
